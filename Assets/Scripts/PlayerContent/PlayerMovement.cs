@@ -28,7 +28,6 @@ namespace PlayerContent
         
             if (_isGrounded && _velocity.y < 0)
             {
-                Debug.Log(_isGrounded + " ъ " + _velocity.y);
                 _velocity.y = -2f;
             }
 

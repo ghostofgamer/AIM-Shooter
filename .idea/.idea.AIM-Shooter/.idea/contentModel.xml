@@ -8,6 +8,383 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddedAssets" t="Include">
+          <e p="Epic Toon FX" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Animation" t="Include" />
+              <e p="Demo Prefabs" t="Include">
+                <e p="VFX Library" t="Include" />
+              </e>
+              <e p="Materials" t="Include">
+                <e p="Bullet Surfaces" t="Include" />
+                <e p="Skybox" t="Include" />
+              </e>
+              <e p="Missile Prefabs" t="Include">
+                <e p="Bullet" t="Include" />
+                <e p="BulletFat" t="Include" />
+                <e p="EnergyNova" t="Include" />
+                <e p="EnergyNovaSmall" t="Include" />
+                <e p="Fireball" t="Include" />
+                <e p="Frost" t="Include" />
+                <e p="Gas" t="Include" />
+                <e p="Grenade" t="Include" />
+                <e p="Laser" t="Include" />
+                <e p="Lightning" t="Include" />
+                <e p="Liquid" t="Include" />
+                <e p="Magic" t="Include" />
+                <e p="MagicSoft" t="Include" />
+                <e p="Mystic" t="Include" />
+                <e p="Nuke" t="Include" />
+                <e p="Rocket" t="Include" />
+                <e p="Shadow" t="Include" />
+                <e p="Soul" t="Include" />
+                <e p="Sparkle" t="Include" />
+                <e p="Storm" t="Include" />
+              </e>
+              <e p="Scenes" t="Include">
+                <e p="Extras" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="ETFXButtonScript.cs" t="Include" />
+                <e p="ETFXFireProjectile.cs" t="Include" />
+                <e p="ETFXLoopScript.cs" t="Include" />
+                <e p="ETFXMouseOrbit.cs" t="Include" />
+                <e p="ETFXProjectileScript.cs" t="Include" />
+                <e p="ETFXSceneManager.cs" t="Include" />
+                <e p="ETFXTarget.cs" t="Include" />
+                <e p="VFX Library" t="Include">
+                  <e p="ParticleEffectsLibrary.cs" t="Include" />
+                  <e p="PEButtonScript.cs" t="Include" />
+                  <e p="UICanvasManager.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Textures" t="Include">
+                <e p="Skybox" t="Include" />
+              </e>
+            </e>
+            <e p="Materials" t="Include">
+              <e p="Basics" t="Include" />
+              <e p="Misc" t="Include">
+                <e p="Bubbles" t="Include" />
+                <e p="Cards" t="Include" />
+                <e p="Decals" t="Include" />
+                <e p="Emojis" t="Include">
+                  <e p="Part 1" t="Include" />
+                  <e p="Part 2" t="Include" />
+                </e>
+                <e p="Explosions" t="Include" />
+                <e p="Fire" t="Include" />
+                <e p="Hearts" t="Include" />
+                <e p="Lightning" t="Include" />
+                <e p="Liquid" t="Include" />
+                <e p="Magic" t="Include" />
+                <e p="Portals" t="Include" />
+                <e p="Skulls" t="Include" />
+                <e p="Stars" t="Include" />
+                <e p="Sword" t="Include" />
+                <e p="Text" t="Include" />
+                <e p="Unsorted" t="Include" />
+              </e>
+            </e>
+            <e p="Models" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Combat" t="Include">
+                <e p="Blood" t="Include">
+                  <e p="Green" t="Include" />
+                  <e p="Red" t="Include" />
+                  <e p="Yellow" t="Include" />
+                </e>
+                <e p="BombFuse" t="Include" />
+                <e p="Brawling" t="Include">
+                  <e p="Cartoony" t="Include" />
+                  <e p="RoundHit" t="Include" />
+                  <e p="Soft" t="Include" />
+                  <e p="Stun" t="Include" />
+                </e>
+                <e p="Combat FX.txt" t="Include" />
+                <e p="Death" t="Include">
+                  <e p="Skulls" t="Include" />
+                  <e p="Souls" t="Include" />
+                </e>
+                <e p="Decals" t="Include">
+                  <e p="Bullet Decal" t="Include" />
+                  <e p="Energy Decal" t="Include" />
+                  <e p="Explosion Decal" t="Include" />
+                </e>
+                <e p="Explosions" t="Include">
+                  <e p="- Misc" t="Include" />
+                  <e p="BulletExplosion" t="Include" />
+                  <e p="BulletFatExplosion" t="Include" />
+                  <e p="FireballExplosion" t="Include" />
+                  <e p="FrostExplosion" t="Include" />
+                  <e p="GasExplosion" t="Include" />
+                  <e p="GlitterExplosion" t="Include" />
+                  <e p="GrenadeExplosion" t="Include" />
+                  <e p="LaserExplosion" t="Include" />
+                  <e p="LightningExplosion" t="Include" />
+                  <e p="LiquidExplosion" t="Include" />
+                  <e p="MagicExplosion" t="Include" />
+                  <e p="MagicSoftExplosion" t="Include" />
+                  <e p="MegaExplosion" t="Include" />
+                  <e p="MysticExplosion" t="Include" />
+                  <e p="NovaExplosion" t="Include" />
+                  <e p="NovaSmallExplosion" t="Include" />
+                  <e p="NukeConeExplosion" t="Include" />
+                  <e p="NukeExplosion" t="Include" />
+                  <e p="NukeVerticalExplosion" t="Include" />
+                  <e p="RoundExplosion" t="Include" />
+                  <e p="ShadowExplosion" t="Include" />
+                  <e p="SmallExplosion" t="Include" />
+                  <e p="SoulExplosion" t="Include" />
+                  <e p="SparkleExplosion" t="Include" />
+                  <e p="SpikyExplosion" t="Include" />
+                  <e p="StarExplosion" t="Include" />
+                  <e p="StarIntenseExplosion" t="Include" />
+                  <e p="StormExplosion" t="Include" />
+                </e>
+                <e p="Flamethrower" t="Include">
+                  <e p="Cartoon" t="Include" />
+                  <e p="Soft" t="Include">
+                    <e p="Additive" t="Include" />
+                    <e p="Alpha Blend" t="Include" />
+                  </e>
+                  <e p="Spiky" t="Include" />
+                </e>
+                <e p="Magic" t="Include">
+                  <e p="Aura" t="Include" />
+                  <e p="Aura Soft" t="Include" />
+                  <e p="Buff" t="Include" />
+                  <e p="Charge" t="Include" />
+                  <e p="Circle" t="Include" />
+                  <e p="Circle Simple" t="Include" />
+                  <e p="Enchant" t="Include" />
+                  <e p="Field" t="Include" />
+                  <e p="Nova" t="Include" />
+                  <e p="PillarBlast" t="Include" />
+                  <e p="Shield" t="Include" />
+                  <e p="Sphere" t="Include" />
+                </e>
+                <e p="Missiles" t="Include">
+                  <e p="Bullet" t="Include" />
+                  <e p="FatBullet" t="Include" />
+                  <e p="Fireball" t="Include" />
+                  <e p="Frost" t="Include" />
+                  <e p="Gas" t="Include" />
+                  <e p="Grenade" t="Include" />
+                  <e p="Laser" t="Include" />
+                  <e p="Lightning" t="Include" />
+                  <e p="Liquid" t="Include" />
+                  <e p="Magic" t="Include" />
+                  <e p="MagicSoft" t="Include" />
+                  <e p="Mystic" t="Include" />
+                  <e p="NovaMissile" t="Include" />
+                  <e p="NovaSmall" t="Include" />
+                  <e p="Nuke" t="Include" />
+                  <e p="Rocket" t="Include" />
+                  <e p="Shadow" t="Include" />
+                  <e p="Soul" t="Include" />
+                  <e p="Sparkle" t="Include" />
+                  <e p="Storm" t="Include" />
+                </e>
+                <e p="Muzzleflash" t="Include">
+                  <e p="- Misc" t="Include">
+                    <e p="GunFire" t="Include" />
+                  </e>
+                  <e p="BulletFatMuzzle" t="Include" />
+                  <e p="BulletMuzzle" t="Include" />
+                  <e p="EnergyNovaMuzzle" t="Include" />
+                  <e p="EnergyNovaSmallMuzzle" t="Include" />
+                  <e p="FireballMuzzle" t="Include" />
+                  <e p="FrostMuzzle" t="Include" />
+                  <e p="GrenadeMuzzle" t="Include" />
+                  <e p="LaserMuzzle" t="Include" />
+                  <e p="LightningMuzzle" t="Include" />
+                  <e p="LiquidMuzzle" t="Include" />
+                  <e p="MagicMuzzle" t="Include" />
+                  <e p="MagicSoftMuzzle" t="Include" />
+                  <e p="MysticMuzzle" t="Include" />
+                  <e p="NukeMuzzle" t="Include" />
+                  <e p="RocketMuzzle" t="Include" />
+                  <e p="ShadowMuzzle" t="Include" />
+                  <e p="SoulMuzzle" t="Include" />
+                  <e p="SparkleMuzzle" t="Include" />
+                  <e p="StormMuzzle" t="Include" />
+                </e>
+                <e p="Nova" t="Include">
+                  <e p="Fire" t="Include" />
+                  <e p="Frost" t="Include" />
+                  <e p="Lightning" t="Include" />
+                  <e p="Standard" t="Include" />
+                </e>
+                <e p="Shield" t="Include" />
+                <e p="Sword" t="Include">
+                  <e p="- Legacy" t="Include">
+                    <e p="SwordHitCriticalLegacy" t="Include" />
+                    <e p="SwordHitLegacy" t="Include" />
+                  </e>
+                  <e p="Hit" t="Include">
+                    <e p="SwordHit" t="Include" />
+                    <e p="SwordHitCritical" t="Include" />
+                    <e p="SwordHitMagic" t="Include" />
+                    <e p="SwordHitMini" t="Include" />
+                  </e>
+                  <e p="Slash" t="Include">
+                    <e p="SwordSlashMini" t="Include" />
+                    <e p="SwordSlashThick" t="Include" />
+                    <e p="SwordSlashThin" t="Include" />
+                  </e>
+                  <e p="Spin" t="Include" />
+                  <e p="Wave" t="Include" />
+                  <e p="Whirlwind" t="Include" />
+                </e>
+                <e p="Text" t="Include" />
+              </e>
+              <e p="Environment" t="Include">
+                <e p="Bubbles" t="Include" />
+                <e p="Confetti" t="Include">
+                  <e p="Blast" t="Include" />
+                  <e p="Directional" t="Include" />
+                  <e p="Shower" t="Include" />
+                </e>
+                <e p="Dust" t="Include" />
+                <e p="Environment FX.txt" t="Include" />
+                <e p="Fire" t="Include">
+                  <e p="Candle" t="Include">
+                    <e p="CandleLight" t="Include" />
+                    <e p="CandleLightSoft" t="Include" />
+                  </e>
+                  <e p="Cartoon" t="Include">
+                    <e p="Field" t="Include" />
+                    <e p="Field Intense" t="Include" />
+                    <e p="Torch" t="Include" />
+                    <e p="Torch Intense" t="Include" />
+                  </e>
+                  <e p="Soft" t="Include">
+                    <e p="SoftFireAB" t="Include" />
+                    <e p="SoftFireADD" t="Include" />
+                    <e p="SoftFireBig" t="Include" />
+                    <e p="SoftTallFire" t="Include" />
+                  </e>
+                  <e p="Spiky" t="Include">
+                    <e p="Additive" t="Include" />
+                  </e>
+                  <e p="Trails" t="Include" />
+                </e>
+                <e p="Fireflies" t="Include" />
+                <e p="Firework" t="Include" />
+                <e p="Fog" t="Include">
+                  <e p="Black" t="Include" />
+                  <e p="Grey" t="Include" />
+                  <e p="White" t="Include" />
+                </e>
+                <e p="Lightning" t="Include">
+                  <e p="Sharp" t="Include" />
+                  <e p="Soft" t="Include" />
+                </e>
+                <e p="Smoke" t="Include">
+                  <e p="Dark" t="Include" />
+                  <e p="White" t="Include" />
+                </e>
+                <e p="Sparks" t="Include" />
+                <e p="Stars" t="Include">
+                  <e p="StarFog" t="Include" />
+                  <e p="StarFogFlow" t="Include" />
+                  <e p="StarVortex" t="Include" />
+                </e>
+                <e p="Underwater" t="Include" />
+                <e p="Water" t="Include">
+                  <e p="Boiling" t="Include" />
+                  <e p="Bubbles" t="Include" />
+                  <e p="Flowing" t="Include">
+                    <e p="Sharp" t="Include" />
+                    <e p="Soft" t="Include" />
+                  </e>
+                  <e p="Other" t="Include" />
+                </e>
+                <e p="Weather" t="Include">
+                  <e p="Rain" t="Include" />
+                  <e p="Snow" t="Include" />
+                  <e p="Wind &amp; Leaves" t="Include" />
+                </e>
+              </e>
+              <e p="Interactive" t="Include">
+                <e p="Cards" t="Include" />
+                <e p="Emojis" t="Include" />
+                <e p="Emojis 2" t="Include" />
+                <e p="Feathers" t="Include" />
+                <e p="Flares" t="Include">
+                  <e p="Sharp" t="Include" />
+                  <e p="Soft" t="Include" />
+                </e>
+                <e p="Healing" t="Include" />
+                <e p="Hearts" t="Include" />
+                <e p="Interactive FX.txt" t="Include" />
+                <e p="Loot" t="Include">
+                  <e p="ChestAppear" t="Include" />
+                  <e p="GlowOrb" t="Include" />
+                  <e p="ItemSkewedGlow" t="Include" />
+                  <e p="ItemSparkle" t="Include" />
+                  <e p="ItemSparkleSoft" t="Include" />
+                </e>
+                <e p="Money" t="Include">
+                  <e p="Bills" t="Include" />
+                  <e p="Coins" t="Include" />
+                </e>
+                <e p="Portals" t="Include">
+                  <e p="SimplePortal" t="Include" />
+                  <e p="SoftPortal" t="Include" />
+                  <e p="SpinPortal" t="Include" />
+                  <e p="VortexPortal" t="Include" />
+                  <e p="WavePortal" t="Include" />
+                </e>
+                <e p="Powerups" t="Include">
+                  <e p="PowerOrb" t="Include" />
+                  <e p="PowerOrbElemental" t="Include" />
+                  <e p="PowerOrbSciFi" t="Include" />
+                  <e p="PowerOrbSmall" t="Include" />
+                  <e p="PowerupActivate" t="Include" />
+                  <e p="PowerupGlow" t="Include" />
+                </e>
+                <e p="Sparkle" t="Include">
+                  <e p="SparkleArea" t="Include" />
+                  <e p="SparkleSolo" t="Include" />
+                </e>
+                <e p="Stars" t="Include" />
+                <e p="Trails" t="Include" />
+                <e p="Zone" t="Include">
+                  <e p="BasicZone" t="Include" />
+                  <e p="BasicZoneWall" t="Include" />
+                  <e p="MagicZone" t="Include" />
+                  <e p="SpinZone" t="Include" />
+                </e>
+              </e>
+              <e p="Misc" t="Include" />
+            </e>
+            <e p="Prefabs 2D" t="Include">
+              <e p="Blood" t="Include">
+                <e p="Green" t="Include" />
+                <e p="Red" t="Include" />
+                <e p="Yellow" t="Include" />
+              </e>
+              <e p="Explosions" t="Include" />
+              <e p="Water" t="Include">
+                <e p="Flowing" t="Include" />
+              </e>
+              <e p="Weather" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="ETFXLightFade.cs" t="Include" />
+              <e p="ETFXPitchRandomizer.cs" t="Include" />
+              <e p="ETFXRotation.cs" t="Include" />
+            </e>
+            <e p="Sound" t="Include" />
+            <e p="Textures" t="Include">
+              <e p="Emojis" t="Include" />
+              <e p="Text" t="Include" />
+            </e>
+            <e p="Upgrade" t="Include" />
+          </e>
           <e p="modern-weapons" t="Include">
             <e p="870 Shotgun" t="Include">
               <e p="Textures" t="Include" />
@@ -27,8 +404,122 @@
             </e>
             <e p="README.txt" t="Include" />
           </e>
+          <e p="Travis Game Assets" t="Include">
+            <e p="Hit Impact Effects" t="Include">
+              <e p="Demo Scene" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="HitImpactEffectsPreview.cs" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Materials" t="Include">
+                <e p="Guards" t="Include" />
+                <e p="Hits" t="Include" />
+              </e>
+              <e p="Pipeline Upgrade" t="Include" />
+              <e p="Prefabs" t="Include">
+                <e p="Guards" t="Include" />
+                <e p="Hits" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="JMO Assets" t="Include">
+          <e p="Cartoon FX Remaster" t="Include">
+            <e p="CFXR Assets" t="Include">
+              <e p="Editor" t="Include">
+                <e p="CFXR Editor.asmdef" t="Include" />
+                <e p="CFXR_ExpressionParser.cs" t="Include" />
+                <e p="CFXR_MaterialInspector.cs" t="Include" />
+                <e p="CFXR_ShaderImporter.cs" t="Include" />
+                <e p="CFXR_ShaderPostProcessor.cs" t="Include" />
+                <e p="CFXR_Styles.cs" t="Include" />
+              </e>
+              <e p="Graphics" t="Include" />
+              <e p="Meshes" t="Include" />
+              <e p="Misc" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="CFXR Runtime.asmdef" t="Include" />
+                <e p="CFXR_Effect.CameraShake.cs" t="Include" />
+                <e p="CFXR_Effect.cs" t="Include" />
+                <e p="CFXR_EmissionBySurface.cs" t="Include" />
+                <e p="CFXR_ParticleText.cs" t="Include" />
+                <e p="CFXR_ParticleTextFontAsset.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="CFXR.cginc" t="Include" />
+                <e p="CFXR_PASSES.cginc" t="Include" />
+                <e p="CFXR_SETTINGS.cginc" t="Include" />
+                <e p="CFXR_URP.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="CFXR Prefabs" t="Include">
+              <e p="Eerie" t="Include" />
+              <e p="Electric" t="Include" />
+              <e p="Explosions" t="Include" />
+              <e p="Fire" t="Include" />
+              <e p="Ice" t="Include" />
+              <e p="Impacts" t="Include" />
+              <e p="Light" t="Include" />
+              <e p="Liquids" t="Include" />
+              <e p="Magic Misc" t="Include" />
+              <e p="Misc" t="Include" />
+              <e p="Nature" t="Include" />
+              <e p="Sword Trails" t="Include">
+                <e p="Fire" t="Include" />
+                <e p="Ice" t="Include" />
+                <e p="Plain" t="Include" />
+              </e>
+              <e p="Texts" t="Include">
+                <e p="_Make your own text effect.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Demo Assets" t="Include">
+              <e p="CFXR Demo.asmdef" t="Include" />
+              <e p="CFXR_Demo.cs" t="Include" />
+              <e p="CFXR_Demo_Rotate.cs" t="Include" />
+              <e p="CFXR_Demo_Translate.cs" t="Include" />
+              <e p="Kino Bloom" t="Include">
+                <e p="Bloom.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="BloomEditor.cs" t="Include" />
+                  <e p="BloomGraphDrawer.cs" t="Include" />
+                  <e p="KinoBloom.Editor.asmdef" t="Include" />
+                </e>
+                <e p="Kino Bloom License.txt" t="Include" />
+                <e p="KinoBloom.Runtime.asmdef" t="Include" />
+                <e p="Shader" t="Include">
+                  <e p="Bloom.cginc" t="Include" />
+                  <e p="Bloom.shader" t="Include" />
+                </e>
+              </e>
+              <e p="UI" t="Include" />
+            </e>
+          </e>
+          <e p="Welcome Screen" t="Include">
+            <e p="CFXR.WelcomeScreen.asmdef" t="Include" />
+            <e p="CFXR_WelcomeScreen.cs" t="Include" />
+            <e p="CFXR_WelcomeScreen.uss" t="Include" />
+            <e p="CFXR_WelcomeScreen.uxml" t="Include" />
+          </e>
         </e>
         <e p="Materials" t="Include" />
+        <e p="OccaSoftware" t="Include">
+          <e p="Crosshairs" t="Include">
+            <e p="Art" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="OccaSoftware.Crosshairs.Editor.asmdef" t="Include" />
+              <e p="StartMenu.cs" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="PlayerContent" t="Include">
@@ -36,15 +527,31 @@
             <e p="Player.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="Target.cs" t="Include" />
+          <e p="WeaponContent" t="Include">
+            <e p="Gun.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Spags Assets" t="Include">
+          <e p="Textures" t="Include">
+            <e p="Demo" t="Include" />
+          </e>
         </e>
         <e p="Sprites" t="Include">
           <e p="Materials" t="Include" />
         </e>
         <e p="Textures" t="Include" />
       </e>
+      <e p="CFXR.WelcomeScreen.csproj" t="IncludeRecursive" />
+      <e p="CFXRDemo.csproj" t="IncludeRecursive" />
+      <e p="CFXREditor.csproj" t="IncludeRecursive" />
+      <e p="CFXRRuntime.csproj" t="IncludeRecursive" />
+      <e p="KinoBloom.Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
+      <e p="OccaSoftware.Crosshairs.Editor.csproj" t="IncludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="ToonyColorsPro.Demo.Editor.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>
