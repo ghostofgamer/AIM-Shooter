@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\VadimPC\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\VadimPC\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_AIM-Shooter.645133941.00" t="ExcludeRecursive" />
+    <e p="E:\Repository\AIM-Shooter" t="IncludeRecursive">
+      <e p="AIM-Shooter.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AddedAssets" t="Include">
+          <e p="modern-weapons" t="Include">
+            <e p="870 Shotgun" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="AK-47" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Extra" t="Include" />
+            <e p="L96 Sniper Rifle" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="M4 Carbine" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Pistol" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Materials" t="Include" />
+        <e p="Scenes" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="PlayerContent" t="Include">
+            <e p="LookMouse.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Materials" t="Include" />
+        </e>
+        <e p="Textures" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
