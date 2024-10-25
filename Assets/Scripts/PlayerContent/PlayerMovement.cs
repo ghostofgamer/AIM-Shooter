@@ -22,10 +22,10 @@ namespace PlayerContent
 
         private void Update()
         {
-            _speed = Input.GetKey(KeyCode.LeftShift) ? _speedRun : _speedWalk;
+            _speed = Input.GetKey(KeyCode.LeftShift) && _isGrounded ? _speedRun : _speedWalk;
             _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
             _characterController.height = Input.GetKey(KeyCode.LeftControl) ? 1.5f : 3;
-        
+
             if (_isGrounded && _velocity.y < 0)
             {
                 _velocity.y = -2f;
