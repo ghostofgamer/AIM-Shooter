@@ -834,6 +834,7 @@
             <e p="WeaponSwitching.cs" t="Include" />
           </e>
         </e>
+        <e p="Sounds" t="Include" />
         <e p="Sprites" t="Include" />
         <e p="Textures" t="Include" />
         <e p="UnityTechnologies" t="Include">

@@ -49,6 +49,7 @@ public class WeaponSwitching : MonoBehaviour
         foreach (Transform weapon in transform)
         {
             weapon.gameObject.SetActive(i == _selectedWeapon);
+            // weapon.gameObject.GetComponent<Gun>().ReadyGun();
             i++;
         }
     }

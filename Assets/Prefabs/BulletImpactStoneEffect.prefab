@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198000012529019072}
   - component: {fileID: 199000010308534436}
   - component: {fileID: 114407232850301898}
-  - component: {fileID: 2649530923795448982}
+  - component: {fileID: 2550421207903494255}
   m_Layer: 0
   m_Name: BulletImpactStoneEffect
   m_TagString: Untagged
@@ -273,8 +273,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
-      minScalar: 0.1
+      scalar: 3
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4688,14 +4688,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 5
---- !u!114 &2649530923795448982
+--- !u!114 &2550421207903494255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000010844420130}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c46919a85353b44eb459ef959c964be, type: 3}
   m_Name: 
