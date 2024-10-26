@@ -17,9 +17,15 @@ public class Gun : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private ParticleSystem _muzzleFlash;
     [SerializeField] private GameObject _impactEffect;
+    [SerializeField] private Decal _decalEffectStone;
+    [SerializeField] private Decal _decalEffectMetall;
 
     [SerializeField] private Animator _animator;
     [SerializeField] private bool _isAutomatic;
+
+
+    [SerializeField] private GameObject _decal;
+    [SerializeField] private Transform _container;
 
     private float _nextTimeToFire = 0f;
     private bool _isReloading = false;
@@ -47,13 +53,13 @@ public class Gun : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Fire1") && Time.time >= _nextTimeToFire)
+        if (Input.GetMouseButtonDown(0) && Time.time >= _nextTimeToFire)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;
             Shoot();
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= _nextTimeToFire && _isAutomatic)
+        if (Input.GetMouseButton(0) && Time.time >= _nextTimeToFire && _isAutomatic)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;
             Shoot();
@@ -76,7 +82,6 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Выстрел");
         RaycastHit hit;
 
         _animator.SetTrigger("Fire");
@@ -94,8 +99,33 @@ public class Gun : MonoBehaviour
             if (hit.rigidbody != null)
                 hit.rigidbody.AddForce(-hit.normal * _force);
 
-            GameObject impactGO = Instantiate(_impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+            GameObject impactGO;
+
+            if (hit.transform.GetComponent<Environment>().IsStone)
+            {
+                Debug.Log("Stone");
+                 // impactGO = Instantiate(_impactEffectStone, hit.point, Quaternion.LookRotation(hit.normal));
+                 impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
+            }
+            else
+            {
+                Debug.Log("Metall");
+                // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
+                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
+            }
+                
+
+
+            // GameObject impactGO = Instantiate(_impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            // Destroy(impactGO, 2f);
+
+            // GameObject decal = Instantiate(_decal, _container);
+            
+            /*GameObject decal = Instantiate(_decal, hit.point, Quaternion.LookRotation(hit.normal));
+            decal.transform.Translate(decal.transform.forward * 0.1f, Space.World);*/
+            
+            /*decal.transform.position = hit.point + hit.normal * 0.01f;
+            decal.transform.rotation = Quaternion.FromToRotation(decal.transform.up, hit.normal);*/
         }
     }
 }
