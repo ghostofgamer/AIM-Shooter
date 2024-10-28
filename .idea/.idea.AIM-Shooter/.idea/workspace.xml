@@ -24,38 +24,41 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Flash_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Flash_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_PointGlow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_PointGlow_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Shockwave_2x2_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Shockwave_2x2_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Smoke_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Smoke_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Smoke_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Travis Game Assets/Hit Impact Effects/Materials/Hits/HIE_Hit_01_Smoke_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/fps-ak-animated/source/Weapon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/fps-ak-animated/source/Weapon.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/fps-pistol-animated/source/WeaponPistol.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/fps-pistol-animated/source/WeaponPistol.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/LookMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/LookMouse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimChanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimChanger.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.data.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.framework.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.wasm.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/MemoryProfiler.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/fullscreen-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/progress-bar-empty-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/progress-bar-empty-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/progress-bar-full-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/progress-bar-full-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/unity-logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/unity-logo-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/webgl-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/TemplateData/webmemd-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +69,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AimContent/AimColorChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decals/Decal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../CrashMetal/Assets/Scripts/Assembly-CSharp/Menu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Target.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponChanger/WeaponCameraChanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponChanger/WeaponChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AimChanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../CrashMetal/Assets/Scripts/Assembly-CSharp/Menu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,11 +85,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Target.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Environment.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Decals/Decal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/../CrashMetal/Assets/Scripts/Assembly-CSharp/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerContent/LookMouse.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerContent/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AimChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" />
       </list>
     </option>
@@ -158,7 +164,8 @@
       <workItem from="1730029043562" duration="482000" />
       <workItem from="1730104547010" duration="13000" />
       <workItem from="1730105393991" duration="1000" />
-      <workItem from="1730105909140" duration="1494000" />
+      <workItem from="1730105909140" duration="3597000" />
+      <workItem from="1730111527462" duration="751000" />
     </task>
     <servers />
   </component>

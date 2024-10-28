@@ -34,7 +34,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private LookMouse _lookMouse;
     [SerializeField] private float _recoilX;
     [SerializeField] private float _recoilY;
-    
+
+
+    [SerializeField] private WeaponSwitching _weaponSwitching;
 
     private float _nextTimeToFire = 0f;
     private bool _isReloading = false;
@@ -45,10 +47,10 @@ public class Gun : MonoBehaviour
         _animator.SetBool("Reloading", false);
     }
 
-    public void ReadyGun()
+    /*public void ReadyGun()
     {
         _audioSource.PlayOneShot(_audioReady);
-    }
+    }*/
 
     private void Start()
     {
@@ -117,6 +119,30 @@ public class Gun : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * _force);
 
             GameObject impactGO;
+
+            if (hit.transform.GetComponent<WeaponChanger>())
+            {
+                _weaponSwitching.Selected(hit.transform.GetComponent<WeaponChanger>().Index);
+                return;
+            }
+            
+            if (hit.transform.GetComponent<AimChanger>())
+            {
+                hit.transform.GetComponent<AimChanger>().ChangeAim();
+                return;
+            }
+            
+            if (hit.transform.GetComponent<AimScaleChanger>())
+            {
+                hit.transform.GetComponent<AimScaleChanger>().ChangeScale();
+                return;
+            }
+            
+            if (hit.transform.GetComponent<AimColorChanger>())
+            {
+                hit.transform.GetComponent<AimColorChanger>().ChangeColor();
+                return;
+            }
 
             if (hit.transform.GetComponent<Environment>().IsStone)
             {

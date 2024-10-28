@@ -849,6 +849,7 @@
           <e p="Decals" t="Include">
             <e p="Decal.cs" t="Include" />
           </e>
+          <e p="Enums" t="Include" />
           <e p="Environment.cs" t="Include" />
           <e p="PlayerContent" t="Include">
             <e p="LookMouse.cs" t="Include" />
@@ -856,6 +857,10 @@
             <e p="PlayerMovement.cs" t="Include" />
           </e>
           <e p="Target.cs" t="Include" />
+          <e p="WeaponChanger" t="Include">
+            <e p="WeaponCameraChanger.cs" t="Include" />
+            <e p="WeaponChanger.cs" t="Include" />
+          </e>
           <e p="WeaponContent" t="Include">
             <e p="Gun.cs" t="Include" />
             <e p="WeaponSwitching.cs" t="Include" />
