@@ -30,6 +30,12 @@ public class Gun : MonoBehaviour
     [SerializeField] private AudioClip _audioFire;
     [SerializeField] private AudioClip _audioReady;
 
+
+    [SerializeField] private LookMouse _lookMouse;
+    [SerializeField] private float _recoilX;
+    [SerializeField] private float _recoilY;
+    
+
     private float _nextTimeToFire = 0f;
     private bool _isReloading = false;
 
@@ -91,13 +97,15 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+        // _lookMouse.ChangeOffset(Random.Range(0,_recoilX),Random.Range(-_recoilY,_recoilY));
+        
         RaycastHit hit;
         _audioSource.PlayOneShot(_audioFire);
         _animator.SetTrigger("Fire");
 
         _muzzleFlash.Play();
         _currentAmmo--;
-
+        
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
         {
             Target target = hit.transform.GetComponent<Target>();
@@ -126,7 +134,8 @@ public class Gun : MonoBehaviour
                 // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
                 impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
             }
-
+            // _lookMouse.ChangeOffset(Random.Range(0,_recoilX),Random.Range(-_recoilY,_recoilY));
+            _lookMouse.ChangeOffset(Random.Range(-_recoilY,_recoilY),Random.Range(0,_recoilX));
 
             // GameObject impactGO = Instantiate(_impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             // Destroy(impactGO, 2f);

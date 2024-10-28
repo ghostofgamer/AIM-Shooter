@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\VadimPC\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\VadimPC\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_AIM-Shooter.645133941.00" t="ExcludeRecursive" />
-    <e p="E:\Repository\AIM-Shooter" t="IncludeRecursive">
+    <e p="C:\Users\VadimPC\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_AIM-Shooter.-1714173068.00" t="ExcludeRecursive" />
+    <e p="D:\Repository\AIM-Shooter" t="IncludeRecursive">
       <e p="AIM-Shooter.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddedAssets" t="Include">
@@ -766,7 +768,7 @@
             <e p="Pistol" t="Include">
               <e p="Textures" t="Include" />
             </e>
-            <e p="README.txt" t="Include" />
+            <e p="Readme.txt" t="Include" />
           </e>
           <e p="Muzzleflash" t="Include">
             <e p="BuiltIn" t="Include">
@@ -783,7 +785,7 @@
                 <e p="StartMenu.cs" t="Include" />
                 <e p="Textures" t="Include" />
               </e>
-              <e p="README.txt" t="Include" />
+              <e p="Readme.txt" t="Include" />
             </e>
           </e>
           <e p="Spags Assets" t="Include">
@@ -809,16 +811,41 @@
                 <e p="Guards" t="Include" />
                 <e p="Hits" t="Include" />
               </e>
-              <e p="README.txt" t="Include" />
+              <e p="Readme.txt" t="Include" />
               <e p="Textures" t="Include" />
             </e>
           </e>
         </e>
         <e p="Animations" t="Include" />
         <e p="Materials" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Imgs" t="Include" />
+              </e>
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="Readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Prefabs" t="Include" />
+        <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AimChanger.cs" t="Include" />
+          <e p="CameraContent" t="Include">
+            <e p="CameraShake.cs" t="Include" />
+          </e>
           <e p="Decals" t="Include">
             <e p="Decal.cs" t="Include" />
           </e>
@@ -940,7 +967,7 @@
             <e p="Leaderboards" t="Include" />
             <e p="Payments" t="Include" />
           </e>
-          <e p="README.txt" t="Include" />
+          <e p="Readme.txt" t="Include" />
           <e p="ScriptsYG" t="Include">
             <e p="ActivityOnAuthorizationYG.cs" t="Include" />
             <e p="AdNotificationYG.cs" t="Include" />
@@ -961,6 +988,7 @@
                 <e p="ModifyIndexFile" t="Include">
                   <e p="AdWhenLoadingGame.cs" t="Include" />
                   <e p="BackgroundFormat.cs" t="Include" />
+                  <e p="BuildLogYG.txt" t="Include" />
                   <e p="LogoFormat.cs" t="Include" />
                   <e p="MetricaCounterID.cs" t="Include" />
                   <e p="ModifyBuildManager.cs" t="Include" />
