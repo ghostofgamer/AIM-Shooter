@@ -98,6 +98,7 @@ public class Gun : MonoBehaviour, IShootable
         yield return new WaitForSeconds(_reloadTime);
         _currentAmmo = _maxAmmo;
         _isReloading = false;
+        AmmoChanged?.Invoke(_currentAmmo);
     }
 
     private void SingleShotHandler()

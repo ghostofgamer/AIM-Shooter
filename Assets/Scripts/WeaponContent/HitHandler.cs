@@ -29,7 +29,7 @@ public class HitHandler : MonoBehaviour
             impactGO.transform.SetParent(hit.collider.transform);
             impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
         }
-        else
+        else if(!hit.transform.GetComponent<Environment>().IsStone)
         {
             // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
             impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));

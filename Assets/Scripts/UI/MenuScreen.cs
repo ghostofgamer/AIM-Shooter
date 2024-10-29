@@ -19,12 +19,14 @@ public class MenuScreen : MonoBehaviour
 
     public void Close()
     {
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         ChangeValue(0, false);
     }
 
-    private void Open()
+    public void Open()
     {
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         ChangeValue(1, true);
     }
