@@ -1302,6 +1302,7 @@ MonoBehaviour:
   _recoilX: 0
   _recoilY: 0
   _weaponSwitching: {fileID: 0}
+  _playerInput: {fileID: 0}
 --- !u!1 &53482094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,6 +4761,7 @@ MonoBehaviour:
   _recoilX: 60
   _recoilY: 60
   _weaponSwitching: {fileID: 340313234}
+  _playerInput: {fileID: 2066839212}
 --- !u!82 &1123049374
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6862,6 +6864,7 @@ MonoBehaviour:
   _recoilX: 300
   _recoilY: 300
   _weaponSwitching: {fileID: 340313234}
+  _playerInput: {fileID: 2066839212}
 --- !u!82 &1427142902
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7080,6 +7083,7 @@ MonoBehaviour:
   _recoilX: 0
   _recoilY: 0
   _weaponSwitching: {fileID: 0}
+  _playerInput: {fileID: 0}
 --- !u!1 &1468768893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,6 +9335,7 @@ GameObject:
   - component: {fileID: 2066839210}
   - component: {fileID: 2066839209}
   - component: {fileID: 2066839211}
+  - component: {fileID: 2066839212}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9404,6 +9409,18 @@ MonoBehaviour:
     m_Bits: 64
   _jumpHight: 3
   _gravity: -19.62
+--- !u!114 &2066839212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066839208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74facb56c9e9d744b87438e990c13639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078026264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4501e8be7a4b44245a4f87c5ce583c33, type: 3}
@@ -9450,6 +9467,7 @@ MonoBehaviour:
   _recoilX: 0
   _recoilY: 0
   _weaponSwitching: {fileID: 0}
+  _playerInput: {fileID: 0}
 --- !u!1 &2087211690
 GameObject:
   m_ObjectHideFlags: 0

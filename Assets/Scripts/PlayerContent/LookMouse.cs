@@ -3,7 +3,6 @@ using UnityEngine;
 public class LookMouse : MonoBehaviour
 {
     [SerializeField] private Transform _body;
-    [SerializeField] private float _sensitivityMouse = 100f;
     [SerializeField] private SensivitySettings _sensivitySettings;
 
     private float _mouseX;

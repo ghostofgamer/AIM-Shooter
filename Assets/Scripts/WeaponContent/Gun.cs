@@ -1,59 +1,61 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviour, IShootable
 {
-    [SerializeField] private float _damage = 10f;
+    [SerializeField] private int _damage = 10;
     [SerializeField] private float _range = 100f;
     [SerializeField] private float _force = 30f;
     [SerializeField] private float _fireRate = 15f;
-
     [SerializeField] private int _maxAmmo = 10;
     [SerializeField] private int _currentAmmo = -1;
     [SerializeField] private float _reloadTime = 1f;
-
-    [SerializeField] private Camera _camera;
-    [SerializeField] private ParticleSystem _muzzleFlash;
-    [SerializeField] private GameObject _impactEffect;
-    [SerializeField] private Decal _decalEffectStone;
-    [SerializeField] private Decal _decalEffectMetall;
-
-    [SerializeField] private Animator _animator;
-    [SerializeField] private bool _isAutomatic;
-
-
-    [SerializeField] private GameObject _decal;
-    [SerializeField] private Transform _container;
-
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _audioReload;
-    [SerializeField] private AudioClip _audioFire;
-    [SerializeField] private AudioClip _audioReady;
-
-
-    [SerializeField] private LookMouse _lookMouse;
     [SerializeField] private float _recoilX;
     [SerializeField] private float _recoilY;
+    [SerializeField] private float _timeToReady;
+    [SerializeField] private bool _isAutomatic;
 
+    [SerializeField] private LookMouse _lookMouse;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private HitHandler _hitHandler;
 
-    [SerializeField] private WeaponSwitching _weaponSwitching;
-
+    private WaitForSeconds _waitForSeconds;
     private float _nextTimeToFire = 0f;
     private bool _isReloading = false;
+    private bool _isReady;
+    private Coroutine _coroutine;
+    
+    public event Action Shooting;
+
+    public event Action<float> Reloading;
 
     private void OnEnable()
     {
+        _playerInput.RKeyPressed += ReloadWeapon;
+        _playerInput.MouseZeroKeyPressed += SingleShotHandler;
+        _playerInput.MouseZeroKeyHoldDown += AutomaticShotHandler;
         _isReloading = false;
-        _animator.SetBool("Reloading", false);
+        
+        if(_coroutine!=null)
+            StopCoroutine(_coroutine);
+        
+        _coroutine = StartCoroutine(PrepareWeapon());
     }
 
-    /*public void ReadyGun()
+    private void OnDisable()
     {
-        _audioSource.PlayOneShot(_audioReady);
-    }*/
+        _playerInput.RKeyPressed -= ReloadWeapon;
+        _playerInput.MouseZeroKeyPressed -= SingleShotHandler;
+        _playerInput.MouseZeroKeyHoldDown -= AutomaticShotHandler;
+    }
 
     private void Start()
     {
+        _waitForSeconds = new WaitForSeconds(_timeToReady);
+
         if (_currentAmmo == -1)
             _currentAmmo = _maxAmmo;
     }
@@ -63,116 +65,71 @@ public class Gun : MonoBehaviour
         if (_isReloading)
             return;
 
-        if (_currentAmmo <= 0 || Input.GetKey(KeyCode.R))
-        {
-            StartCoroutine(Reload());
+        if (_currentAmmo <= 0)
+            ReloadWeapon();
+    }
+
+    private IEnumerator PrepareWeapon()
+    {
+        _isReady = false;
+        yield return _waitForSeconds;
+        _isReady = true;
+    }
+    
+    private void ReloadWeapon()
+    {
+        if (_isReloading)
             return;
-        }
 
-        if (Input.GetMouseButtonDown(0) && Time.time >= _nextTimeToFire)
-        {
-            _nextTimeToFire = Time.time + 1f / _fireRate;
-            Shoot();
-        }
-
-        if (Input.GetMouseButton(0) && Time.time >= _nextTimeToFire && _isAutomatic)
-        {
-            _nextTimeToFire = Time.time + 1f / _fireRate;
-            Shoot();
-        }
+        StartCoroutine(Reload());
     }
 
     private IEnumerator Reload()
     {
-        _animator.ResetTrigger("Fire");
-
-        Debug.Log("Reloading");
         _isReloading = true;
-        _audioSource.PlayOneShot(_audioReload);
-        _animator.SetBool("Reloading", _isReloading);
-        yield return new WaitForSeconds(_reloadTime - 0.25f);
-        _animator.SetBool("Reloading", false);
-        yield return new WaitForSeconds(0.25f);
+        Reloading?.Invoke(_reloadTime);
+        yield return new WaitForSeconds(_reloadTime);
         _currentAmmo = _maxAmmo;
         _isReloading = false;
     }
 
-    private void Shoot()
+    private void SingleShotHandler()
     {
-        // _lookMouse.ChangeOffset(Random.Range(0,_recoilX),Random.Range(-_recoilY,_recoilY));
-        
-        RaycastHit hit;
-        _audioSource.PlayOneShot(_audioFire);
-        _animator.SetTrigger("Fire");
+        ShotHandler();
+    }
 
-        _muzzleFlash.Play();
+    private void AutomaticShotHandler()
+    {
+        if (_isAutomatic)
+            ShotHandler();
+    }
+
+    private void ShotHandler()
+    {
+        if (_isReloading)
+            return;
+
+        if (Time.time >= _nextTimeToFire)
+        {
+            _nextTimeToFire = Time.time + 1f / _fireRate;
+            Shoot();
+        }
+    }
+
+    public void Shoot()
+    {
+        if (!_isReady) return;
+
+        Shooting?.Invoke();
+        RaycastHit hit;
         _currentAmmo--;
-        
+
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
         {
-            Target target = hit.transform.GetComponent<Target>();
-
-            if (target != null)
-                target.TakeDamage(_damage);
-
-            if (hit.rigidbody != null)
-                hit.rigidbody.AddForce(-hit.normal * _force);
-
-            GameObject impactGO;
-
-            if (hit.transform.GetComponent<WeaponChanger>())
-            {
-                _weaponSwitching.Selected(hit.transform.GetComponent<WeaponChanger>().Index);
-                return;
-            }
-            
-            if (hit.transform.GetComponent<AimChanger>())
-            {
-                hit.transform.GetComponent<AimChanger>().ChangeAim();
-                return;
-            }
-            
-            if (hit.transform.GetComponent<AimScaleChanger>())
-            {
-                hit.transform.GetComponent<AimScaleChanger>().ChangeScale();
-                return;
-            }
-            
-            if (hit.transform.GetComponent<AimColorChanger>())
-            {
-                hit.transform.GetComponent<AimColorChanger>().ChangeColor();
-                return;
-            }
-
-            if (hit.transform.GetComponent<Environment>().IsStone)
-            {
-                Debug.Log("Stone");
-                // impactGO = Instantiate(_impactEffectStone, hit.point, Quaternion.LookRotation(hit.normal));
-                impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-              
-                impactGO.transform.SetParent(hit.collider.transform);
-                impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
-                
-            }
-            else
-            {
-                Debug.Log("Metall");
-                // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
-                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-            }
-            // _lookMouse.ChangeOffset(Random.Range(0,_recoilX),Random.Range(-_recoilY,_recoilY));
-            _lookMouse.ChangeOffset(Random.Range(-_recoilY,_recoilY),Random.Range(0,_recoilX));
-
-            // GameObject impactGO = Instantiate(_impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            // Destroy(impactGO, 2f);
-
-            // GameObject decal = Instantiate(_decal, _container);
-
-            /*GameObject decal = Instantiate(_decal, hit.point, Quaternion.LookRotation(hit.normal));
-            decal.transform.Translate(decal.transform.forward * 0.1f, Space.World);*/
-
-            /*decal.transform.position = hit.point + hit.normal * 0.01f;
-            decal.transform.rotation = Quaternion.FromToRotation(decal.transform.up, hit.normal);*/
+            _hitHandler.ProcessHit(hit, _damage, _force);
+            // _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));
         }
+
+        _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));
     }
 }
