@@ -14,17 +14,8 @@ public class HitHandler : MonoBehaviour
         if (hit.rigidbody != null)
             hit.rigidbody.AddForce(-hit.normal * force);
         
-        if (hit.transform.TryGetComponent(out WeaponChanger weaponChanger))
-            _weaponSwitching.Selected(weaponChanger.Index);
-        
-        if (hit.transform.TryGetComponent(out AimChanger aimChanger))
-            aimChanger.ChangeAim();
-        
-        if (hit.transform.TryGetComponent(out AimScaleChanger aimScaleChanger))
-            aimScaleChanger.ChangeScale();
-        
-        if (hit.transform.TryGetComponent(out AimColorChanger aimColorChanger))
-            aimColorChanger.ChangeColor();
+        if (hit.transform.TryGetComponent(out IValueChanger valueChanger))
+            valueChanger.ChangeValue();
         
         GameObject impactGO;
 

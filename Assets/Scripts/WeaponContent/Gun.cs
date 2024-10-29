@@ -32,6 +32,11 @@ public class Gun : MonoBehaviour, IShootable
 
     public event Action<float> Reloading;
 
+    private void Awake()
+    {
+        _waitForSeconds = new WaitForSeconds(_timeToReady);
+    }
+
     private void OnEnable()
     {
         _playerInput.RKeyPressed += ReloadWeapon;
@@ -54,8 +59,6 @@ public class Gun : MonoBehaviour, IShootable
 
     private void Start()
     {
-        _waitForSeconds = new WaitForSeconds(_timeToReady);
-
         if (_currentAmmo == -1)
             _currentAmmo = _maxAmmo;
     }
