@@ -31,8 +31,6 @@ public class SensivitySettings : MonoBehaviour
         // Преобразуйте значение слайдера в фактическое значение сенситивности
         SensitivityMouse = MapValue(sensitivitySlider.value, 0f, 5f, minSensitivity, maxSensitivity);
         _valueText.text = sensitivitySlider.value.ToString("F1");
-        // Используйте значение sensitivity в вашем коде
-        Debug.Log("Sensitivity: " + SensitivityMouse);
     }
 
     private float MapValue(float value, float fromMin, float fromMax, float toMin, float toMax)

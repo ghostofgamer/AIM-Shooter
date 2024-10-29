@@ -13,9 +13,12 @@ public class HitHandler : MonoBehaviour
 
         if (hit.rigidbody != null)
             hit.rigidbody.AddForce(-hit.normal * force);
-        
+
         if (hit.transform.TryGetComponent(out IValueChanger valueChanger))
+        {
             valueChanger.ChangeValue();
+            return;
+        }
         
         GameObject impactGO;
 

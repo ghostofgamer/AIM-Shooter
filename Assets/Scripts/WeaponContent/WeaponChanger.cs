@@ -8,6 +8,6 @@ public class WeaponChanger : MonoBehaviour, IValueChanger
     
     public void ChangeValue()
     {
-        _weaponSwitching.Selected(Index);
+        _weaponSwitching.Select(Index);
     }
 }

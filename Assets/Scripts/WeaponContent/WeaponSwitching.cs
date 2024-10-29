@@ -1,14 +1,22 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
     [SerializeField] private int _selectedWeapon = -1;
+    [SerializeField] private Gun[] _guns;
+
+    private Coroutine _coroutine;
+    
+    public event Action<Gun> WeaponSwitched;
+    
+    public Gun _currentGun { get; private set; }
 
     private void Start()
     {
         // SelectWeapon();
-        Selected(0);
+        Select(0);
     }
 
 
@@ -57,15 +65,18 @@ public class WeaponSwitching : MonoBehaviour
         }
     }
 
-    public void Selected(int index)
+    public void Select(int index)
     {
         if (_selectedWeapon == index)
             return;
 
-        StartCoroutine(Sel(index));
+        if(_coroutine!=null)
+            StopCoroutine(_coroutine);
+        
+        _coroutine = StartCoroutine(StartSelectWeapon(index));
     }
 
-    private IEnumerator Sel(int index)
+    private IEnumerator StartSelectWeapon(int index)
     {
         yield return new WaitForSeconds(0.15f);
 
@@ -73,11 +84,20 @@ public class WeaponSwitching : MonoBehaviour
 
         int i = 0;
 
-        foreach (Transform weapon in transform)
+        foreach (Gun gun in _guns)
+        {
+            _currentGun = _guns[_selectedWeapon];
+            gun.gameObject.SetActive(i == _selectedWeapon);
+            i++;
+        }
+        
+        WeaponSwitched?.Invoke(_currentGun);
+        Debug.Log("ТУТ");
+        /*foreach (Transform weapon in transform)
         {
             weapon.gameObject.SetActive(i == _selectedWeapon);
             // weapon.gameObject.GetComponent<Gun>().ReadyGun();
             i++;
-        }
+        }*/
     }
 }

@@ -27,14 +27,24 @@ public class Gun : MonoBehaviour, IShootable
     private bool _isReloading = false;
     private bool _isReady;
     private Coroutine _coroutine;
-    
+
     public event Action Shooting;
 
     public event Action<float> Reloading;
 
+    public event Action<int> AmmoChanged;
+    
+    public int CurrentAmmo => _currentAmmo;
+
     private void Awake()
     {
         _waitForSeconds = new WaitForSeconds(_timeToReady);
+
+        if (_currentAmmo == -1)
+        {
+            _currentAmmo = _maxAmmo;
+            AmmoChanged?.Invoke(_currentAmmo);
+        }
     }
 
     private void OnEnable()
@@ -55,12 +65,6 @@ public class Gun : MonoBehaviour, IShootable
         _playerInput.RKeyPressed -= ReloadWeapon;
         _playerInput.MouseZeroKeyPressed -= SingleShotHandler;
         _playerInput.MouseZeroKeyHoldDown -= AutomaticShotHandler;
-    }
-
-    private void Start()
-    {
-        if (_currentAmmo == -1)
-            _currentAmmo = _maxAmmo;
     }
 
     private void Update()
@@ -126,6 +130,7 @@ public class Gun : MonoBehaviour, IShootable
         Shooting?.Invoke();
         RaycastHit hit;
         _currentAmmo--;
+        AmmoChanged?.Invoke(_currentAmmo);
 
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
         {

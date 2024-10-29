@@ -23,11 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimColorChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimScaleChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimScaleChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Target.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/AmmoViewer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/ShootEffect.cs" root0="FORCE_HIGHLIGHTING" />
@@ -148,7 +151,7 @@
       <workItem from="1730105393991" duration="1000" />
       <workItem from="1730105909140" duration="3597000" />
       <workItem from="1730111527462" duration="751000" />
-      <workItem from="1730185809968" duration="9220000" />
+      <workItem from="1730185809968" duration="12901000" />
     </task>
     <servers />
   </component>
