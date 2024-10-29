@@ -23,42 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_08.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_09.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_11.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_15.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_16.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_17.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_18.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_20.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_21.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_23.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_24.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/OccaSoftware/Crosshairs/Art/Textures/Crosshair_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/fps-ak-animated/source/Weapon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/fps-ak-animated/source/Weapon.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/fps-pistol-animated/source/WeaponPistol.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/fps-pistol-animated/source/WeaponPistol.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimChanger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimChanger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/WeaponSwitching.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/LookMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerContent/LookMouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WebGLTemplates/PluginYG/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WebGLTemplates/PluginYG/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +47,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decals/Decal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Target.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SensivitySlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponChanger/WeaponCameraChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponChanger/WeaponChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +73,9 @@
     </option>
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2nstAkg7UiAQE2Sah1mg3ejoFxZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -104,7 +84,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "git-widget-placeholder": "main",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -166,6 +150,7 @@
       <workItem from="1730105393991" duration="1000" />
       <workItem from="1730105909140" duration="3597000" />
       <workItem from="1730111527462" duration="751000" />
+      <workItem from="1730185809968" duration="2499000" />
     </task>
     <servers />
   </component>
