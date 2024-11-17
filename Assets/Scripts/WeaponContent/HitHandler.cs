@@ -11,6 +11,15 @@ public class HitHandler : MonoBehaviour
         if (hit.transform.TryGetComponent(out IDamageable target))
             target.TakeDamage(damage);
 
+        if (hit.transform.TryGetComponent(out ITargetHandler targetHit))
+        {
+            targetHit.HandleHit();
+            return;
+        }
+        
+        if(hit.transform.TryGetComponent(out StartGame startGame))
+            startGame.Play();
+        
         if (hit.rigidbody != null)
             hit.rigidbody.AddForce(-hit.normal * force);
 

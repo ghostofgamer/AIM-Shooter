@@ -141,4 +141,10 @@ public class Gun : MonoBehaviour, IShootable
 
         _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));
     }
+
+    public void DefaultAmmo()
+    {
+        _currentAmmo = _maxAmmo;
+        AmmoChanged?.Invoke(_currentAmmo);
+    }
 }

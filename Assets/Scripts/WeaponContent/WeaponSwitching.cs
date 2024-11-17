@@ -79,7 +79,6 @@ public class WeaponSwitching : MonoBehaviour
     private IEnumerator StartSelectWeapon(int index)
     {
         yield return new WaitForSeconds(0.15f);
-
         _selectedWeapon = index;
 
         int i = 0;
@@ -87,17 +86,11 @@ public class WeaponSwitching : MonoBehaviour
         foreach (Gun gun in _guns)
         {
             _currentGun = _guns[_selectedWeapon];
+            _currentGun.DefaultAmmo();
             gun.gameObject.SetActive(i == _selectedWeapon);
             i++;
         }
         
         WeaponSwitched?.Invoke(_currentGun);
-        Debug.Log("ТУТ");
-        /*foreach (Transform weapon in transform)
-        {
-            weapon.gameObject.SetActive(i == _selectedWeapon);
-            // weapon.gameObject.GetComponent<Gun>().ReadyGun();
-            i++;
-        }*/
     }
 }
