@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HitHandler : MonoBehaviour
@@ -6,19 +7,22 @@ public class HitHandler : MonoBehaviour
     [SerializeField] private Decal _decalEffectStone;
     [SerializeField] private Decal _decalEffectMetall;
 
+    public event Action Hit;
+
     public void ProcessHit(RaycastHit hit, int damage, float force)
     {
         if (hit.transform.TryGetComponent(out IDamageable target))
             target.TakeDamage(damage);
+        
+        if (hit.transform.TryGetComponent(out ISettingsHandler settingsHandler))
+            settingsHandler.SetSettings();
 
         if (hit.transform.TryGetComponent(out ITargetHandler targetHit))
         {
             targetHit.HandleHit();
+            Hit.Invoke();
             return;
         }
-        
-        if(hit.transform.TryGetComponent(out StartGame startGame))
-            startGame.Play();
         
         if (hit.rigidbody != null)
             hit.rigidbody.AddForce(-hit.normal * force);

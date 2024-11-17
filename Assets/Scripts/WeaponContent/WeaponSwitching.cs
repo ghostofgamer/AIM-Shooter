@@ -13,11 +13,16 @@ public class WeaponSwitching : MonoBehaviour
     
     public Gun _currentGun { get; private set; }
 
-    private void Start()
+    private void Awake()
+    {
+        Select(0);
+    }
+    
+    /*private void Start()
     {
         // SelectWeapon();
         Select(0);
-    }
+    }*/
 
 
     private void Update()

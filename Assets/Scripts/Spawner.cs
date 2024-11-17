@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,15 +9,34 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _delay;
     [SerializeField] private Transform _contaner;
     [SerializeField] private DifficultySettings _difficultySettings;
-    
-    private void Start()
+    [SerializeField] private StartGame _startGame;
+
+    private Coroutine _coroutine;
+
+    private void OnEnable()
     {
-        StartCoroutine(SpawnTarget());
+        _startGame.GameStarting += StopSpawn;
+        _startGame.GameStarted += StartSpawn;
+    }
+
+    private void OnDisable()
+    {
+        _startGame.GameStarting -= StopSpawn;
+        _startGame.GameStarted -= StartSpawn;
+    }
+
+    public void StartSpawn(DifficultySettings difficultySettings)
+    {
+        _difficultySettings = difficultySettings;
+
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+
+        _coroutine = StartCoroutine(SpawnTarget());
     }
 
     private IEnumerator SpawnTarget()
     {
-        yield return new WaitForSeconds(3f);
         int spawnCount = 500;
         float minDistance = _difficultySettings.minDistanceBetweenTargets;
         Vector3 spawnRange = _difficultySettings.spawnRange;
@@ -49,5 +69,17 @@ public class Spawner : MonoBehaviour
             spawnCount--;
             yield return new WaitForSeconds(_difficultySettings.spawnDelay);
         }
+    }
+
+    private void StopSpawn()
+    {
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+            _coroutine = null;
+        }
+
+        foreach (Transform child in _contaner)
+            child.gameObject.SetActive(false);
     }
 }
