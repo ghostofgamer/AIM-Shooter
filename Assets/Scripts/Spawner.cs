@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _contaner;
     [SerializeField] private DifficultySettings _difficultySettings;
     [SerializeField] private StartGame _startGame;
+    [SerializeField]private RecordCounter _recordCounter;
 
     private Coroutine _coroutine;
 
@@ -65,7 +66,8 @@ public class Spawner : MonoBehaviour
                 }
             }
 
-            Instantiate(_prefab, newPos, Quaternion.identity, _contaner);
+            Target target = Instantiate(_prefab, newPos, Quaternion.identity, _contaner).GetComponent<Target>();
+            target.Init(_recordCounter);
             spawnCount--;
             yield return new WaitForSeconds(_difficultySettings.spawnDelay);
         }

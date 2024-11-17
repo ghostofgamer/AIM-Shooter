@@ -1,12 +1,21 @@
 using UnityEngine;
 
-public class Target : MonoBehaviour,IDamageable,ITargetHandler
+public class Target : MonoBehaviour, IDamageable, ITargetHandler
 {
     [SerializeField] private int _health = 50;
+    
+    private RecordCounter _recordCounter;
 
-    private void Die()
+    public void Init(RecordCounter recordCounter)
     {
-        Destroy(gameObject);
+        _recordCounter = recordCounter;
+    }
+    
+    public void Die()
+    {
+        Debug.Log("Сам ВЫКЛ");
+        _recordCounter.AddDie();
+        gameObject.SetActive(false);
     }
 
     public void TakeDamage(int damage)
@@ -17,14 +26,5 @@ public class Target : MonoBehaviour,IDamageable,ITargetHandler
             Die();
     }
 
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
-    public void HandleHit()
-    {
-        Debug.Log("ВЫКЛ");
-        gameObject.SetActive(false);
-    }
+    public void HandleHit() => gameObject.SetActive(false);
 }

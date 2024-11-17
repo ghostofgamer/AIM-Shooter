@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RecordCounter : MonoBehaviour
@@ -9,13 +10,15 @@ public class RecordCounter : MonoBehaviour
     private Gun _gun;
     private int _shots;
     private int _hits;
+    private int _dies;
     private float _percent;
 
+    public event Action<int,int,float > LevelCompleted;
+  
     private void OnEnable()
     {
         _startGame.GameStarting += ClearAllData;
         _hitHandler.Hit += AddHit;
-        // _gun.Shooting += AddShoot;
         _weaponSwitching.WeaponSwitched += ChangeGun;
     }
 
@@ -25,6 +28,20 @@ public class RecordCounter : MonoBehaviour
         _hitHandler.Hit -= AddHit;
         _gun.Shooting -= AddShoot;
         _weaponSwitching.WeaponSwitched -= ChangeGun;
+    }
+
+    public void AddDie()
+    {
+        _dies++;
+
+        if (_dies >= 3)
+            LevelCompleted?.Invoke(_shots,_hits,GetPercent());
+    }
+
+    public float GetPercent()
+    {
+        _percent = (float)_hits / _shots * 100;
+        return _percent;
     }
 
     private void ClearAllData()
@@ -37,12 +54,6 @@ public class RecordCounter : MonoBehaviour
     private void AddHit() => _hits++;
 
     private void AddShoot() => _shots++;
-
-    public float GetPercent()
-    {
-        _percent = (float)_hits / _shots * 100;
-        return _percent;
-    }
 
     private void ChangeGun(Gun gun)
     {

@@ -35,6 +35,6 @@ public class TargetScaler : MonoBehaviour
         }
 
         transform.localScale = Vector3.zero;
-        gameObject.SetActive(false);
+        _target.Die();
     }
 }
