@@ -25,10 +25,8 @@
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecordCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerContent/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecordCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/DifficultySettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartGameContent/StartGameButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/ChooseLevelButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -163,7 +161,8 @@
       <workItem from="1730111527462" duration="751000" />
       <workItem from="1730185809968" duration="17986000" />
       <workItem from="1730279524895" duration="9605000" />
-      <workItem from="1731829826657" duration="13393000" />
+      <workItem from="1731829826657" duration="13566000" />
+      <workItem from="1732438231075" duration="2140000" />
     </task>
     <servers />
   </component>
