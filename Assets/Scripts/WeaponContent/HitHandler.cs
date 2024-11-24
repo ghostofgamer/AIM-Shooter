@@ -8,11 +8,15 @@ public class HitHandler : MonoBehaviour
     [SerializeField] private Decal _decalEffectMetall;
 
     public event Action Hit;
+    
+    public event Action HitedBomb;
 
     public void ProcessHit(RaycastHit hit, int damage, float force)
     {
         /*if (hit.transform.TryGetComponent(out IDamageable target))
             target.TakeDamage(damage);*/
+        if (hit.transform.TryGetComponent(out Bomb bomb))
+            HitedBomb?.Invoke();
         
         if (hit.transform.TryGetComponent(out ISettingsHandler settingsHandler))
             settingsHandler.SetSettings();

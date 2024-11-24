@@ -55,8 +55,8 @@ public class NinjaSpawn : MonoBehaviour
             GameObject targetObject = Instantiate(prefab,position,rotation);
             
             if (targetObject.GetComponent<SlicedTarget>())
-              targetObject.GetComponent<SlicedTarget>().Init(_recordCounter);  
-            
+              targetObject.GetComponent<SlicedTarget>().Init(_recordCounter);
+    
             // Destroy(targetObject, _lifeTime);
             
             float force = Random.Range(_minForce,_maxForce);

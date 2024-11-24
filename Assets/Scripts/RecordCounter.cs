@@ -19,6 +19,7 @@ public class RecordCounter : MonoBehaviour
     {
         _startGame.GameStarting += ClearAllData;
         _hitHandler.Hit += AddHit;
+        _hitHandler.HitedBomb+=LevelOver;
         _weaponSwitching.WeaponSwitched += ChangeGun;
     }
 
@@ -26,6 +27,7 @@ public class RecordCounter : MonoBehaviour
     {
         _startGame.GameStarting -= ClearAllData;
         _hitHandler.Hit -= AddHit;
+        _hitHandler.HitedBomb-=LevelOver;
         _gun.Shooting -= AddShoot;
         _weaponSwitching.WeaponSwitched -= ChangeGun;
     }
@@ -35,7 +37,12 @@ public class RecordCounter : MonoBehaviour
         _dies++;
 
         if (_dies >= 3)
-            LevelCompleted?.Invoke(_shots,_hits,GetPercent());
+            LevelOver();
+    }
+
+    public void LevelOver()
+    {
+        LevelCompleted?.Invoke(_shots,_hits,GetPercent());
     }
 
     public float GetPercent()
