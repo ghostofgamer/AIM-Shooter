@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3608216076999993653}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24199398, y: 0.24199398, z: 0.2750774}
+  m_LocalPosition: {x: 0, y: -0.094566, z: 0}
+  m_LocalScale: {x: 0.2847785, y: 0.2847785, z: 0.3237111}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3203899001575847330}
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4809165862134410859}
   - component: {fileID: 385559145868306330}
   - component: {fileID: 5236931834127613923}
+  - component: {fileID: 764837984851341766}
   m_Layer: 0
   m_Name: Wine Bottle_cell.004
   m_TagString: Untagged
@@ -169,6 +170,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &764837984851341766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625261349624483816}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3673299053021326860
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +208,7 @@ GameObject:
   - component: {fileID: 6817845230088196480}
   - component: {fileID: 8242138129195474309}
   - component: {fileID: 8022098930020461695}
+  - component: {fileID: 978524844483352701}
   m_Layer: 0
   m_Name: Wine Bottle_cell
   m_TagString: Untagged
@@ -253,6 +282,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &978524844483352701
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673299053021326860}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5362483793828265517
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +320,7 @@ GameObject:
   - component: {fileID: 5698095788228667381}
   - component: {fileID: 3882619438993094267}
   - component: {fileID: 6101388070315647547}
+  - component: {fileID: 714833281962388109}
   m_Layer: 0
   m_Name: Wine Bottle_cell.003
   m_TagString: Untagged
@@ -337,6 +394,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &714833281962388109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362483793828265517}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6118621017452514175
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,10 +430,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3203899001575847330}
-  - component: {fileID: 2662751076782649069}
   - component: {fileID: 21615314059230093}
   - component: {fileID: 5157305407400554408}
   - component: {fileID: 2801352596212896353}
+  - component: {fileID: -4451064528178238973}
   m_Layer: 0
   m_Name: BottleWine
   m_TagString: Untagged
@@ -375,19 +459,6 @@ Transform:
   - {fileID: 8236370315353345387}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2662751076782649069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6118621017452514175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4122ad0f277f1ab45b00cb2f73aad99f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 50
 --- !u!136 &21615314059230093
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -408,9 +479,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.195
-  m_Height: 1.0262885
+  m_Height: 1.0736275
   m_Direction: 1
-  m_Center: {x: 0, y: 0.45135236, z: 0}
+  m_Center: {x: 0, y: 0.3311534, z: 0}
 --- !u!136 &5157305407400554408
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -431,9 +502,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.08
-  m_Height: 0.5536847
+  m_Height: 0.6771574
   m_Direction: 1
-  m_Center: {x: 0, y: 1.1086457, z: 0}
+  m_Center: {x: 0, y: 0.8845854, z: 0}
 --- !u!54 &2801352596212896353
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -461,6 +532,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4451064528178238973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118621017452514175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ebb00fc5e84754da1a4146b432a527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultPrefab: {fileID: 3608216076999993653}
+  _slicedPrefab: {fileID: 8720841920261461969}
+  _targetColliders:
+  - {fileID: 21615314059230093}
+  - {fileID: 5157305407400554408}
 --- !u!1 &6451825397987378230
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +560,7 @@ GameObject:
   - component: {fileID: 5449952438737468597}
   - component: {fileID: 6560481272256371735}
   - component: {fileID: 5091080005944500730}
+  - component: {fileID: 3006792268509218131}
   m_Layer: 0
   m_Name: Wine Bottle_cell.006
   m_TagString: Untagged
@@ -545,6 +634,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3006792268509218131
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6451825397987378230}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6970860502922792504
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +757,7 @@ GameObject:
   - component: {fileID: 4287378774250362028}
   - component: {fileID: 7247011334585017362}
   - component: {fileID: 8583349539609239351}
+  - component: {fileID: 5545513640234946562}
   m_Layer: 0
   m_Name: Wine Bottle_cell.007
   m_TagString: Untagged
@@ -714,6 +831,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5545513640234946562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8271971244642801314}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8720841920261461969
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8236370315353345387}
   m_Layer: 0
-  m_Name: untitled
+  m_Name: Sliced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -739,8 +883,8 @@ Transform:
   m_GameObject: {fileID: 8720841920261461969}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000014901161, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
+  m_LocalPosition: {x: 0, y: -0.094566, z: 0}
+  m_LocalScale: {x: 0.15744407, y: 0.15744407, z: 0.15744407}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6817845230088196480}
@@ -762,6 +906,7 @@ GameObject:
   - component: {fileID: 244881137688580895}
   - component: {fileID: 6845798067903492069}
   - component: {fileID: 7131566467623099379}
+  - component: {fileID: 1746317327072710931}
   m_Layer: 0
   m_Name: Wine Bottle_cell.005
   m_TagString: Untagged
@@ -836,6 +981,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1746317327072710931
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854621023273991337}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1760033763119810055
 PrefabInstance:
   m_ObjectHideFlags: 0

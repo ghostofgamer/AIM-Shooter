@@ -5,6 +5,8 @@ using Random = UnityEngine.Random;
 
 public class Gun : MonoBehaviour, IShootable
 {
+    int layerToIgnore = 8; 
+    
     [SerializeField] private int _damage = 10;
     [SerializeField] private float _range = 100f;
     [SerializeField] private float _force = 30f;
@@ -132,8 +134,10 @@ public class Gun : MonoBehaviour, IShootable
         RaycastHit hit;
         _currentAmmo--;
         AmmoChanged?.Invoke(_currentAmmo);
-
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
+        
+        int layerMask = ~(1 << layerToIgnore);
+        
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range,layerMask))
         {
             _hitHandler.ProcessHit(hit, _damage, _force);
             // _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));

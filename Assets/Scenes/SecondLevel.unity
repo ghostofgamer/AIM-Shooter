@@ -2908,7 +2908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294099647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AimNinja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2924,7 +2924,7 @@ Transform:
   m_GameObject: {fileID: 294099646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8793451, y: 9.690587, z: -39.640263}
+  m_LocalPosition: {x: 0.8793451, y: 10.86, z: -39.640263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9824,7 +9824,7 @@ GameObject:
   - component: {fileID: 1331933536}
   - component: {fileID: 1331933535}
   - component: {fileID: 1331933537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9840,8 +9840,8 @@ Transform:
   m_GameObject: {fileID: 1331933533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7631, y: -4.79, z: -15.19}
-  m_LocalScale: {x: 13.167725, y: 1, z: 1}
+  m_LocalPosition: {x: 1.7631, y: -6.58, z: -15.6528}
+  m_LocalScale: {x: 13.167725, y: 1, z: 1.9256}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 294099647}
@@ -9887,15 +9887,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6406c389deae18b4e9a90e3ebf3faf22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6118621017452514175, guid: 0789bc3961e05cb4aabcab0980d4f744, type: 3}
+  _prefabs:
+  - {fileID: 6118621017452514175, guid: 0789bc3961e05cb4aabcab0980d4f744, type: 3}
+  _bombPrefab: {fileID: 6808452079761921661, guid: c15512ac29be16e46a78f091dbe8f479, type: 3}
   _spawner: {fileID: 1331933535}
-  _minDelay: 0.3
-  _maxDelay: 1
+  _minDelay: 0.5
+  _maxDelay: 1.5
   _minAngle: -15
   _maxAngle: 15
   _minForce: 10
   _maxForce: 15
-  _lifeTime: 4
+  _lifeTime: 3
+  _maxTorque: 3
+  _spawnBobmChance: 0.05
+  _recordCounter: {fileID: 783540866}
 --- !u!1 &1346498079
 GameObject:
   m_ObjectHideFlags: 0
@@ -14224,8 +14229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066839208}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.96592593, z: -0, w: 0.25881872}
-  m_LocalPosition: {x: 0, y: 2.16, z: 0}
+  m_LocalRotation: {x: -0, y: -0.9659257, z: -0, w: -0.25881976}
+  m_LocalPosition: {x: -6.39, y: 5.66, z: -26.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14233,7 +14238,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 1205339380}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -150, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -210, z: 0}
 --- !u!114 &2066839211
 MonoBehaviour:
   m_ObjectHideFlags: 0
