@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HitPositionEnemy : MonoBehaviour,IDamageable
@@ -7,7 +8,12 @@ public class HitPositionEnemy : MonoBehaviour,IDamageable
     [SerializeField] private bool _isHead;
 
     public bool IsHead => _isHead;
-    
+
+    private void Start()
+    {
+        
+    }
+
     public void Damage(int damage)
     {
         if (_isHead)
