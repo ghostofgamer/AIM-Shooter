@@ -29,7 +29,7 @@ public class HitHandler : MonoBehaviour
         if (hit.transform.TryGetComponent(out HitPositionEnemy hitPosition))
         {
             // hitPosition.Damage(damage);
-            hitPosition.Damage(0);
+            hitPosition.Damage(damage);
 
           
             

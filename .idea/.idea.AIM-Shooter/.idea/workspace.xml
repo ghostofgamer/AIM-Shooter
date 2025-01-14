@@ -24,7 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/3D Characters Zombie City Streets Lowpoly Pack - Lite/Anim/ZombieAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/3D Characters Zombie City Streets Lowpoly Pack - Lite/Anim/ZombieAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemys/Zombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AimContent/AimColorChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decals/Decal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyContent/HitPositionEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyContent/ZombieMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ISettingsHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screens/SettingsScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Wall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/AmmoViewer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/Gun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,18 +98,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Program Files\UnityHub\EditorUnity\2022.3.14f1\Editor\Unity.exe" />
@@ -170,7 +177,8 @@
       <workItem from="1734259917007" duration="1263000" />
       <workItem from="1736251696888" duration="37000" />
       <workItem from="1736251785276" duration="86000" />
-      <workItem from="1736411540119" duration="4322000" />
+      <workItem from="1736411540119" duration="5087000" />
+      <workItem from="1736842159002" duration="7084000" />
     </task>
     <servers />
   </component>
