@@ -26,7 +26,7 @@ public class KillsZombieCounter : MonoBehaviour
         Debug.Log("килл " + _killsCount);
     }
 
-    private void Clear()
+    public void Clear()
     {
         _killsCount = 0;
         ShowScore();

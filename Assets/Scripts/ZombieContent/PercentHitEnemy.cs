@@ -60,4 +60,12 @@ public class PercentHitEnemy : MonoBehaviour
     {
         _percentText.text = _currentPercent.ToString("F1") + "%";
     }
+
+    public void Clear()
+    {
+        _currentHits = 0;
+        _currentShootAmount = 0;
+        _currentPercent = 0;
+        Show();
+    }
 }

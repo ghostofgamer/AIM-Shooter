@@ -87,7 +87,12 @@ public class ZombieMovement : MonoBehaviour
         waitTime = Random.Range(minWaitTime, maxWaitTime);
         float x = Random.Range(_minX, _maxX);
         float z = Random.Range(_minZ, _maxZ);
-        targetPosition = new Vector3(x, transform.position.y, z);
+        
+        Vector3 localTargetPosition = new Vector3(x, 0, z);
+        targetPosition = transform.parent.TransformPoint(localTargetPosition);
+        targetPosition.y = transform.position.y;
+        
+        // targetPosition = new Vector3(x, transform.position.y, z);
     }
 
     public void SetValue(float value,float timeWait)
