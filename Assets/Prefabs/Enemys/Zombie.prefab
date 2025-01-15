@@ -724,6 +724,9 @@ MonoBehaviour:
   - {fileID: 8891252729702157653}
   - {fileID: 664316171002655012}
   - {fileID: 1940342652038419196}
+  _headCollieder: {fileID: 6068428799044606139}
+  _zombieReviver: {fileID: 0}
+  _zombieKillCounter: {fileID: 0}
 --- !u!114 &7283578184798869188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,13 +739,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464efe4d2d963e648844e1890881fd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  _enemy: {fileID: 0}
+  _moveSpeed: 2
   minWaitTime: 1
   maxWaitTime: 3
   _minX: -55
   _maxX: -40
   _minZ: -50
   _maxZ: -30
+  _animator: {fileID: 0}
+  _isLoppedPosition: 1
 --- !u!1 &3988262107062273159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2626715512951081392, guid: 11dc877362a2b024689604f7a58fdc65, type: 3}

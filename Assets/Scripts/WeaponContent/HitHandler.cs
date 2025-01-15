@@ -14,36 +14,44 @@ public class HitHandler : MonoBehaviour
     public event Action Hit;
 
     public event Action HitedBomb;
+    
+    public event Action HeadHited;
 
     public void ProcessHit(RaycastHit hit, int damage, float force)
     {
+        if (hit.transform.TryGetComponent(out ZombieModeButton zombieModeButton))
+        {
+            zombieModeButton.Click();
+            // return;
+        }
+
         /*if (hit.transform.TryGetComponent(out IDamageable target))
         {
             target.TakeDamage(damage);
 
             return;
         }*/
-        
+
         GameObject impactBlood;
 
         if (hit.transform.TryGetComponent(out HitPositionEnemy hitPosition))
         {
             // hitPosition.Damage(damage);
-            hitPosition.Damage(damage);
-
-          
             
             if (hitPosition.IsHead)
             {
+                hitPosition.Damage(damage);
+                HeadHited?.Invoke();
                 int index = Random.Range(0, _headShootEffects.Length);
-                impactBlood = Instantiate(_headShootEffects[index].gameObject, hit.point, Quaternion.LookRotation(hit.normal),
+                impactBlood = Instantiate(_headShootEffects[index].gameObject, hit.point,
+                    Quaternion.LookRotation(hit.normal),
                     _bloodContainer);
                 impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);
             }
             else
             {
                 int index = Random.Range(0, _bloodHitEffects.Length);
-                
+
                 impactBlood = Instantiate(_bloodHitEffects[index].gameObject, hit.point,
                     Quaternion.LookRotation(hit.normal), _bloodContainer);
                 impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);

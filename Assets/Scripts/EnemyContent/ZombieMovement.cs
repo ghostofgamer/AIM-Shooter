@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class ZombieMovement : MonoBehaviour
 {
     [SerializeField] private Enemy _enemy;
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float _moveSpeed = 2f;
     [SerializeField] private float minWaitTime = 1f;
     [SerializeField] private float maxWaitTime = 3f;
     [SerializeField] private float _minX = 3f;
@@ -20,98 +18,81 @@ public class ZombieMovement : MonoBehaviour
     private float waitTime;
     private float waitCounter;
     private bool _isWaiting = true;
+    [SerializeField] private bool _isLoppedPosition = true;
+    private Coroutine _moveCoroutine;
 
     private void OnEnable()
     {
         if (_enemy.Health <= 0)
         {
-            _enemy.StartRevive();
-            StartCoroutine(NewPosition());
+            SearchTargetPosition();
         }
     }
 
     private void Start()
     {
-        // SetNewTargetPosition();
-        StartCoroutine(NewPosition());
+        // SearchTargetPosition();
     }
 
     private void Update()
     {
-        if (!_isWaiting && _enemy.Health > 0)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            transform.LookAt(targetPosition);
+        if (_isLoppedPosition || _enemy.Health <= 0)
+            return;
 
+        if (_isWaiting)
+        {
+            waitCounter += Time.deltaTime;
+
+            if (waitCounter >= waitTime)
+            {
+                _isWaiting = false;
+                _animator.Play("Walk");
+            }
+        }
+        else if (!_isWaiting && _enemy.Health > 0)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, _moveSpeed * Time.deltaTime);
+            // transform.LookAt(targetPosition);
+            
+            Quaternion targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
+            
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-                StartCoroutine(NewPosition());
+            {
+                _animator.Play("Idle");
+                SearchTargetPosition();
+            }
         }
         else
         {
             _isWaiting = true;
-            StopCoroutine(NewPosition());
-        }
-
-
-        if (Vector3.Distance(transform.position, targetPosition) > 0.1f)
-        {
-            /*transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            transform.LookAt(targetPosition);
-
-            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-                StartCoroutine(NewPosition());*/
-
-
-            /*if (waitCounter > 0)
-            {
-                waitCounter -= Time.deltaTime;
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-                transform.LookAt(targetPosition);
-
-                if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-                {
-                    /*Debug.Log("IDLE");
-                    _animator.Play("Idle");
-                    waitCounter = waitTime;
-                    SetNewTargetPosition();#1#
-                    NewPosition();
-                }
-            }*/
         }
     }
 
-    private IEnumerator NewPosition()
+    public void SetLoopPositionValue(bool value)
+    {
+        _isLoppedPosition = value;
+
+        if (value)
+        {
+            _animator.Play("Idle");
+            _isWaiting = true;
+        }
+    }
+
+    private void SearchTargetPosition()
     {
         _isWaiting = true;
+        waitCounter = 0;
         waitTime = Random.Range(minWaitTime, maxWaitTime);
-        _animator.Play("Idle");
-        Debug.Log("Time: " + waitTime);
-        yield return new WaitForSeconds(waitTime);
-        _animator.Play("Walk");
         float x = Random.Range(_minX, _maxX);
         float z = Random.Range(_minZ, _maxZ);
         targetPosition = new Vector3(x, transform.position.y, z);
-        _isWaiting = false;
     }
 
-    private void SetNewTargetPosition()
+    public void SetValue(float value,float timeWait)
     {
-        Debug.Log("SetNewTargetPosition");
-        float x = Random.Range(_minX, _maxX);
-        float z = Random.Range(_minZ, _maxZ);
-        targetPosition = new Vector3(x, transform.position.y, z);
-        waitTime = Random.Range(minWaitTime, maxWaitTime);
+        _moveSpeed = value;
+        maxWaitTime = timeWait;
     }
-
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.TryGetComponent(out Wall wall))
-        {
-            SetNewTargetPosition();
-        }
-    }*/
 }
