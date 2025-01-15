@@ -3,18 +3,21 @@ using UnityEngine;
 public class Target : MonoBehaviour, IDamageable, ITargetHandler
 {
     [SerializeField] private int _health = 50;
-    
-    private RecordCounter _recordCounter;
+    [SerializeField]  private bool _isDeadCount = true;
 
+    private RecordCounter _recordCounter;
+    
     public void Init(RecordCounter recordCounter)
     {
         _recordCounter = recordCounter;
     }
-    
+
     public void Die()
     {
-        Debug.Log("Сам ВЫКЛ");
-        _recordCounter.AddDie();
+        // Debug.Log("Сам ВЫКЛ");
+        if (_isDeadCount)
+            _recordCounter.AddDie();
+
         gameObject.SetActive(false);
     }
 

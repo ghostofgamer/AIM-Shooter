@@ -6,13 +6,14 @@ using UnityEngine;
 public class TargetScaler : MonoBehaviour
 {
     [SerializeField] private float _duration;
+    [SerializeField] private Vector3 _defaultScale;
 
     private float _elapsedTime;
     private Target _target;
 
     private void OnEnable()
     {
-        transform.localScale = Vector3.one;
+        transform.localScale = _defaultScale;
     }
 
     private void Start()

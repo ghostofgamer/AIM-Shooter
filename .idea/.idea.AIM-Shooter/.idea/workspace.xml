@@ -24,8 +24,35 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/ZombieMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyContent/ZombieMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Toony Colors Pro/Demo TCP2/Cat Demo Assets/Materials/TCP2_Demo_BrickWall.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Toony Colors Pro/Demo TCP2/Cat Demo Assets/Materials/TCP2_Demo_BrickWall.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Toony Colors Pro/Demo TCP2/Cat Demo Assets/Materials/TCP2_Demo_BrickWall_Flat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Toony Colors Pro/Demo TCP2/Cat Demo Assets/Materials/TCP2_Demo_BrickWall_Flat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Target.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Target.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecordCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Roof.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Roof.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WallLong.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WallLong.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WallMini.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WallMini.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/38f4f4b09f4176c60795bd11c9be444b.wasm.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/482ef964d2c7e56f9c31183aeba9c5df.data.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/87510621013f1b841d69821dbea9397e.js.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +208,7 @@
       <workItem from="1736251785276" duration="86000" />
       <workItem from="1736411540119" duration="5087000" />
       <workItem from="1736842159002" duration="14492000" />
-      <workItem from="1736930419981" duration="8453000" />
+      <workItem from="1736930419981" duration="13450000" />
     </task>
     <servers />
   </component>

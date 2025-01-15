@@ -7,17 +7,20 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private TMP_Text _shootsText;
     [SerializeField] private TMP_Text _hitsText;
     [SerializeField] private TMP_Text _percentText;
+    // [SerializeField]private Timer _timer;
 
     private CanvasGroup _canvasGroup;
 
     private void OnEnable()
     {
         _recordCounter.LevelCompleted += ShowScreen;
+        // _timer.GameEnded += ShowScreen;
     }
 
     private void OnDisable()
     {
         _recordCounter.LevelCompleted -= ShowScreen;
+        // _timer.GameEnded -= ShowScreen;
     }
 
     private void Start()
@@ -27,6 +30,7 @@ public class GameOverScreen : MonoBehaviour
 
     private void ShowScreen(int shootsCount, int hitsCount, float percentValue)
     {
+        Debug.Log("%%%%" + percentValue);
         _shootsText.text = shootsCount.ToString();
         _hitsText.text = hitsCount.ToString();
         _percentText.text = percentValue.ToString("F3") + " %";

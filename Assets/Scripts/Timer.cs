@@ -5,19 +5,33 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField]private TMP_Text _timerText; 
+    [SerializeField] private StartGame _startGame;
+    [SerializeField]private RecordCounter _recordCounter;
     
     private bool _isTimerActive = false;
-    private float _currentTime = 6f;
+    private float _currentTime = 10f;
     
     public event Action GameEnded ;
+    
+    private void OnEnable()
+    {
+        // _startGame.GameStarting += StopSpawn;
+        _startGame.GameStarted += StartTimer;
+    }
+
+    private void OnDisable()
+    {
+        // _startGame.GameStarting -= StopSpawn;
+        _startGame.GameStarted -= StartTimer;
+    }
     
     private void Start()
     {
         _timerText.text = "00:00";
-        StartTimer();
+        // StartTimer();
     }
     
-    private void StartTimer()
+    private void StartTimer(DifficultySettings  difficultySettings)   
     {
         _isTimerActive = true;
         InvokeRepeating(nameof(UpdateTimer), 0f, 1f);
