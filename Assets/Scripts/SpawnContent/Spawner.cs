@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
 
     private Coroutine _coroutine;
 
+    public int SpawnTargetAmount { get; private set; }
+
     private void OnEnable()
     {
         _startGame.GameStarting += StopSpawn;
@@ -28,7 +30,8 @@ public class Spawner : MonoBehaviour
     public void StartSpawn(DifficultySettings difficultySettings)
     {
         _difficultySettings = difficultySettings;
-
+        SpawnTargetAmount = 0;
+        
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
@@ -66,6 +69,7 @@ public class Spawner : MonoBehaviour
             }
 
             Target target = Instantiate(_prefab, newPos, Quaternion.identity, _contaner).GetComponent<Target>();
+            SpawnTargetAmount++;
             target.Init(_recordCounter);
             spawnCount--;
             yield return new WaitForSeconds(_difficultySettings.spawnDelay);

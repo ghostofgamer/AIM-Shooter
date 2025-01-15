@@ -3397,6 +3397,8 @@ MonoBehaviour:
   _shootsText: {fileID: 2093687210}
   _hitsText: {fileID: 374671008}
   _percentText: {fileID: 494764826}
+  _targetAmountText: {fileID: 0}
+  _percentKillTarget: {fileID: 0}
 --- !u!4 &326147814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011227296186, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
@@ -5738,6 +5740,12 @@ MonoBehaviour:
   _startGame: {fileID: 1088607158}
   _hitHandler: {fileID: 1878263836}
   _weaponSwitching: {fileID: 340313234}
+  _timer: {fileID: 0}
+  _spawner: {fileID: 1346498080}
+  Shots: 0
+  Hits: 0
+  Dies: 0
+  Percent: 0
 --- !u!4 &783540867
 Transform:
   m_ObjectHideFlags: 0
@@ -12623,6 +12631,9 @@ MonoBehaviour:
   _weaponSwitching: {fileID: 340313234}
   _decalEffectStone: {fileID: 1972075732270416200, guid: 797a57fce75d0d54abbc122e5fa4cf6c, type: 3}
   _decalEffectMetall: {fileID: -9098952416873906844, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
+  _headShootEffects: []
+  _bloodHitEffects: []
+  _bloodContainer: {fileID: 0}
 --- !u!4 &1878263837
 Transform:
   m_ObjectHideFlags: 0
@@ -12688,6 +12699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 50
+  _isDeadCount: 1
 --- !u!65 &1883140636
 BoxCollider:
   m_ObjectHideFlags: 0

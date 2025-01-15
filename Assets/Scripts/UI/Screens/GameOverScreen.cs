@@ -7,6 +7,8 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private TMP_Text _shootsText;
     [SerializeField] private TMP_Text _hitsText;
     [SerializeField] private TMP_Text _percentText;
+    [SerializeField] private TMP_Text _targetAmountText;
+    [SerializeField] private TMP_Text _percentKillTarget;
     // [SerializeField]private Timer _timer;
 
     private CanvasGroup _canvasGroup;
@@ -28,15 +30,19 @@ public class GameOverScreen : MonoBehaviour
         _canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    private void ShowScreen(int shootsCount, int hitsCount, float percentValue)
+    private void ShowScreen(int shootsCount, int hitsCount, float percentValue, int targetAmount, bool isSumTargetSpawn)
     {
-        Debug.Log("%%%%" + percentValue);
         _shootsText.text = shootsCount.ToString();
         _hitsText.text = hitsCount.ToString();
         _percentText.text = percentValue.ToString("F3") + " %";
-        Debug.Log(_percentText.text);
-        Time.timeScale = 0;
 
+        if (isSumTargetSpawn)
+        {
+            _targetAmountText.text = targetAmount.ToString();
+            float percent = (float)hitsCount / targetAmount * 100;
+            _percentKillTarget.text = percent.ToString("F3") + "%";
+        }
+        Time.timeScale = 0;
         ChangeValue(1, true);
     }
 
