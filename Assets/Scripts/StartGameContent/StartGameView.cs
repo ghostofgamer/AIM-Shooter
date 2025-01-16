@@ -7,17 +7,22 @@ public class StartGameView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _countdownText;
     [SerializeField]private StartGame _startGame;
+    [SerializeField] private StopGameButton _stopGameButton;
     
     private float _countDownDuration = 1f;
     private Coroutine _coroutine;
+    
+    public event Action CountdownStarting;
 
     private void OnEnable()
     {
+        _stopGameButton.Stoping += StopCountdown;
         _startGame.GameStarting += StartCountdownGame;
     }
 
     private void OnDisable()
     {
+        _stopGameButton.Stoping -= StopCountdown;
         _startGame.GameStarting -= StartCountdownGame;
     }
 
@@ -32,6 +37,7 @@ public class StartGameView : MonoBehaviour
     private IEnumerator StartCountdown()
     {
         _countdownText.gameObject.SetActive(true);
+        CountdownStarting?.Invoke();
         
         for (int i = 3; i >= 1; i--)
         {
@@ -58,6 +64,17 @@ public class StartGameView : MonoBehaviour
             _countdownText.transform.localScale = Vector3.one * scale;
             elapsedTimeGo += Time.deltaTime;
             yield return null;
+        }
+
+        _countdownText.gameObject.SetActive(false);
+    }
+    
+    private void StopCountdown()
+    {
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+            _coroutine = null;
         }
 
         _countdownText.gameObject.SetActive(false);

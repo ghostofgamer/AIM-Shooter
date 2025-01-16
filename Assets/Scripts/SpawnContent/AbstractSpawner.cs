@@ -3,37 +3,39 @@ using UnityEngine;
 
 public abstract class AbstractSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform _contaner;
+    [SerializeField] protected Transform Contaner;
+    [SerializeField] protected RecordCounter RecordCounter;
+    [SerializeField] private StopGameButton _stopGameButton;
     [SerializeField] private StartGame _startGame;
-    [SerializeField]private RecordCounter _recordCounter;
-    
-    private DifficultySettings _difficultySettings;
+
+    protected DifficultySettings DifficultySettings;
     private Coroutine _coroutine;
-    
+
     private void OnEnable()
     {
+        _stopGameButton.Stoping += StopSpawn;
         _startGame.GameStarting += StopSpawn;
         _startGame.GameStarted += StartSpawn;
     }
 
     private void OnDisable()
     {
+        _stopGameButton.Stoping -= StopSpawn;
         _startGame.GameStarting -= StopSpawn;
         _startGame.GameStarted -= StartSpawn;
     }
-    
-    public virtual void StartSpawn(DifficultySettings difficultySettings)
+
+    protected virtual void StartSpawn(DifficultySettings difficultySettings)
     {
-        _difficultySettings = difficultySettings;
-        // SpawnTargetAmount = 0;
-        
+        DifficultySettings = difficultySettings;
+
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
         _coroutine = StartCoroutine(SpawnTarget());
     }
-    
-    public virtual IEnumerator SpawnTarget()
+
+    protected virtual IEnumerator SpawnTarget()
     {
         yield return new WaitForSeconds(0f);
     }
@@ -46,7 +48,7 @@ public abstract class AbstractSpawner : MonoBehaviour
             _coroutine = null;
         }
 
-        foreach (Transform child in _contaner)
+        foreach (Transform child in Contaner)
             child.gameObject.SetActive(false);
     }
 }
