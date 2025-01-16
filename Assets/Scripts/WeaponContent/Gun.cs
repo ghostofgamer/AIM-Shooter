@@ -5,8 +5,8 @@ using Random = UnityEngine.Random;
 
 public class Gun : MonoBehaviour, IShootable
 {
-    int layerToIgnore = 8; 
-    
+    int layerToIgnore = 8;
+
     [SerializeField] private int _damage = 10;
     [SerializeField] private float _range = 100f;
     [SerializeField] private float _force = 30f;
@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour, IShootable
     [SerializeField] private float _recoilY;
     [SerializeField] private float _timeToReady;
     [SerializeField] private bool _isAutomatic;
-
+    [SerializeField] private bool _isEndlessAmmo = false;
     [SerializeField] private LookMouse _lookMouse;
     [SerializeField] private Camera _camera;
     [SerializeField] private PlayerInput _playerInput;
@@ -35,7 +35,7 @@ public class Gun : MonoBehaviour, IShootable
     public event Action<float> Reloading;
 
     public event Action<int> AmmoChanged;
-    
+
     public int CurrentAmmo => _currentAmmo;
 
     private void Awake()
@@ -55,10 +55,10 @@ public class Gun : MonoBehaviour, IShootable
         _playerInput.MouseZeroKeyPressed += SingleShotHandler;
         _playerInput.MouseZeroKeyHoldDown += AutomaticShotHandler;
         _isReloading = false;
-        
-        if(_coroutine!=null)
+
+        if (_coroutine != null)
             StopCoroutine(_coroutine);
-        
+
         _coroutine = StartCoroutine(PrepareWeapon());
     }
 
@@ -84,7 +84,7 @@ public class Gun : MonoBehaviour, IShootable
         yield return _waitForSeconds;
         _isReady = true;
     }
-    
+
     private void ReloadWeapon()
     {
         if (_isReloading)
@@ -132,12 +132,17 @@ public class Gun : MonoBehaviour, IShootable
 
         Shooting?.Invoke();
         RaycastHit hit;
-        _currentAmmo--;
-        AmmoChanged?.Invoke(_currentAmmo);
-        
+
+        if (!_isEndlessAmmo)
+        {
+            _currentAmmo--;
+            AmmoChanged?.Invoke(_currentAmmo);
+        }
+       
+
         int layerMask = ~(1 << layerToIgnore);
-        
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range,layerMask))
+
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range, layerMask))
         {
             _hitHandler.ProcessHit(hit, _damage, _force);
             // _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));

@@ -20,13 +20,11 @@ public class Door : MonoBehaviour
 
     private void Open()
     {
-        Debug.Log("Open");
         _door.gameObject.SetActive(false);
     }
 
     private void Close()
     {
-        Debug.Log("Close");
         _door.gameObject.SetActive(true);
     }
 }

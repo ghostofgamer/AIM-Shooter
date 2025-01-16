@@ -16,3 +16,4 @@ MonoBehaviour:
   scaleDuration: 4
   spawnRange: {x: 5, y: 3, z: 1}
   minDistanceBetweenTargets: 1
+  Difficulty: 2

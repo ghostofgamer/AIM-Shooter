@@ -44,23 +44,23 @@ public class RecordCounter : MonoBehaviour
     {
         Dies++;
         
-        Debug.Log("ДАЙ");
+        // Debug.Log("ДАЙ");
         
         if (Dies >= 3)
             LevelOver();
     }
 
-    public void LevelOver()
+    private void LevelOver()
     {
         LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, false);
     }
 
-    public void TimeOver()
+    private void TimeOver()
     {
         LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, true);
     }
 
-    public float GetPercent()
+    private float GetPercent()
     {
         Percent = (float)Hits / Shots * 100;
 

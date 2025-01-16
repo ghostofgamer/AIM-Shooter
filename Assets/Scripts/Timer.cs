@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField]private RecordCounter _recordCounter;
     
     private bool _isTimerActive = false;
-    private float _currentTime = 10f;
+    private float _currentTime = 60f;
     
     public event Action GameEnded ;
     

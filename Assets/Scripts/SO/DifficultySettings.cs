@@ -7,4 +7,5 @@ public class DifficultySettings : ScriptableObject
     public float scaleDuration;
     public Vector3 spawnRange;
     public float minDistanceBetweenTargets;
+    public int Difficulty;
 }

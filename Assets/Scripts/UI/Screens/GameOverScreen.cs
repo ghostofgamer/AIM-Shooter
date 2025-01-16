@@ -1,12 +1,21 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private RecordCounter _recordCounter;
-    [SerializeField] private TMP_Text _shootsText;
+    [SerializeField] private ScoreCalculator _scoreCalculator;
+    [SerializeField] private bool _isTimeBased;
+    [SerializeField] private TimerNew _timerNew;
+    [SerializeField] private StartGame _startGame;
+
+    [Header("TMP_Text Elements ")] [SerializeField]
+    private TMP_Text _shootsText;
+
     [SerializeField] private TMP_Text _hitsText;
     [SerializeField] private TMP_Text _percentText;
+    [SerializeField] private TMP_Text _recordScoreText;
     [SerializeField] private TMP_Text _targetAmountText;
     [SerializeField] private TMP_Text _percentKillTarget;
     // [SerializeField]private Timer _timer;
@@ -36,13 +45,18 @@ public class GameOverScreen : MonoBehaviour
         _hitsText.text = hitsCount.ToString();
         _percentText.text = percentValue.ToString("F3") + " %";
 
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (_isTimeBased)
+            _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
+
         if (isSumTargetSpawn)
         {
             _targetAmountText.text = targetAmount.ToString();
             float percent = (float)hitsCount / targetAmount * 100;
             _percentKillTarget.text = percent.ToString("F3") + "%";
         }
-        
+
         Time.timeScale = 0;
         ChangeValue(1, true);
     }
