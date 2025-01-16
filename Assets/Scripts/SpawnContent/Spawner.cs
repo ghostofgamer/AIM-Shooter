@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class Spawner : AbstractSpawner
 {
     [SerializeField] private GameObject _prefab;
-
+    
     public int SpawnTargetAmount { get; private set; }
 
     protected override void StartSpawn(DifficultySettings difficultySettings)
@@ -16,12 +16,14 @@ public class Spawner : AbstractSpawner
 
     protected override IEnumerator SpawnTarget()
     {
-        int spawnCount = 500;
+        int spawnCount = 99999999;
         float minDistance = DifficultySettings.minDistanceBetweenTargets;
         Vector3 spawnRange = DifficultySettings.spawnRange;
 
-        while (spawnCount > 0)
+        while (IsWork)
         {
+            // Debug.Log("Spawning");
+            
             Vector3 newPos = Vector3.zero;
             bool isValidPosition = false;
 

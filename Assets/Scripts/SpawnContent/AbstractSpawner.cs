@@ -9,8 +9,10 @@ public abstract class AbstractSpawner : MonoBehaviour
     [SerializeField] private StartGame _startGame;
 
     protected DifficultySettings DifficultySettings;
+    protected bool IsWork;
+    
     private Coroutine _coroutine;
-
+    
     private void OnEnable()
     {
         _stopGameButton.Stoping += StopSpawn;
@@ -27,8 +29,11 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     protected virtual void StartSpawn(DifficultySettings difficultySettings)
     {
+        Debug.Log("StartSpawn");
+        
         DifficultySettings = difficultySettings;
-
+        IsWork = true;
+        
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
@@ -42,6 +47,9 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     private void StopSpawn()
     {
+        IsWork = false;
+        Debug.Log("ТУТ МЫ ЖМЕМ СТОП " + IsWork);
+
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);

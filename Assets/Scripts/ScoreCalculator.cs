@@ -8,15 +8,10 @@ public class ScoreCalculator : MonoBehaviour
     public float hardDifficultyMultiplier = 5f;
     
     
-    public void CalculateScore(float timeSpent, int difficultyLevel, float accuracyPercentage)
+    public int CalculateScore(float timeSpent, int difficultyLevel, float accuracyPercentage)
     {
-        // Вычисляем множитель времени
         float timeFactor = timeSpent * timeMultiplier;
-
-        // Вычисляем множитель сложности
         float difficultyMultiplier = 1f;
-        
-        Debug.Log("ЧТО ТУТ? " + difficultyLevel);
         
         switch (difficultyLevel)
         {
@@ -33,18 +28,16 @@ public class ScoreCalculator : MonoBehaviour
                 Debug.LogWarning("Invalid difficulty level");
                 break;
         }
-
-        // Вычисляем множитель точности
+        
         float accuracyMultiplier = accuracyPercentage / 100f;
-
-        // Вычисляем итоговые очки
         
-        
-        Debug.Log("TimeFactor " + timeFactor);
+        /*Debug.Log("TimeFactor " + timeFactor);
         Debug.Log("DifficultyMultiplier " +difficultyMultiplier);
-        Debug.Log("AccuracyMultiplier " + accuracyMultiplier);
-        float finalScore = timeFactor * difficultyMultiplier * accuracyMultiplier;
-
+        Debug.Log("AccuracyMultiplier " + accuracyMultiplier);*/
+        
+        // float finalScore = timeFactor * difficultyMultiplier * accuracyMultiplier;
+        int finalScore = Mathf.RoundToInt(timeFactor * difficultyMultiplier * accuracyMultiplier);
+return finalScore;
         // Выводим результат
         Debug.Log("Final Score: " + finalScore);
     }

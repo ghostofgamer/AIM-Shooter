@@ -16,6 +16,7 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private TMP_Text _hitsText;
     [SerializeField] private TMP_Text _percentText;
     [SerializeField] private TMP_Text _recordScoreText;
+    [SerializeField] private TMP_Text _currentScoreText;
     [SerializeField] private TMP_Text _targetAmountText;
     [SerializeField] private TMP_Text _percentKillTarget;
     // [SerializeField]private Timer _timer;
@@ -48,7 +49,30 @@ public class GameOverScreen : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (_isTimeBased)
-            _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
+        {
+            int score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
+            _currentScoreText.text = score.ToString();
+
+            int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
+
+            /*Debug.Log("SCORE " + score);
+            Debug.Log("начальный " + record);*/
+
+
+            if (score > record)
+            {
+                // Debug.Log("сохраняем " + record);
+                PlayerPrefs.SetInt("Record" + currentSceneIndex, score);
+            }
+
+            int currentRecord = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
+            // Debug.Log("нынешний " + currentRecord);
+
+            _recordScoreText.text = currentRecord.ToString();
+
+            // Debug.Log("Record" + currentSceneIndex);
+        }
+
 
         if (isSumTargetSpawn)
         {
