@@ -14,30 +14,17 @@ public class HitHandler : MonoBehaviour
     public event Action Hit;
 
     public event Action HitedBomb;
-    
+
     public event Action HeadHited;
 
     public void ProcessHit(RaycastHit hit, int damage, float force)
     {
-        if (hit.transform.TryGetComponent(out ZombieModeButton zombieModeButton))
-        {
-            zombieModeButton.Click();
-            // return;
-        }
-
-        /*if (hit.transform.TryGetComponent(out IDamageable target))
-        {
-            target.TakeDamage(damage);
-
-            return;
-        }*/
-
         GameObject impactBlood;
 
         if (hit.transform.TryGetComponent(out HitPositionEnemy hitPosition))
         {
             // hitPosition.Damage(damage);
-            
+
             if (hitPosition.IsHead)
             {
                 hitPosition.Damage(damage);
@@ -61,8 +48,14 @@ public class HitHandler : MonoBehaviour
         }
 
 
+        /*
         if (hit.transform.TryGetComponent(out Bomb bomb))
             HitedBomb?.Invoke();
+            */
+        
+        if (hit.transform.TryGetComponent<Bomb>(out _))
+            HitedBomb?.Invoke();
+        
 
         if (hit.transform.TryGetComponent(out ISettingsHandler settingsHandler))
             settingsHandler.SetSettings();
@@ -80,12 +73,25 @@ public class HitHandler : MonoBehaviour
         if (hit.transform.TryGetComponent(out IValueChanger valueChanger))
         {
             valueChanger.ChangeValue();
-            return;
+            // return;
         }
 
         GameObject impactGO;
 
-        if (hit.transform.GetComponent<Environment>().IsStone)
+        if (hit.collider.TryGetComponent(out Environment environment))
+        {
+            if (environment.IsStone)
+            {
+                impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
+                impactGO.transform.SetParent(hit.collider.transform);
+                impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
+            }
+            else if (!environment.IsStone)
+                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+
+
+        /*if (hit.transform.GetComponent<Environment>().IsStone)
         {
             // impactGO = Instantiate(_impactEffectStone, hit.point, Quaternion.LookRotation(hit.normal));
             impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
@@ -96,6 +102,6 @@ public class HitHandler : MonoBehaviour
         {
             // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
             impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-        }
+        }*/
     }
 }

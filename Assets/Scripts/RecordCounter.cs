@@ -43,7 +43,9 @@ public class RecordCounter : MonoBehaviour
     public void AddDie()
     {
         Dies++;
+        
         Debug.Log("ДАЙ");
+        
         if (Dies >= 3)
             LevelOver();
     }

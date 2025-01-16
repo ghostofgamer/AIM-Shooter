@@ -22,7 +22,6 @@ public class StartGame : MonoBehaviour
 
     private IEnumerator StartAimGame(DifficultySettings difficultySettings)
     {
-        Debug.Log("ТУт " + difficultySettings);
         GameStarting.Invoke();
         yield return _waitForSeconds;
         GameStarted.Invoke(difficultySettings);

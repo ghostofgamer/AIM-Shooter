@@ -31,21 +31,18 @@ public class ZombieMode : MonoBehaviour
     {
         SetValueMovementZombie(false);
         SetValueSpeedEnemy(1.65f,3f);
-        Debug.Log("SimpleMode");
     }
 
     private void MediumMode()
     {
         SetValueMovementZombie(true);
         SetValueSpeedEnemy(1.65f,3f);
-        Debug.Log("MediumMode");
     }
 
     private void HardMode()
     {
         SetValueMovementZombie(true);
         SetValueSpeedEnemy(3f,1.65f);
-        Debug.Log("HardMode");
     }
 
     private void SetValueMovementZombie(bool value)

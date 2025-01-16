@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class NinjaSpawn : MonoBehaviour
 {
+    [SerializeField] private StartGame _startGame;
     [SerializeField] private GameObject[] _prefabs;
     [SerializeField] private GameObject _bombPrefab;
     [SerializeField] private Collider _spawner;
@@ -20,6 +19,9 @@ public class NinjaSpawn : MonoBehaviour
     [SerializeField] private float _spawnBobmChance = 0.05f;
     [SerializeField] private RecordCounter _recordCounter;
 
+    private Coroutine _spawnCoroutine;
+    private DifficultySettings _difficultySettings;
+
     private void Awake()
     {
         _spawner = GetComponent<Collider>();
@@ -27,49 +29,60 @@ public class NinjaSpawn : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(Spawn());
+        _startGame.GameStarted += StartSpawn;
+        // StartCoroutine(Spawn());
     }
 
     private void OnDisable()
     {
-        
+        _startGame.GameStarted -= StartSpawn;
+    }
+
+    private void StartSpawn(DifficultySettings difficultySettings)
+    {
+        _difficultySettings = difficultySettings;
+
+        if (_spawnCoroutine != null)
+            StopCoroutine(_spawnCoroutine);
+
+        _spawnCoroutine = StartCoroutine(Spawn());
     }
 
     private IEnumerator Spawn()
     {
         yield return new WaitForSeconds(1.5f);
 
-        while (enabled )
+        while (enabled)
         {
             GameObject prefab = _prefabs[Random.Range(0, _prefabs.Length)];
 
             if (Random.value < _spawnBobmChance)
                 prefab = _bombPrefab;
-            
+
             Vector3 position = new Vector3();
             position.x = Random.Range(_spawner.bounds.min.x, _spawner.bounds.max.x);
             position.y = Random.Range(_spawner.bounds.min.y, _spawner.bounds.max.y);
             position.z = Random.Range(_spawner.bounds.min.z, _spawner.bounds.max.z);
 
-            Quaternion rotation  = Quaternion.Euler(0f,0f,Random.Range(_minAngle,_maxAngle));
-            GameObject targetObject = Instantiate(prefab,position,rotation);
-            
+            Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(_minAngle, _maxAngle));
+            GameObject targetObject = Instantiate(prefab, position, rotation);
+
             if (targetObject.GetComponent<SlicedTarget>())
-              targetObject.GetComponent<SlicedTarget>().Init(_recordCounter);
-    
+                targetObject.GetComponent<SlicedTarget>().Init(_recordCounter);
+
             // Destroy(targetObject, _lifeTime);
-            
-            float force = Random.Range(_minForce,_maxForce);
-            targetObject.GetComponent<Rigidbody>().AddForce(targetObject.transform.up * force,ForceMode.Impulse);
-            
+
+            float force = Random.Range(_minForce, _maxForce);
+            targetObject.GetComponent<Rigidbody>().AddForce(targetObject.transform.up * force, ForceMode.Impulse);
+
             Vector3 randomTorque = new Vector3(
                 Random.Range(-_maxTorque, _maxTorque),
                 Random.Range(-_maxTorque, _maxTorque),
                 Random.Range(-_maxTorque, _maxTorque)
             );
-            targetObject.GetComponent<Rigidbody>().AddTorque(randomTorque, ForceMode.Impulse);
             
-            yield return new WaitForSeconds(Random.Range(_minDelay,_maxDelay));
+            targetObject.GetComponent<Rigidbody>().AddTorque(randomTorque, ForceMode.Impulse);
+            yield return new WaitForSeconds(Random.Range(_minDelay, _maxDelay));
         }
     }
 }

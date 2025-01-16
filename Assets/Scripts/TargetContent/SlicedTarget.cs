@@ -58,8 +58,8 @@ public class SlicedTarget : MonoBehaviour, IDamageable, ITargetHandler
 
     private void OnTriggerEnter(Collider other)
     {
-        /*if (other.TryGetComponent(out Environment environment))
-            Die();*/
+        if (other.TryGetComponent(out Environment environment))
+            Die();
     }
 
     public void Die()

@@ -42,6 +42,7 @@ public class GameOverScreen : MonoBehaviour
             float percent = (float)hitsCount / targetAmount * 100;
             _percentKillTarget.text = percent.ToString("F3") + "%";
         }
+        
         Time.timeScale = 0;
         ChangeValue(1, true);
     }
