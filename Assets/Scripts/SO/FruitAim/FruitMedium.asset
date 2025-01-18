@@ -17,12 +17,12 @@ MonoBehaviour:
   spawnRange: {x: 4, y: 3, z: 0}
   minDistanceBetweenTargets: 1
   Difficulty: 2
-  _minDelay: 0.3
-  _maxDelay: 1
-  _minAngle: -15
-  _maxAngle: 15
-  _minForce: 10
-  _maxForce: 15
+  _minDelay: 0.6
+  _maxDelay: 1.3
+  _minAngle: -6.5
+  _maxAngle: 6.5
+  _minForce: 9
+  _maxForce: 13
   _lifeTime: 4
   _maxTorque: 5
   _spawnBobmChance: 0.05

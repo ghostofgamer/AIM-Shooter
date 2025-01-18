@@ -436,5 +436,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.37058944
+  m_Radius: 0.43
   m_Center: {x: 0, y: 0.00941056, z: 0}

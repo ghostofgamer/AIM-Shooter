@@ -30,5 +30,5 @@ public class FriutDifficultySetting : DifficultySettings
 
     public float MaxTorque => _maxTorque;
 
-    public float SpawnBobmChance => _spawnBobmChance;
+    public float SpawnBombChance => _spawnBobmChance;
 }
