@@ -1416,6 +1416,7 @@ MonoBehaviour:
   _recoilY: 0
   _timeToReady: 0
   _isAutomatic: 0
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 0}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 0}
@@ -1931,7 +1932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add8d19b5782c1841a273a12244b2908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <SensitivityMouse>k__BackingField: 160
+  <SensitivityMouse>k__BackingField: 300
   _valueText: {fileID: 302383077}
   sensitivitySlider: {fileID: 505647928}
   minSensitivity: 0
@@ -3633,9 +3634,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _recordCounter: {fileID: 783540866}
+  _scoreCalculator: {fileID: 0}
+  _isTimeBased: 0
+  _timerNew: {fileID: 0}
+  _startGame: {fileID: 0}
   _shootsText: {fileID: 2093687210}
   _hitsText: {fileID: 374671008}
   _percentText: {fileID: 494764826}
+  _recordScoreText: {fileID: 0}
+  _currentScoreText: {fileID: 0}
   _targetAmountText: {fileID: 370962989}
   _percentKillTarget: {fileID: 392742805}
 --- !u!4 &326147814 stripped
@@ -5610,6 +5617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countdownText: {fileID: 955158300}
   _startGame: {fileID: 1088607158}
+  _stopGameButton: {fileID: 0}
 --- !u!114 &645570278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8415,6 +8423,7 @@ MonoBehaviour:
   _recoilY: 60
   _timeToReady: 1
   _isAutomatic: 0
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 963194229}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 2066839212}
@@ -9528,6 +9537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countdownText: {fileID: 955158300}
   _startGame: {fileID: 1088607158}
+  _stopGameButton: {fileID: 0}
 --- !u!114 &1205163645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10569,12 +10579,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7836ded19fb9076459485b855e22f5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 1073927265665138349, guid: f1b39fa687cad6249a0b11d690d557c8, type: 3}
-  _delay: 1
-  _contaner: {fileID: 2095597047}
-  _difficultySettings: {fileID: 11400000, guid: e09ab44506e65c243832ed0837e85916, type: 2}
+  Contaner: {fileID: 0}
+  RecordCounter: {fileID: 0}
+  _stopGameButton: {fileID: 0}
   _startGame: {fileID: 1088607158}
-  _recordCounter: {fileID: 783540866}
+  _prefab: {fileID: 1073927265665138349, guid: f1b39fa687cad6249a0b11d690d557c8, type: 3}
 --- !u!4 &1346498081
 Transform:
   m_ObjectHideFlags: 0
@@ -10943,6 +10952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countdownText: {fileID: 955158300}
   _startGame: {fileID: 1088607158}
+  _stopGameButton: {fileID: 0}
 --- !u!114 &1394525778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11138,6 +11148,7 @@ MonoBehaviour:
   _recoilY: 130
   _timeToReady: 1
   _isAutomatic: 1
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 963194229}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 2066839212}
@@ -11501,6 +11512,7 @@ MonoBehaviour:
   _recoilY: 0
   _timeToReady: 0
   _isAutomatic: 0
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 0}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 0}
@@ -12491,6 +12503,7 @@ MonoBehaviour:
   _recoilY: 115
   _timeToReady: 1
   _isAutomatic: 1
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 963194229}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 2066839212}
@@ -14935,6 +14948,7 @@ MonoBehaviour:
   _recoilY: 0
   _timeToReady: 0
   _isAutomatic: 0
+  _isEndlessAmmo: 0
   _lookMouse: {fileID: 0}
   _camera: {fileID: 963194227}
   _playerInput: {fileID: 0}
