@@ -24,16 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/FriutDifficultySetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/FriutDifficultySetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/FruitAim/FruitEasy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/FruitAim/FruitEasy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayerMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/EasyBig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/EasyBig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/HardBig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/HardBig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/MediumBig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SO/Sphere3DSettings/MediumBig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreCalculator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1736842159002" duration="14492000" />
       <workItem from="1736930419981" duration="15113000" />
       <workItem from="1737016440299" duration="17951000" />
-      <workItem from="1737185759417" duration="3677000" />
+      <workItem from="1737185759417" duration="7338000" />
     </task>
     <servers />
   </component>

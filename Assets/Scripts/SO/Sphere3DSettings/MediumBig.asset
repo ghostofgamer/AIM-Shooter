@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8ac5ef5355d12499d357c90850685c, type: 3}
   m_Name: MediumBig
   m_EditorClassIdentifier: 
-  spawnDelay: 0.6
+  spawnDelay: 0.5
   scaleDuration: 5
   spawnRange: {x: 15, y: 6, z: 30}
   minDistanceBetweenTargets: 1
+  Difficulty: 2

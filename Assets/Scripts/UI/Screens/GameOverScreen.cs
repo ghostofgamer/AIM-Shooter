@@ -52,13 +52,8 @@ public class GameOverScreen : MonoBehaviour
         {
             int score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
-
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
-
-            /*Debug.Log("SCORE " + score);
-            Debug.Log("начальный " + record);*/
-
-
+            
             if (score > record)
             {
                 // Debug.Log("сохраняем " + record);
@@ -66,11 +61,22 @@ public class GameOverScreen : MonoBehaviour
             }
 
             int currentRecord = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
-            // Debug.Log("нынешний " + currentRecord);
-
             _recordScoreText.text = currentRecord.ToString();
-
-            // Debug.Log("Record" + currentSceneIndex);
+        }
+        else
+        {
+            int score = _scoreCalculator.CalculateScoreWithoutTime(_startGame.Difficulty, percentValue);
+            _currentScoreText.text = score.ToString();
+            int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
+            
+            if (score > record)
+            {
+                // Debug.Log("сохраняем " + record);
+                PlayerPrefs.SetInt("Record" + currentSceneIndex, score);
+            }
+            
+            int currentRecord = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
+            _recordScoreText.text = currentRecord.ToString();
         }
 
 
