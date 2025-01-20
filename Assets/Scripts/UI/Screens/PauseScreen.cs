@@ -17,6 +17,11 @@ public class PauseScreen : AbstractScreen
         _playerInput.PausePressed -= ProcessScreen;
     }
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     private void ProcessScreen()
     {
         if (_isOpened)
