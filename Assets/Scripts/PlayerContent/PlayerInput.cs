@@ -25,7 +25,7 @@ public class PlayerInput : MonoBehaviour
                 MouseZeroKeyHoldDown?.Invoke();
         }
         
-        if (Input.GetKeyDown(KeyCode.Escape))
-            PausePressed?.Invoke();
+        /*if (Input.GetKeyDown(KeyCode.Escape))
+            PausePressed?.Invoke();*/
     }
 }
