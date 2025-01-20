@@ -22,11 +22,7 @@ public class SensivitySettings : MonoBehaviour
         sensitivitySlider.value = MapValue(currentSensitivity, minSensitivity, maxSensitivity, 0.5f, 5f);
         _valueText.text = sensitivitySlider.value.ToString("F1");
         sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
-
-
-
         SensitivityMouse = currentSensitivity;
-        Debug.Log($"Start: SensitivityMouse = {SensitivityMouse}, Slider Value = {sensitivitySlider.value}");
     }
 
     private void OnSensitivityChanged(float value)
@@ -36,22 +32,14 @@ public class SensivitySettings : MonoBehaviour
 
         PlayerPrefs.SetFloat("Sensitivity", SensitivityMouse);
         PlayerPrefs.Save();
-        
-        Debug.Log($"OnSensitivityChanged: Slider Value = {value}, SensitivityMouse = {SensitivityMouse}");
     }
 
     private float MapValue(float value, float fromMin, float fromMax, float toMin, float toMax)
     {
         if (value < fromMin) value = fromMin;
         if (value > fromMax) value = fromMax;
-        
-        
-        float mappedValue = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
-        Debug.Log($"MapValue: value = {value}, fromMin = {fromMin}, fromMax = {fromMax}, toMin = {toMin}, toMax = {toMax}, mappedValue = {mappedValue}");
 
+        float mappedValue = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
         return mappedValue;
-        
-        // return (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
-        // return (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
     }
 }

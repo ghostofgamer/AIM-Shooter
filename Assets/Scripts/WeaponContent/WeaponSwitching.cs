@@ -15,49 +15,11 @@ public class WeaponSwitching : MonoBehaviour
 
     private void Awake()
     {
-        Select(0);
+       int indexWeapon= PlayerPrefs.GetInt("CurrentWeaponIndex",0);
+        Select(indexWeapon);
+        // Select(0);
     }
     
-    /*private void Start()
-    {
-        // SelectWeapon();
-        Select(0);
-    }*/
-
-
-    /*private void Update()
-    {
-        int previousSelectedWeapon = _selectedWeapon;
-
-        /*if (Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
-            if (_selectedWeapon >= transform.childCount - 1)
-                _selectedWeapon = 0;
-            else
-                _selectedWeapon++;
-        }
-
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            if (_selectedWeapon <= 0)
-                _selectedWeapon = transform.childCount - 1;
-            else
-                _selectedWeapon--;
-        }#1#
-
-        /*if (Input.GetKeyDown(KeyCode.Alpha1) && transform.childCount >= 1)
-            _selectedWeapon = 0;
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
-            _selectedWeapon = 1;
-
-        if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
-            _selectedWeapon = 2;#1#
-
-        if (previousSelectedWeapon != _selectedWeapon)
-            SelectWeapon();
-    }*/
-
     private void SelectWeapon()
     {
         int i = 0;
