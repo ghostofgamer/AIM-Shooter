@@ -1,6 +1,10 @@
-using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class BackToMenuButton : AbstractButton
 {
-    protected override void OnClick() => SceneManager.LoadScene(1);
+    [SerializeField] private LoadingScreen _loadingScreen;
+
+    private int _mainMenuIndexScene = 1;
+
+    protected override void OnClick() => _loadingScreen.LoadScene(_mainMenuIndexScene);
 }

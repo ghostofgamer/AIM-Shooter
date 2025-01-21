@@ -11,19 +11,18 @@ public abstract class AD : MonoBehaviour
 
     protected void OnOpen()
     {
-        IsAdCompleted = false;
         SetValue(_inactiveValue);
     }
 
     protected void OnClose(bool isClosed)
     {
-        IsAdCompleted = true;
+        SetValueAdCompleted(true);
         SetValue(_activeValue);
     }
 
     protected virtual void OnClose()
     {
-        IsAdCompleted = true;
+        SetValueAdCompleted(true);
         SetValue(_activeValue);
     }
 
@@ -31,5 +30,10 @@ public abstract class AD : MonoBehaviour
     {
         Time.timeScale = value;
         AudioListener.volume = value;
+    }
+
+    public void SetValueAdCompleted(bool isCompleted)
+    {
+        IsAdCompleted = isCompleted;
     }
 }

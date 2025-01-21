@@ -8,7 +8,7 @@ public class BlockLevel : AbstractButton
     private void Start()
     {
         int purchasedIndex = PlayerPrefs.GetInt("RewardLevel" + _index, 0);
-        Debug.Log("Block Level" + purchasedIndex);
+        // Debug.Log("Block Level" + purchasedIndex);
 
         if (purchasedIndex > 0)
             gameObject.SetActive(false);

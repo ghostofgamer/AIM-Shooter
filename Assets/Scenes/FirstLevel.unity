@@ -3565,6 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fullAd: {fileID: 281758496}
+  _loadingScreen: {fileID: 2364527891870373167}
 --- !u!114 &281758496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8430,9 +8431,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 898099728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06469873e70c1654292ca80bc5039204, type: 3}
+  m_Script: {fileID: 11500000, guid: fd316132556c8e24d8280edbf502849b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadingScreen: {fileID: 2364527891870373167}
 --- !u!1 &908222503
 GameObject:
   m_ObjectHideFlags: 0
@@ -17860,11 +17862,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3614350695587608120, guid: 7bd54e3343dfe2e43a713e1dbad5aaef, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679581626886403384, guid: 7bd54e3343dfe2e43a713e1dbad5aaef, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd54e3343dfe2e43a713e1dbad5aaef, type: 3}
+--- !u!114 &2364527891870373167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8095478510172762881, guid: 7bd54e3343dfe2e43a713e1dbad5aaef, type: 3}
+  m_PrefabInstance: {fileID: 2364527891870373166}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900943344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb9a657fbb8c9f4f93604b4bf7c53fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4714475696396240082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17985,6 +18006,10 @@ PrefabInstance:
       propertyPath: _mainCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 4308911802238917558, guid: 0c3475ddca3477f4787ece37178e9651, type: 3}
+      propertyPath: _loadingScreen
+      value: 
+      objectReference: {fileID: 2364527891870373167}
     - target: {fileID: 4329814335731577222, guid: 0c3475ddca3477f4787ece37178e9651, type: 3}
       propertyPath: m_Name
       value: PauseScreen

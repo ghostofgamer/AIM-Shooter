@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LoadLevelButton : AbstractButton
 {
     [SerializeField] private FullAd _fullAd;
-    [SerializeField]private GameObject _loadingScreen;
+    [SerializeField]private LoadingScreen _loadingScreen;
     
     protected override void OnClick()
     {
@@ -13,21 +12,29 @@ public class LoadLevelButton : AbstractButton
         StartCoroutine(ShowAdAndLoadScene());
 #else
         int levelIndex = PlayerPrefs.GetInt("CurrentLevel", 0) + 2;
-        SceneManager.LoadScene(levelIndex);   
+        _loadingScreen.gameObject.SetActive(true);
+        _loadingScreen.LoadScene(levelIndex);
 #endif
     }
     
     private IEnumerator ShowAdAndLoadScene()
     {
+        _fullAd.SetValueAdCompleted(false);
         _fullAd.Show();
         _loadingScreen.gameObject.SetActive(true);
         
+        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
+        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
+        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
+        
         while (!_fullAd.GetAdCompleted())
         {
+            Debug.Log("ЗАГРУЗКА WHILE" + _fullAd.GetAdCompleted());
             yield return null;
         }
-
+        
+        Debug.Log("ЗАГРУЗКА OVER" + _fullAd.GetAdCompleted());
         int levelIndex = PlayerPrefs.GetInt("CurrentLevel", 0) + 2;
-        SceneManager.LoadScene(levelIndex);
+        _loadingScreen.LoadScene(levelIndex);
     }
 }
