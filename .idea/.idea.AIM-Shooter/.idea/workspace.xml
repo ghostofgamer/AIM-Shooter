@@ -22,38 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ADS/AD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ADS/AD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BlockLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BlockLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackToMenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/BackToMenuButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/LoadLevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/LoadLevelButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/RestartButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/RestartButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_06.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_07.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_13.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_14.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Crosshair/Crosshair_27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/3916adf3ddfe057f0c035d31ea3378d4.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/de27b826770f4ae819eda71fc814d60f.wasm.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/e623ab17ba403f448096e8cc1caa3ea2.data.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/style.css" beforeDir="false" />
-    </list>
+    <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +206,7 @@
       <workItem from="1737016440299" duration="17951000" />
       <workItem from="1737185759417" duration="12947000" />
       <workItem from="1737358932180" duration="21831000" />
-      <workItem from="1737446942036" duration="10250000" />
+      <workItem from="1737446942036" duration="13597000" />
     </task>
     <servers />
   </component>
