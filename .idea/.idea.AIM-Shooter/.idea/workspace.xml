@@ -22,7 +22,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="" />
+    <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Character_List_Select/character_role_icon_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Character_List_Select/character_role_icon_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_s_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Clan/clan_symbol_s_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_boss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_boss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_skull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_skull.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Lobby_UserInfo/userinfo_icon_win.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Play/minimap_enermy_icon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Play/minimap_enermy_icon_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Stage/stage_icon_boss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Stage/stage_icon_boss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Stage/stage_icon_boss_dim.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Stage/stage_icon_boss_dim.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,6 +237,7 @@
       <workItem from="1737185759417" duration="12947000" />
       <workItem from="1737358932180" duration="21831000" />
       <workItem from="1737446942036" duration="13597000" />
+      <workItem from="1737537553511" duration="3586000" />
     </task>
     <servers />
   </component>
