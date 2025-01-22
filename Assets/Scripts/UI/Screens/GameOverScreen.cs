@@ -50,13 +50,13 @@ public class GameOverScreen : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         int score = 0;
-        
+
         if (_isTimeBased)
         {
             score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
-            
+
             if (score > record)
             {
                 // Debug.Log("сохраняем " + record);
@@ -71,18 +71,21 @@ public class GameOverScreen : MonoBehaviour
             score = _scoreCalculator.CalculateScoreWithoutTime(_startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
-            
+
             if (score > record)
             {
                 // Debug.Log("сохраняем " + record);
                 PlayerPrefs.SetInt("Record" + currentSceneIndex, score);
             }
-            
+
             int currentRecord = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
             _recordScoreText.text = currentRecord.ToString();
         }
-        
-        _yandexLeaderBoard.SetPlayerScore(score);
+
+        int leaderboardScore = PlayerPrefs.GetInt("LeaderboardScore", 0);
+        leaderboardScore += score;
+        PlayerPrefs.SetInt("LeaderboardScore", leaderboardScore);
+        _yandexLeaderBoard.SetPlayerScore(leaderboardScore);
 
 
         if (isSumTargetSpawn)

@@ -16,7 +16,7 @@ public class LeaderboardView : MonoBehaviour
         {
             LeaderboardElement leaderboardElement = Instantiate(_leaderboardElementPrefab, _container);
             leaderboardElement.Initialize(player.Name, player.Rank, player.Score);
-
+            leaderboardElement.ShowLeaderPosition(player.Rank);
             _leaderboardElements.Add(leaderboardElement);
         }
     }

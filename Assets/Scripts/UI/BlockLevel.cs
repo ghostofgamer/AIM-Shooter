@@ -17,7 +17,7 @@ public class BlockLevel : AbstractButton
 
     protected override void OnClick()
     {
-        Button.interactable = false;
+        Button.enabled = false;
         _rewardLevel.Show();
     }
 }
