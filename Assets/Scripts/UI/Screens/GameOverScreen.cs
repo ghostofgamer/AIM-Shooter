@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
+    [SerializeField] private YandexLeaderboard _yandexLeaderBoard;
     [SerializeField] private RecordCounter _recordCounter;
     [SerializeField] private ScoreCalculator _scoreCalculator;
     [SerializeField] private bool _isTimeBased;
@@ -48,9 +49,11 @@ public class GameOverScreen : MonoBehaviour
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        int score = 0;
+        
         if (_isTimeBased)
         {
-            int score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
+            score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
             
@@ -65,7 +68,7 @@ public class GameOverScreen : MonoBehaviour
         }
         else
         {
-            int score = _scoreCalculator.CalculateScoreWithoutTime(_startGame.Difficulty, percentValue);
+            score = _scoreCalculator.CalculateScoreWithoutTime(_startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
             
@@ -78,6 +81,8 @@ public class GameOverScreen : MonoBehaviour
             int currentRecord = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
             _recordScoreText.text = currentRecord.ToString();
         }
+        
+        _yandexLeaderBoard.SetPlayerScore(score);
 
 
         if (isSumTargetSpawn)

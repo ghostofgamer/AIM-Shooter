@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8ac5ef5355d12499d357c90850685c, type: 3}
   m_Name: EasyBig
   m_EditorClassIdentifier: 
-  spawnDelay: 0.8
+  spawnDelay: 0.6
   scaleDuration: 5
   spawnRange: {x: 5, y: 5, z: 15}
   minDistanceBetweenTargets: 1

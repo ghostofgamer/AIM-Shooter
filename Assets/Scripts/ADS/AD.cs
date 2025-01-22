@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class AD : MonoBehaviour
 {
+    [SerializeField]private FocusScreen _focusScreen;
+    
     private int _activeValue = 1;
     private int _inactiveValue = 0;
 
@@ -11,17 +13,20 @@ public abstract class AD : MonoBehaviour
 
     protected void OnOpen()
     {
+        _focusScreen.SetValueWork(false);
         SetValue(_inactiveValue);
     }
 
     protected void OnClose(bool isClosed)
     {
+        _focusScreen.SetValueWork(true);
         SetValueAdCompleted(true);
         SetValue(_activeValue);
     }
 
     protected virtual void OnClose()
     {
+        _focusScreen.SetValueWork(true);
         SetValueAdCompleted(true);
         SetValue(_activeValue);
     }

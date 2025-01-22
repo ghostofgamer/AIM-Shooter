@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField]private StopGameButton _stopGameButton;
 
     private bool _isTimerActive = false;
-    private float _currentTime = 6f;
+    private float _currentTime = 30f;
 
     public event Action GameEnded;
 
