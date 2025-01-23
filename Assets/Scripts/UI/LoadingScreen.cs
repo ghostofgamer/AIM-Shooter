@@ -32,13 +32,13 @@ public class LoadingScreen : MonoBehaviour
             _loadingSlider.value = progress;
  
             if (_loadingText != null)
-                _loadingText.text = "Loading... " + (progress * 100).ToString("F0") + "%";
+                _loadingText.text = (progress * 100).ToString("F0") + "%";
 
             if (asyncOperation.progress >= 0.9f)
             {
                 progress = Mathf.MoveTowards(progress, 1f, Time.deltaTime);
                 _loadingSlider.value = progress;
-                _loadingText.text = "Loading... " + (progress * 100).ToString("F0") + "%";
+                _loadingText.text = (progress * 100).ToString("F0") + "%";
                 
                 if (progress >= 1f)
                     asyncOperation.allowSceneActivation = true;

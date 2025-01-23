@@ -24,27 +24,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Common/character_lv_icon_trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Common/character_lv_icon_trophy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_bronze.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_bronze.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_gold.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_silver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/Ranking/ranking_medal_silver.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_eng.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_eng.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_rus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_rus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_tur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/GUI Kit Casual Game/ResourcesData/Sprite/SettingLanguage/language_flag_tur.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Leaders/PlayerElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Leaders/PlayerElement.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardContent/LeaderboardElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardContent/LeaderboardElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeaderboardContent/LeaderboardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeaderboardContent/LeaderboardView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BlockLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BlockLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/2bd39c51e26c1d2766a725f9897c64fc.data.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/9c7e0a9d1f291965de1e476bd195ca2a.js.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/Build/f515d7c53c28f0020f7030bfe303ff27.wasm.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bild/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +216,8 @@
       <workItem from="1737185759417" duration="12947000" />
       <workItem from="1737358932180" duration="21831000" />
       <workItem from="1737446942036" duration="13597000" />
-      <workItem from="1737537553511" duration="12239000" />
+      <workItem from="1737537553511" duration="13770000" />
+      <workItem from="1737627431025" duration="2003000" />
     </task>
     <servers />
   </component>
