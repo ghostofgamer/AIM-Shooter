@@ -24,18 +24,30 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LoadingScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/lightray3_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/lightray3_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/ring_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/ring_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/wave3_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/wave3_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_half_clear_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_half_clear_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_half_thick_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_half_thick_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_round3_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Bubbles/bubble_round3_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Liquid/water_soft_3x3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Liquid/water_soft_3x3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Brawling/RoundHit/RoundHitRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Brawling/RoundHit/RoundHitRed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids/CFXR2 Blood Shape Splash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids/CFXR2 Blood Shape Splash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/2bd39c51e26c1d2766a725f9897c64fc.data.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/9c7e0a9d1f291965de1e476bd195ca2a.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/f515d7c53c28f0020f7030bfe303ff27.wasm.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocalizationContent/Localization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocalizationContent/Localization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +84,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/DifficultySettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/FriutDifficultySetting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SettingsContent/SoundChanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnContent/AbstractSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartGameContent/StartGameButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,6 +115,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieContent/RecordKillEnemyCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieContent/ZombieMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieContent/ZombieModeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.yandexgames@3bdb25b676/Runtime/PlayerAccount/PlayerAccount.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../CrashMetal/Assets/Scripts/Assembly-CSharp/Menu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -217,7 +231,7 @@
       <workItem from="1737358932180" duration="21831000" />
       <workItem from="1737446942036" duration="13597000" />
       <workItem from="1737537553511" duration="13770000" />
-      <workItem from="1737627431025" duration="2003000" />
+      <workItem from="1737627431025" duration="8410000" />
     </task>
     <servers />
   </component>

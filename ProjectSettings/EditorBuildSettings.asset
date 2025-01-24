@@ -23,4 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FourScene.unity
     guid: ba4e50826c4048347a74fa3b04a040d8
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 1bc0a342039d84b4791a43c6d7011771, type: 2}
