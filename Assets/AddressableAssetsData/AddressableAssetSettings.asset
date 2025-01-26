@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: bfcea28bc60d200408028e285e33ec87
   m_currentHash:
     serializedVersion: 2
-    Hash: 5bcc17e63381b7ad081fdcb2821ca8bd
+    Hash: 6b486da7eed84bd8f950114ac5be397f
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 1b4c2d59d285ebb46826b872493f7e4c, type: 2}
   - {fileID: 11400000, guid: 7d899332bfd34cf4b949527c71877c5d, type: 2}
+  - {fileID: 11400000, guid: 3622e49a2f9cd1144ba733e757ba25aa, type: 2}
+  - {fileID: 11400000, guid: cf85bf239afe61e42ba19c49ae8995b1, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -60,13 +62,13 @@ MonoBehaviour:
       - m_Id: 30690ef0f3bc5ba488048f16c1820f6f
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 8d61cf1f35442304b83ee9cd178a7848
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+        m_Value: ServerData/[BuildTarget]
       - m_Id: 84d07a9eff0aaf548b59ab85d2ba358e
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
       - m_Id: 30ebc0ddc15d9b44aa91385409899bfd
         m_Value: ServerData/[BuildTarget]
       - m_Id: d3eefcdc546d2ab46af2097a33c53ac7
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://ghostofgamer.github.io/AssetAddressableAim-Shooter/
     m_ProfileEntryNames:
     - m_Id: 30690ef0f3bc5ba488048f16c1820f6f
       m_Name: BuildTarget

@@ -80,8 +80,11 @@ MonoBehaviour:
   _defaultPrefab: {fileID: 8116613710340514492}
   _slicedPrefab: {fileID: 2413965463562420612}
   _targetColliders:
-  - {fileID: 8854686521738120073}
+  - {fileID: 5007558262556278432}
   _slicedParticles: {fileID: 1663006071480303004}
+  _slicedParts:
+  - {fileID: 2233535768683057544}
+  - {fileID: 3600020962558331719}
 --- !u!135 &8854686521738120073
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -101,7 +104,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0.00941056, z: 0}
 --- !u!1 &2233535768683057544
 GameObject:
@@ -452,6 +455,9 @@ GameObject:
   - component: {fileID: 2032011567694305357}
   - component: {fileID: 7429429525309214743}
   - component: {fileID: 6796769127944615733}
+  - component: {fileID: 4336065699811430124}
+  - component: {fileID: 4962792406361192139}
+  - component: {fileID: 5007558262556278432}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Untagged
@@ -524,6 +530,67 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4336065699811430124
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116613710340514492}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4962792406361192139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116613710340514492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd050c43a5a52d54b816729a2e61147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slicedTarget: {fileID: 8608145363917279141}
+--- !u!135 &5007558262556278432
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116613710340514492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0.00941056, z: 0}
 --- !u!1001 &2892623570302853759
 PrefabInstance:
   m_ObjectHideFlags: 0

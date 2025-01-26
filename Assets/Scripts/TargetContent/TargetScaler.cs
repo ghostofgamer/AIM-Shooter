@@ -10,17 +10,27 @@ public class TargetScaler : MonoBehaviour
 
     private float _elapsedTime;
     private Target _target;
+private Coroutine _coroutine;
 
     private void OnEnable()
     {
+        _target = GetComponent<Target>();
         transform.localScale = _defaultScale;
+        
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+        
+        _coroutine=  StartCoroutine(ScaleTarget());
     }
 
-    private void Start()
+    /*private void Start()
     {
         _target = GetComponent<Target>();
-        StartCoroutine(ScaleTarget());
-    }
+        
+        if (_coroutine == null)
+            StopCoroutine(_coroutine);
+        _coroutine=  StartCoroutine(ScaleTarget());
+    }*/
 
     private IEnumerator ScaleTarget()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -5,8 +6,18 @@ using Random = UnityEngine.Random;
 public class Spawner : AbstractSpawner
 {
     [SerializeField] private GameObject _prefab;
+    [SerializeField] private int _maxSize;
     
     public int SpawnTargetAmount { get; private set; }
+    
+   
+    private ObjectPool<Target> _objectPool;
+
+    private void Start()
+    {
+        _objectPool = new ObjectPool<Target>(_prefab.GetComponent<Target>(),_maxSize, Contaner);
+        _objectPool.EnableAutoExpand();
+    }
 
     protected override void StartSpawn(DifficultySettings difficultySettings)
     {
@@ -46,10 +57,19 @@ public class Spawner : AbstractSpawner
                 }
             }
 
-            Target target = Instantiate(_prefab, newPos, Quaternion.identity, Contaner).GetComponent<Target>();
-            SpawnTargetAmount++;
+            if (_objectPool.TryGetObject(out Target target, _prefab.GetComponent<Target>()))
+            {
+                target.gameObject.SetActive(true);
+                target.transform.position = newPos;
+                SpawnTargetAmount++;
+                target.Init(RecordCounter);
+                spawnCount--;
+            }
+            
+            // Target target = Instantiate(_prefab, newPos, Quaternion.identity, Contaner).GetComponent<Target>();
+            /*SpawnTargetAmount++;
             target.Init(RecordCounter);
-            spawnCount--;
+            spawnCount--;*/
             yield return new WaitForSeconds(DifficultySettings.spawnDelay);
         }
     }

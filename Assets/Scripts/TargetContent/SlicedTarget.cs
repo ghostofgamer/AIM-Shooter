@@ -1,33 +1,77 @@
 using System;
 using UnityEngine;
 
-public class SlicedTarget : MonoBehaviour, IDamageable, ITargetHandler
+public class SlicedTarget : MonoBehaviour
 {
     [SerializeField] private GameObject _defaultPrefab;
     [SerializeField] private GameObject _slicedPrefab;
     [SerializeField] private Collider[] _targetColliders;
     [SerializeField] private ParticleSystem _slicedParticles;
+    [SerializeField] private GameObject[] _slicedParts;
 
     private Rigidbody _targetRigidbody;
     private RecordCounter _recordCounter;
-
-
+    private Vector3 [] _slicedPartsPositions;
+    private Quaternion [] _slicedPartsRotations;
+    
     private void Awake()
     {
         _targetRigidbody = GetComponent<Rigidbody>();
+
+        _slicedPartsPositions = new Vector3[_slicedParts.Length];
+        _slicedPartsRotations = new Quaternion[_slicedParts.Length];
+        
+        for (int i = 0; i < _slicedPartsPositions.Length; i++)
+        {
+            _slicedPartsPositions[i] = _slicedParts[i].transform.localPosition;
+        }
+
+        for (int i = 0; i < _slicedPartsRotations.Length; i++)
+        {
+            _slicedPartsRotations[i] = _slicedParts[i].transform.rotation;
+        }
     }
 
-    public void TakeDamage(int damage)
+    private void OnEnable()
     {
+        _defaultPrefab.gameObject.SetActive(true);
+        _slicedPrefab.gameObject.SetActive(false);
+        
+        foreach (var collider in _targetColliders)
+            collider.enabled = true;
+
+        for (int i = 0; i < _slicedParts.Length; i++)
+        {
+            _slicedParts[i].transform.localPosition = _slicedPartsPositions[i];
+            Rigidbody rb =  _slicedParts[i].GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        
+        /*for (int i = 0; i < _slicedParts.Length; i++)
+        {
+            _slicedParts[i].transform.position = _slicedPartsPositions[i];
+        }
+
+        for (int i = 0; i < _slicedPartsRotations.Length; i++)
+        {
+            _slicedParts[i].transform.rotation = _slicedPartsRotations[i];
+        }*/
     }
 
-    public void HandleHit()
+    /*public void TakeDamage(int damage)
+    {
+    }*/
+
+    /*public void HandleHit()
     {
         Slice();
-    }
+    }*/
 
-    private void Slice()
+    public void Slice()
     {
+        Debug.Log("Slice");
+        
         if (_slicedParticles != null)
             _slicedParticles.Play();
 

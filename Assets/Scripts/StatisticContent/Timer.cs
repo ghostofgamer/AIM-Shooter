@@ -10,21 +10,21 @@ public class Timer : MonoBehaviour
     [SerializeField]private StopGameButton _stopGameButton;
 
     private bool _isTimerActive = false;
-    private float _currentTime = 30f;
+    private float _currentTime = 60f;
 
     public event Action GameEnded;
 
     private void OnEnable()
     {
         _stopGameButton.Stoping += StopTimer;
-        // _startGame.GameStarting += StopSpawn;
+        _startGame.GameStarting += StopTimer;
         _startGame.GameStarted += StartTimer;
     }
 
     private void OnDisable()
     {
         _stopGameButton.Stoping += StopTimer;
-        // _startGame.GameStarting -= StopSpawn;
+        _startGame.GameStarting -= StopTimer;
         _startGame.GameStarted -= StartTimer;
     }
 
