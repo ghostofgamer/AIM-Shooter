@@ -85,7 +85,7 @@ public class GameOverScreen : MonoBehaviour
         int leaderboardScore = PlayerPrefs.GetInt("LeaderboardScore", 0);
         leaderboardScore += score;
         PlayerPrefs.SetInt("LeaderboardScore", leaderboardScore);
-        _yandexLeaderBoard.SetPlayerScore(leaderboardScore);
+        // _yandexLeaderBoard.SetPlayerScore(leaderboardScore);
 
 
         if (isSumTargetSpawn)

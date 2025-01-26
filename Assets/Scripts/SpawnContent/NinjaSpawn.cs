@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mail;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,6 +22,7 @@ public class NinjaSpawn : AbstractSpawner
     [SerializeField] private float _lifeTime = 4f;
     [SerializeField] private float _maxTorque = 5f;
     [SerializeField] private float _spawnBobmChance = 0.05f;
+    [SerializeField]private HitHandler _hitHandler;
 
     private List<ObjectPool<SlicedTarget>> _objectPools;
     private ObjectPool<Bomb> _bombPool;
@@ -38,6 +40,18 @@ public class NinjaSpawn : AbstractSpawner
             pool.EnableAutoExpand();
             _objectPools.Add(pool);
         }
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _hitHandler.HitedBomb += StopSpawn;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        _hitHandler.HitedBomb -= StopSpawn;
     }
 
     protected override IEnumerator SpawnTarget()

@@ -11,16 +11,17 @@ public class SlicedTarget : MonoBehaviour
 
     private Rigidbody _targetRigidbody;
     private RecordCounter _recordCounter;
-    private Vector3 [] _slicedPartsPositions;
-    private Quaternion [] _slicedPartsRotations;
-    
+    private Vector3[] _slicedPartsPositions;
+    private Quaternion[] _slicedPartsRotations;
+    private bool _isSliced;
+
     private void Awake()
     {
         _targetRigidbody = GetComponent<Rigidbody>();
 
         _slicedPartsPositions = new Vector3[_slicedParts.Length];
         _slicedPartsRotations = new Quaternion[_slicedParts.Length];
-        
+
         for (int i = 0; i < _slicedPartsPositions.Length; i++)
         {
             _slicedPartsPositions[i] = _slicedParts[i].transform.localPosition;
@@ -34,20 +35,22 @@ public class SlicedTarget : MonoBehaviour
 
     private void OnEnable()
     {
+        _isSliced = false;
+
         _defaultPrefab.gameObject.SetActive(true);
         _slicedPrefab.gameObject.SetActive(false);
-        
+
         foreach (var collider in _targetColliders)
             collider.enabled = true;
 
         for (int i = 0; i < _slicedParts.Length; i++)
         {
             _slicedParts[i].transform.localPosition = _slicedPartsPositions[i];
-            Rigidbody rb =  _slicedParts[i].GetComponent<Rigidbody>();
+            Rigidbody rb = _slicedParts[i].GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-        
+
         /*for (int i = 0; i < _slicedParts.Length; i++)
         {
             _slicedParts[i].transform.position = _slicedPartsPositions[i];
@@ -70,8 +73,9 @@ public class SlicedTarget : MonoBehaviour
 
     public void Slice()
     {
+        _isSliced = true;
         Debug.Log("Slice");
-        
+
         if (_slicedParticles != null)
             _slicedParticles.Play();
 
@@ -110,7 +114,9 @@ public class SlicedTarget : MonoBehaviour
     public void Die()
     {
         Debug.Log("Сам ВЫКЛ");
-        _recordCounter.AddDie();
+        if (!_isSliced)
+            _recordCounter.AddDie();
+
         gameObject.SetActive(false);
     }
 

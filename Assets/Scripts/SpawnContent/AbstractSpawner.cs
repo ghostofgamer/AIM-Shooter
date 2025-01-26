@@ -13,14 +13,14 @@ public abstract class AbstractSpawner : MonoBehaviour
     
     private Coroutine _coroutine;
     
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         _stopGameButton.Stoping += StopSpawn;
         _startGame.GameStarting += StopSpawn;
         _startGame.GameStarted += StartSpawn;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         _stopGameButton.Stoping -= StopSpawn;
         _startGame.GameStarting -= StopSpawn;
@@ -45,7 +45,7 @@ public abstract class AbstractSpawner : MonoBehaviour
         yield return new WaitForSeconds(0f);
     }
 
-    private void StopSpawn()
+    protected void StopSpawn()
     {
         IsWork = false;
         Debug.Log("ТУТ МЫ ЖМЕМ СТОП " + IsWork);

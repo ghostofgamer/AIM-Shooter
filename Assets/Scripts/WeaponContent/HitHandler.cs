@@ -11,6 +11,7 @@ public class HitHandler : MonoBehaviour
     [SerializeField] private Decal[] _headShootEffects;
     [SerializeField] private Decal[] _bloodHitEffects;
     [SerializeField] private Transform _bloodContainer;
+    [SerializeField] private ParticleSystem _explosionEffect;
 
     private Dictionary<string, ObjectPool<Decal>> _effectsPools;
 
@@ -24,9 +25,14 @@ public class HitHandler : MonoBehaviour
     {
         _effectsPools = new Dictionary<string, ObjectPool<Decal>>();
 
+
+        if (_headShootEffects.Length > 0 || _bloodHitEffects.Length > 0)
+        {
+            InitializePool("HeadShoot", _headShootEffects, 10);
+            InitializePool("BloodHit", _bloodHitEffects, 10);
+        }
         // Initialize pools for each type of effect
-        InitializePool("HeadShoot", _headShootEffects, 10);
-        InitializePool("BloodHit", _bloodHitEffects, 10);
+
         InitializePool("StoneDecal", new Decal[] { _decalEffectStone }, 10);
         InitializePool("MetalDecal", new Decal[] { _decalEffectMetall }, 10);
     }
@@ -88,9 +94,8 @@ public class HitHandler : MonoBehaviour
                     decal.gameObject.SetActive(true);
                     // decal.GetComponent<ParticleSystem>().Play();
                 }
-                
-                
-                
+
+
                 /*int index = Random.Range(0, _bloodHitEffects.Length);
 
                 impactBlood = Instantiate(_bloodHitEffects[index].gameObject, hit.point,
@@ -108,7 +113,17 @@ public class HitHandler : MonoBehaviour
             */
 
         if (hit.transform.TryGetComponent<Bomb>(out _))
+        {
+            _explosionEffect.transform.position = hit.point;
+            _explosionEffect.gameObject.SetActive(true);
+            
+            hit.collider.TryGetComponent<Bomb>(out Bomb bomb);
+            {
+                bomb.Explosion();
+            }
+            
             HitedBomb?.Invoke();
+        }
 
 
         if (hit.transform.TryGetComponent(out ISettingsHandler settingsHandler))
@@ -135,8 +150,9 @@ public class HitHandler : MonoBehaviour
         if (hit.collider.TryGetComponent(out Environment environment))
         {
             string poolKey = environment.IsStone ? "StoneDecal" : "MetalDecal";
-            
-            if (_effectsPools[poolKey].TryGetObject(out Decal impactDecal,environment.IsStone ? _decalEffectStone : _decalEffectMetall))
+
+            if (_effectsPools[poolKey].TryGetObject(out Decal impactDecal,
+                    environment.IsStone ? _decalEffectStone : _decalEffectMetall))
             {
                 impactDecal.transform.position = hit.point;
                 impactDecal.transform.rotation = Quaternion.LookRotation(hit.normal);
@@ -144,7 +160,7 @@ public class HitHandler : MonoBehaviour
                 impactDecal.transform.Translate(impactDecal.transform.forward * 0.01f, Space.World);
                 impactDecal.gameObject.SetActive(true);
             }
-            
+
             /*if (environment.IsStone)
             {
                 impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));

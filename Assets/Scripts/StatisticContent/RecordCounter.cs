@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RecordCounter : MonoBehaviour
@@ -24,7 +26,7 @@ public class RecordCounter : MonoBehaviour
 
         _startGame.GameStarting += ClearAllData;
         _hitHandler.Hit += AddHit;
-        _hitHandler.HitedBomb += LevelOver;
+        _hitHandler.HitedBomb += LevelOverPause;
         _weaponSwitching.WeaponSwitched += ChangeGun;
     }
 
@@ -35,7 +37,7 @@ public class RecordCounter : MonoBehaviour
 
         _startGame.GameStarting -= ClearAllData;
         _hitHandler.Hit -= AddHit;
-        _hitHandler.HitedBomb -= LevelOver;
+        _hitHandler.HitedBomb -= LevelOverPause;
         _gun.Shooting -= AddShoot;
         _weaponSwitching.WeaponSwitched -= ChangeGun;
     }
@@ -50,6 +52,17 @@ public class RecordCounter : MonoBehaviour
             LevelOver();
     }
 
+    private void LevelOverPause()
+    {
+        StartCoroutine(Over());
+    }
+
+    private IEnumerator Over()
+    {
+        yield return new WaitForSeconds(1f);
+        LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, false);
+    }
+    
     private void LevelOver()
     {
         LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, false);
