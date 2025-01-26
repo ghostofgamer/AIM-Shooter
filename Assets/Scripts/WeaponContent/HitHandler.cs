@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,11 +12,42 @@ public class HitHandler : MonoBehaviour
     [SerializeField] private Decal[] _bloodHitEffects;
     [SerializeField] private Transform _bloodContainer;
 
+    private Dictionary<string, ObjectPool<Decal>> _effectsPools;
+
     public event Action Hit;
 
     public event Action HitedBomb;
 
     public event Action HeadHited;
+
+    private void Awake()
+    {
+        _effectsPools = new Dictionary<string, ObjectPool<Decal>>();
+
+        // Initialize pools for each type of effect
+        InitializePool("HeadShoot", _headShootEffects, 10);
+        InitializePool("BloodHit", _bloodHitEffects, 10);
+        InitializePool("StoneDecal", new Decal[] { _decalEffectStone }, 10);
+        InitializePool("MetalDecal", new Decal[] { _decalEffectMetall }, 10);
+    }
+
+    private void InitializePool(string key, Decal[] prefabs, int count)
+    {
+        ObjectPool<Decal> pool = new ObjectPool<Decal>(prefabs[0], count, _bloodContainer);
+        pool.EnableAutoExpand();
+
+        _effectsPools[key] = pool;
+
+        for (int i = 1; i < prefabs.Length; i++)
+        {
+            for (int j = 0; j < count; j++)
+            {
+                Decal newDecal = GameObject.Instantiate(prefabs[i], _bloodContainer);
+                newDecal.gameObject.SetActive(false);
+                pool.AddObject(newDecal);
+            }
+        }
+    }
 
     public void ProcessHit(RaycastHit hit, int damage, float force)
     {
@@ -24,24 +56,46 @@ public class HitHandler : MonoBehaviour
         if (hit.transform.TryGetComponent(out HitPositionEnemy hitPosition))
         {
             // hitPosition.Damage(damage);
+            string poolKey = hitPosition.IsHead ? "HeadShoot" : "BloodHit";
 
             if (hitPosition.IsHead)
             {
                 hitPosition.Damage(damage);
                 HeadHited?.Invoke();
-                int index = Random.Range(0, _headShootEffects.Length);
+
+                if (_effectsPools[poolKey].TryGetObject(out Decal decal, _headShootEffects[0]))
+                {
+                    decal.transform.position = hit.point;
+                    decal.transform.rotation = Quaternion.LookRotation(hit.normal);
+                    decal.transform.Translate(decal.transform.forward * 0.01f, Space.World);
+                    decal.gameObject.SetActive(true);
+                    // decal.GetComponent<ParticleSystem>().Play();
+                }
+
+                /*int index = Random.Range(0, _headShootEffects.Length);
                 impactBlood = Instantiate(_headShootEffects[index].gameObject, hit.point,
                     Quaternion.LookRotation(hit.normal),
                     _bloodContainer);
-                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);
+                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);*/
             }
             else
             {
-                int index = Random.Range(0, _bloodHitEffects.Length);
+                if (_effectsPools[poolKey].TryGetObject(out Decal decal, _bloodHitEffects[0]))
+                {
+                    decal.transform.position = hit.point;
+                    decal.transform.rotation = Quaternion.LookRotation(hit.normal);
+                    decal.transform.Translate(decal.transform.forward * 0.01f, Space.World);
+                    decal.gameObject.SetActive(true);
+                    // decal.GetComponent<ParticleSystem>().Play();
+                }
+                
+                
+                
+                /*int index = Random.Range(0, _bloodHitEffects.Length);
 
                 impactBlood = Instantiate(_bloodHitEffects[index].gameObject, hit.point,
                     Quaternion.LookRotation(hit.normal), _bloodContainer);
-                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);
+                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);*/
             }
 
             return;
@@ -52,10 +106,10 @@ public class HitHandler : MonoBehaviour
         if (hit.transform.TryGetComponent(out Bomb bomb))
             HitedBomb?.Invoke();
             */
-        
+
         if (hit.transform.TryGetComponent<Bomb>(out _))
             HitedBomb?.Invoke();
-        
+
 
         if (hit.transform.TryGetComponent(out ISettingsHandler settingsHandler))
             settingsHandler.SetSettings();
@@ -80,28 +134,25 @@ public class HitHandler : MonoBehaviour
 
         if (hit.collider.TryGetComponent(out Environment environment))
         {
-            if (environment.IsStone)
+            string poolKey = environment.IsStone ? "StoneDecal" : "MetalDecal";
+            
+            if (_effectsPools[poolKey].TryGetObject(out Decal impactDecal,environment.IsStone ? _decalEffectStone : _decalEffectMetall))
+            {
+                impactDecal.transform.position = hit.point;
+                impactDecal.transform.rotation = Quaternion.LookRotation(hit.normal);
+                // impactDecal.transform.SetParent(hit.collider.transform);
+                impactDecal.transform.Translate(impactDecal.transform.forward * 0.01f, Space.World);
+                impactDecal.gameObject.SetActive(true);
+            }
+            
+            /*if (environment.IsStone)
             {
                 impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
                 impactGO.transform.SetParent(hit.collider.transform);
                 impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
             }
             else if (!environment.IsStone)
-                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
+                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));*/
         }
-
-
-        /*if (hit.transform.GetComponent<Environment>().IsStone)
-        {
-            // impactGO = Instantiate(_impactEffectStone, hit.point, Quaternion.LookRotation(hit.normal));
-            impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-            impactGO.transform.SetParent(hit.collider.transform);
-            impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
-        }
-        else if (!hit.transform.GetComponent<Environment>().IsStone)
-        {
-            // impactGO = Instantiate(_impactEffectMetall, hit.point, Quaternion.LookRotation(hit.normal));
-            impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-        }*/
     }
 }

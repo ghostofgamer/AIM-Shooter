@@ -24,66 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Banana.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/BottleWine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/RedApple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Tomato.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Watermelon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ThirdLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AimContent/AimChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/TargetScaler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AimSettingsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AimSettingsLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_10.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_11.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_12.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_13.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_14.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_15.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_16.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_17.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_18.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_2.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_21.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_22.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_23.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_24.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_25.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_27.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_28.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_29.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_3.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_3.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_30.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_31.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_32.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_33.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_34.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_35.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_36.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_4.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_5.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_5.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_6.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_6.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_7.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_7.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_8.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_8.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild_9.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Bild_9.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosionRoundAnimated.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosionRoundAnimated.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosionSpikyAnimated.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodExplosionSpikyAnimated.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatCritical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatCritical.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatDirectional.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatDirectional.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatDirectionalAnimated.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decals/Blood/BloodSplatDirectionalAnimated.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/ObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/EffectExamples/Shared/Scripts/DecalDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/EffectExamples/Shared/Scripts/DecalDestroyer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +223,7 @@
       <workItem from="1737446942036" duration="13597000" />
       <workItem from="1737537553511" duration="13770000" />
       <workItem from="1737627431025" duration="8410000" />
-      <workItem from="1737882947589" duration="8524000" />
+      <workItem from="1737882947589" duration="11273000" />
     </task>
     <servers />
   </component>

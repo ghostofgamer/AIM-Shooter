@@ -1,9 +1,6 @@
 using UnityEngine;
 
-public class Bomb :MonoBehaviour, ITargetHandler
+public class Bomb :MonoBehaviour
 {
-    public void HandleHit()
-    {
-        
-    }
+
 }

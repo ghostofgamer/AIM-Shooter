@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1050092790659261667}
   - component: {fileID: 428887527950484666}
   - component: {fileID: -6220403876013111173}
+  - component: {fileID: 2500820235378871380}
   m_Layer: 0
   m_Name: BloodExplosionSpikyAnimated
   m_TagString: Untagged
@@ -4842,6 +4843,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c46919a85353b44eb459ef959c964be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2500820235378871380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916858879493238216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cedb949dfc6b44aa88e1e82ba6471d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5
 --- !u!1 &1032455403784689041
 GameObject:
   m_ObjectHideFlags: 0

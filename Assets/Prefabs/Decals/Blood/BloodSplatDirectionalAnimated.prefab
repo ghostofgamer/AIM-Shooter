@@ -4840,6 +4840,7 @@ GameObject:
   - component: {fileID: 5332521752600948232}
   - component: {fileID: 6179012804771750850}
   - component: {fileID: 2380488607300820536}
+  - component: {fileID: 5900253345381408714}
   m_Layer: 0
   m_Name: BloodSplatDirectionalAnimated
   m_TagString: Untagged
@@ -9679,3 +9680,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c46919a85353b44eb459ef959c964be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5900253345381408714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911385016863389624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cedb949dfc6b44aa88e1e82ba6471d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5

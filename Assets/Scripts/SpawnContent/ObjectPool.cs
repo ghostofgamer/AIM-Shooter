@@ -52,6 +52,11 @@ public class ObjectPool<T> where T : MonoBehaviour
         return spawned != null;
     }
 
+    public void AddObject(T obj)
+    {
+        _poolGeneric.Add(obj);
+    }
+    
     public T GetFirstObject()
     {
         T filter = _poolGeneric.FirstOrDefault(p => p.gameObject.activeSelf == false);
