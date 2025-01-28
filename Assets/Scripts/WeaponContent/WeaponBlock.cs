@@ -1,7 +1,10 @@
+using ADS;
 using UnityEngine;
 
 public class WeaponBlock : MonoBehaviour, IValueChanger
 {
+    private const string WeaponPurchase = "IsPurchaseWeapon";
+    
     [SerializeField] private OpenWeaponAD _openWeaponAD;
     [SerializeField] private BoxCollider _weaponCollider;
 
@@ -9,7 +12,7 @@ public class WeaponBlock : MonoBehaviour, IValueChanger
 
     private void Start()
     {
-        _isPurchase = PlayerPrefs.GetInt("isPurchaseWeapon", 0) > 0;
+        _isPurchase = PlayerPrefs.GetInt(WeaponPurchase, 0) > 0;
 
         if (_isPurchase)
         {

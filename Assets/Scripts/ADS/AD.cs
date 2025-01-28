@@ -1,44 +1,50 @@
 using UnityEngine;
 
-public abstract class AD : MonoBehaviour
+namespace ADS
 {
-    [SerializeField]private FocusScreen _focusScreen;
+    public abstract class AD : MonoBehaviour
+    {
+        [SerializeField]private FocusScreen _focusScreen;
     
-    private int _activeValue = 1;
-    private int _inactiveValue = 0;
+        private int _activeValue = 1;
+        private int _inactiveValue = 0;
 
-    public bool IsAdCompleted = false;
+        protected bool IsAdCompleted = false;
     
-    public abstract void Show();
+        public abstract void Show();
 
-    protected void OnOpen()
-    {
-        _focusScreen.SetValueWork(false);
-        SetValue(_inactiveValue);
-    }
+        public void SetValueAdCompleted(bool isCompleted)
+        {
+            IsAdCompleted = isCompleted;
+        }
 
-    protected void OnClose(bool isClosed)
-    {
-        _focusScreen.SetValueWork(true);
-        SetValueAdCompleted(true);
-        SetValue(_activeValue);
-    }
+        protected void OnOpen()
+        {
+            _focusScreen.SetValueWork(false);
+            SetValue(_inactiveValue);
+        }
 
-    protected virtual void OnClose()
-    {
-        _focusScreen.SetValueWork(true);
-        SetValueAdCompleted(true);
-        SetValue(_activeValue);
-    }
+        protected void OnClose(bool isClosed)
+        {
+            CloseCallback();
+        }
 
-    private void SetValue(int value)
-    {
-        Time.timeScale = value;
-        AudioListener.volume = value;
-    }
+        protected virtual void OnClose()
+        {
+            CloseCallback();
+        }
 
-    public void SetValueAdCompleted(bool isCompleted)
-    {
-        IsAdCompleted = isCompleted;
+        private void CloseCallback()
+        {
+            _focusScreen.SetValueWork(true);
+            SetValueAdCompleted(true);
+            SetValue(_activeValue); 
+        }
+
+        private void SetValue(int value)
+        {
+            Time.timeScale = value;
+            AudioListener.volume = value;
+        }
     }
 }

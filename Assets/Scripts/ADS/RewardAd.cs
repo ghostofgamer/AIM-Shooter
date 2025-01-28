@@ -2,23 +2,26 @@ using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class RewardAd : AD
+namespace ADS
 {
-    [SerializeField] private Button _button;
-
-    public override void Show()
+    public abstract class RewardAd : AD
     {
-        if (YandexGamesSdk.IsInitialized)
-            VideoAd.Show(OnOpen, OnReward, OnClose);
-    }
+        [SerializeField] private Button _button;
 
-    protected abstract void OnReward();
+        public override void Show()
+        {
+            if (YandexGamesSdk.IsInitialized)
+                VideoAd.Show(OnOpen, OnReward, OnClose);
+        }
 
-    protected override void OnClose()
-    {
-        base.OnClose();
+        protected abstract void OnReward();
 
-        if (_button != null)
-            _button.enabled = true;
+        protected override void OnClose()
+        {
+            base.OnClose();
+
+            if (_button != null)
+                _button.enabled = true;
+        }
     }
 }

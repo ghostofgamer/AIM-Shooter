@@ -1,21 +1,18 @@
 using Agava.YandexGames;
-using UnityEngine;
 
-public class FullAd : AD
+namespace ADS
 {
-    public override void Show()
+    public class FullAd : AD
     {
-        Debug.Log("Full Ad");
-        
-        if (YandexGamesSdk.IsInitialized)
+        public override void Show()
         {
-            Debug.Log("START Full Ad");
-            InterstitialAd.Show(OnOpen, OnClose);
+            if (YandexGamesSdk.IsInitialized)
+                InterstitialAd.Show(OnOpen, OnClose);
         }
-    }
-    
-    public bool GetAdCompleted()
-    {
-        return IsAdCompleted;
+
+        public bool GetAdCompleted()
+        {
+            return IsAdCompleted;
+        }
     }
 }

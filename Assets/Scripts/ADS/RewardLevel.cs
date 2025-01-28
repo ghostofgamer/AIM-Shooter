@@ -1,15 +1,20 @@
 using UnityEngine;
 
-public class RewardLevel : RewardAd
+namespace ADS
 {
-    [SerializeField] private int _indexLevel;
-    [SerializeField] private GameObject _block;
-
-    private int _purchasedIndex = 1;
-
-    protected override void OnReward()
+    public class RewardLevel : RewardAd
     {
-        PlayerPrefs.SetInt("RewardLevel" + _indexLevel, _purchasedIndex);
-        _block.SetActive(false);
+        private const string RewardLevelKey = "RewardLevel";
+
+        [SerializeField] private int _indexLevel;
+        [SerializeField] private GameObject _block;
+
+        private int _purchasedIndex = 1;
+
+        protected override void OnReward()
+        {
+            PlayerPrefs.SetInt(RewardLevelKey + _indexLevel, _purchasedIndex);
+            _block.SetActive(false);
+        }
     }
 }

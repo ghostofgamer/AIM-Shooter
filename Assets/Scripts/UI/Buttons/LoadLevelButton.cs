@@ -1,4 +1,5 @@
 using System.Collections;
+using ADS;
 using UnityEngine;
 
 public class LoadLevelButton : AbstractButton
@@ -23,17 +24,11 @@ public class LoadLevelButton : AbstractButton
         _fullAd.Show();
         _loadingScreen.gameObject.SetActive(true);
         
-        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
-        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
-        Debug.Log("ЗАГРУЗКА СТАРТА" + _fullAd.GetAdCompleted());
-        
         while (!_fullAd.GetAdCompleted())
         {
-            Debug.Log("ЗАГРУЗКА WHILE" + _fullAd.GetAdCompleted());
             yield return null;
         }
         
-        Debug.Log("ЗАГРУЗКА OVER" + _fullAd.GetAdCompleted());
         int levelIndex = PlayerPrefs.GetInt("CurrentLevel", 0) + 2;
         _loadingScreen.LoadScene(levelIndex);
     }
