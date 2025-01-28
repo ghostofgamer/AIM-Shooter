@@ -5,7 +5,8 @@ namespace EnemyContent
 {
     public class ZombieMovement : MonoBehaviour, IMovable
     {
-        [Header("Settings")] [SerializeField] private float _minX = 3f;
+        [Header("Settings")] 
+        [SerializeField] private float _minX = 3f;
         [SerializeField] private float _maxX = 3f;
         [SerializeField] private float _minZ = 3f;
         [SerializeField] private float _maxZ = 3f;
