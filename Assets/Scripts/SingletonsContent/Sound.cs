@@ -1,66 +1,71 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Sound : MonoBehaviour
+namespace SingletonsContent
 {
-    private const string SoundKey = "SoundEnabled";
-    private const string SFXKey = "SFXEnabled";
-
-    [SerializeField] private AudioMixerGroup _audioMixerGroup;
-    [SerializeField] private string _volumeParameter = "Sound";
-    [SerializeField] private string _sfxParameter = "SFX";
-
-    private bool _isSoundOn = true;
-    private bool _isSFXOn = true;
-
-    public static Sound Instance { get; private set; }
-
-    private void Awake()
+    public class Sound : MonoBehaviour
     {
-        if (Instance == null)
+        private const string SoundKey = "SoundEnabled";
+        private const string SFXKey = "SFXEnabled";
+
+        [SerializeField] private AudioMixerGroup _audioMixerGroup;
+        [SerializeField] private string _volumeParameter = "Sound";
+        [SerializeField] private string _sfxParameter = "SFX";
+
+        private bool _isSoundOn = true;
+        private bool _isSFXOn = true;
+        private float _valueEnabled = 0f;
+        private float _valueDisabled = -80f;
+
+        public static Sound Instance { get; private set; }
+
+        private void Awake()
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            LoadSettings();
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+                LoadSettings();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
+
+        public void SetSound(bool enabled)
         {
-            Destroy(gameObject);
+            _audioMixerGroup.audioMixer.SetFloat(_volumeParameter, enabled ? _valueEnabled : _valueDisabled);
+            _isSoundOn = enabled;
+            PlayerPrefs.SetInt(SoundKey, enabled ? 1 : 0);
+            PlayerPrefs.Save();
         }
-    }
 
-    private void LoadSettings()
-    {
-        _isSoundOn = PlayerPrefs.GetInt(SoundKey, 1) == 1;
-        _isSFXOn = PlayerPrefs.GetInt(SFXKey, 1) == 1;
+        public void SetSFX(bool enabled)
+        {
+            _audioMixerGroup.audioMixer.SetFloat(_sfxParameter, enabled ? 0f : -80f);
+            _isSFXOn = enabled;
+            PlayerPrefs.SetInt(SFXKey, enabled ? 1 : 0);
+            PlayerPrefs.Save();
+        }
 
-        SetSound(_isSoundOn);
-        SetSFX(_isSFXOn);
-    }
-    
-    public void SetSound(bool enabled)
-    {
-        _audioMixerGroup.audioMixer.SetFloat(_volumeParameter, enabled ? 0f : -80f);
-        _isSoundOn = enabled;
-        PlayerPrefs.SetInt(SoundKey, enabled ? 1 : 0);
-        PlayerPrefs.Save();
-    }
+        public bool IsSoundOn()
+        {
+            return _isSoundOn;
+        }
 
-    public void SetSFX(bool enabled)
-    {
-        _audioMixerGroup.audioMixer.SetFloat(_sfxParameter, enabled ? 0f : -80f);
-        _isSFXOn = enabled;
-        PlayerPrefs.SetInt(SFXKey, enabled ? 1 : 0);
-        PlayerPrefs.Save();
-    }
+        public bool IsSFXOn()
+        {
+            return _isSFXOn;
+        }
 
-    public bool IsSoundOn()
-    {
-        return _isSoundOn;
-    }
+        private void LoadSettings()
+        {
+            _isSoundOn = PlayerPrefs.GetInt(SoundKey, 1) == 1;
+            _isSFXOn = PlayerPrefs.GetInt(SFXKey, 1) == 1;
 
-    public bool IsSFXOn()
-    {
-        return _isSFXOn;
+            SetSound(_isSoundOn);
+            SetSFX(_isSFXOn);
+        }
     }
 }

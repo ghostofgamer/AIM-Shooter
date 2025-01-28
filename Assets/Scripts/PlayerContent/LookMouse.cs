@@ -12,6 +12,7 @@ namespace PlayerContent
         private float _xRotation;
         private float _xOffset = 0;
         private float _yOffset = 0;
+        private float _angleRotation = 90f;
         private PlayerInput _playerInput;
 
         private void Start()
@@ -26,7 +27,7 @@ namespace PlayerContent
             _xOffset = 0f;
             _yOffset = 0f;
             _xRotation -= _mouseY;
-            _xRotation = Mathf.Clamp(_xRotation, -90, 90);
+            _xRotation = Mathf.Clamp(_xRotation, -_angleRotation, _angleRotation);
             transform.localRotation = Quaternion.Euler(_xRotation, 0, 0);
             _body.Rotate(Vector3.up * _mouseX);
         }

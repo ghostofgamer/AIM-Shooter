@@ -1500,7 +1500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1767819321}
-  IsAdCompleted: 1
 --- !u!114 &161154991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13888,7 +13887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1767819321}
-  IsAdCompleted: 0
   _button: {fileID: 1775964447}
   _indexLevel: 4
   _block: {fileID: 1775964445}
@@ -14581,7 +14579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1767819321}
-  IsAdCompleted: 1
 --- !u!1 &1855728362
 GameObject:
   m_ObjectHideFlags: 0
