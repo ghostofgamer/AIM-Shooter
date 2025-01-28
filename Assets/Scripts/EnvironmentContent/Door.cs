@@ -1,3 +1,4 @@
+using StartGameContent;
 using UnityEngine;
 
 namespace EnvironmentContent

@@ -1,5 +1,6 @@
 using System.Collections;
 using EnvironmentContent;
+using StartGameContent;
 using UnityEngine;
 
 namespace SpawnContent

@@ -1,3 +1,4 @@
+using StatisticContent;
 using TMPro;
 using UnityEngine;
 

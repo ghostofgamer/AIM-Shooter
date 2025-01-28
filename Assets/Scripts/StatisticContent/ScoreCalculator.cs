@@ -1,62 +1,51 @@
 using UnityEngine;
 
-public class ScoreCalculator : MonoBehaviour
+namespace StatisticContent
 {
-    public float timeMultiplier = 1f;
-    public float easyDifficultyMultiplier = 1f;
-    public float mediumDifficultyMultiplier = 3f;
-    public float hardDifficultyMultiplier = 5f;
-
-
-    public int CalculateScore(float timeSpent, int difficultyLevel, float accuracyPercentage)
+    public class ScoreCalculator : MonoBehaviour
     {
-        float timeFactor = timeSpent * timeMultiplier;
-        float difficultyMultiplier = 1f;
+        private float _timeMultiplier = 1f;
+        private float _easyDifficultyMultiplier = 1f;
+        private float _mediumDifficultyMultiplier = 3f;
+        private float _hardDifficultyMultiplier = 6f;
+        private float _timeFactor;
+        private float _difficultyMultiplier;
+        private float _accuracyMultiplier;
+        private float _fixedMultiplier;
+        private float _factor = 100f;
 
-        switch (difficultyLevel)
+        public int CalculateScore(float timeSpent, int difficultyLevel, float accuracyPercentage)
         {
-            case 1:
-                difficultyMultiplier = easyDifficultyMultiplier;
-                break;
-            case 2:
-                difficultyMultiplier = mediumDifficultyMultiplier;
-                break;
-            case 3:
-                difficultyMultiplier = hardDifficultyMultiplier;
-                break;
-            default:
-                Debug.LogWarning("Invalid difficulty level");
-                break;
+            _timeFactor = timeSpent * _timeMultiplier;
+            _difficultyMultiplier = GetDifficultyMultiplier(difficultyLevel);
+            _accuracyMultiplier = accuracyPercentage / _factor;
+            return Mathf.RoundToInt(_timeFactor * _difficultyMultiplier * _accuracyMultiplier);
+            ;
         }
 
-        float accuracyMultiplier = accuracyPercentage / 100f;
-        int finalScore = Mathf.RoundToInt(timeFactor * difficultyMultiplier * accuracyMultiplier);
-        return finalScore;
-    }
-    
-    public int CalculateScoreWithoutTime(int difficultyLevel, float accuracyPercentage)
-    {
-        float difficultyMultiplier = 1f;
-
-        switch (difficultyLevel)
+        public int CalculateScoreWithoutTime(int difficultyLevel, float accuracyPercentage)
         {
-            case 1:
-                difficultyMultiplier = easyDifficultyMultiplier;
-                break;
-            case 2:
-                difficultyMultiplier = mediumDifficultyMultiplier;
-                break;
-            case 3:
-                difficultyMultiplier = hardDifficultyMultiplier;
-                break;
-            default:
-                Debug.LogWarning("Invalid difficulty level");
-                break;
+            _difficultyMultiplier = GetDifficultyMultiplier(difficultyLevel);
+            _accuracyMultiplier = accuracyPercentage / _factor;
+            _fixedMultiplier = _factor;
+            return Mathf.RoundToInt(_fixedMultiplier * _difficultyMultiplier * _accuracyMultiplier);
         }
 
-        float accuracyMultiplier = accuracyPercentage / 100f;
-        float fixedMultiplier = 100f;
-        int finalScore = Mathf.RoundToInt(fixedMultiplier * difficultyMultiplier * accuracyMultiplier);
-        return finalScore;
+        private float GetDifficultyMultiplier(int difficultyLevel)
+        {
+            return difficultyLevel switch
+            {
+                1 => _easyDifficultyMultiplier,
+                2 => _mediumDifficultyMultiplier,
+                3 => _hardDifficultyMultiplier,
+                _ => ThrowInvalidDifficultyLevelWarning()
+            };
+        }
+
+        private float ThrowInvalidDifficultyLevelWarning()
+        {
+            Debug.LogWarning("Invalid difficulty level");
+            return 1f;
+        }
     }
 }

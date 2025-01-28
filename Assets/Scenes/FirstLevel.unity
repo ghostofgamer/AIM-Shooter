@@ -3993,7 +3993,7 @@ MonoBehaviour:
   _recordCounter: {fileID: 783540866}
   _scoreCalculator: {fileID: 1709431574}
   _isTimeBased: 1
-  _timerNew: {fileID: 1241928162}
+  _countUpTimer: {fileID: 1241928162}
   _startGame: {fileID: 1088607158}
   _shootsText: {fileID: 2093687210}
   _hitsText: {fileID: 374671008}
@@ -8189,10 +8189,6 @@ MonoBehaviour:
   _weaponSwitching: {fileID: 340313234}
   _timer: {fileID: 0}
   _spawner: {fileID: 1346498080}
-  Shots: 0
-  Hits: 0
-  Dies: 0
-  Percent: 0
 --- !u!4 &783540867
 Transform:
   m_ObjectHideFlags: 0
@@ -16006,10 +16002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ddae068407db4288766d6e961259c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeMultiplier: 1
-  easyDifficultyMultiplier: 1
-  mediumDifficultyMultiplier: 3
-  hardDifficultyMultiplier: 6
 --- !u!1 &1729247251
 GameObject:
   m_ObjectHideFlags: 0

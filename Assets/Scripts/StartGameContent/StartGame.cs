@@ -2,34 +2,37 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class StartGame : MonoBehaviour
+namespace StartGameContent
 {
-    private WaitForSeconds _waitForSeconds = new WaitForSeconds(4f);
-    private Coroutine _coroutine;
-    
-    public event Action GameStarting;
-
-    public event Action<DifficultySettings> GameStarted;
-    
-    public event Action Started;
-    
-    public int Difficulty{ get; private set; }
-
-    public void Play(DifficultySettings difficultySettings)
+    public class StartGame : MonoBehaviour
     {
-        Difficulty = difficultySettings.Difficulty;
+        private WaitForSeconds _waitForSeconds = new WaitForSeconds(4f);
+        private Coroutine _coroutine;
+    
+        public event Action GameStarting;
+
+        public event Action<DifficultySettings> GameStarted;
+    
+        public event Action Started;
+    
+        public int Difficulty{ get; private set; }
+
+        public void Play(DifficultySettings difficultySettings)
+        {
+            Difficulty = difficultySettings.Difficulty;
         
-        if (_coroutine != null)
-            StopCoroutine(_coroutine);
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
 
-        _coroutine = StartCoroutine(StartAimGame(difficultySettings));
-    }
+            _coroutine = StartCoroutine(StartAimGame(difficultySettings));
+        }
 
-    private IEnumerator StartAimGame(DifficultySettings difficultySettings)
-    {
-        GameStarting?.Invoke();
-        yield return _waitForSeconds;
-        GameStarted?.Invoke(difficultySettings);
-        Started?.Invoke();
+        private IEnumerator StartAimGame(DifficultySettings difficultySettings)
+        {
+            GameStarting?.Invoke();
+            yield return _waitForSeconds;
+            GameStarted?.Invoke(difficultySettings);
+            Started?.Invoke();
+        }
     }
 }

@@ -1,3 +1,4 @@
+using StartGameContent;
 using UnityEngine;
 
 public class StartGameButton : MonoBehaviour, ISettingsHandler

@@ -1,16 +1,19 @@
 using Interfaces;
 using UnityEngine;
 
-public class ClearPercentSandboxScene : MonoBehaviour,ITargetHandler
+namespace StatisticContent
 {
-    [SerializeField] private PercentHitEnemy[] _percentHitEnemy;
-    [SerializeField]private KillsZombieCounter _killsZombieCounter;
-    
-    public void HandleHit()
+    public class ClearPercentSandboxScene : MonoBehaviour, ITargetHandler
     {
-        _killsZombieCounter.Clear();
+        [SerializeField] private PercentHitEnemy[] _percentHitEnemy;
+        [SerializeField] private KillsZombieCounter _killsZombieCounter;
 
-        foreach (var percentHitEnemy in _percentHitEnemy)
-            percentHitEnemy.Clear();
+        public void HandleHit()
+        {
+            _killsZombieCounter.Clear();
+
+            foreach (var percentHitEnemy in _percentHitEnemy)
+                percentHitEnemy.Clear();
+        }
     }
 }

@@ -2191,10 +2191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ddae068407db4288766d6e961259c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeMultiplier: 1
-  easyDifficultyMultiplier: 1
-  mediumDifficultyMultiplier: 3
-  hardDifficultyMultiplier: 6
 --- !u!1 &185433379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,7 +3589,7 @@ MonoBehaviour:
   _recordCounter: {fileID: 783540866}
   _scoreCalculator: {fileID: 167449414}
   _isTimeBased: 1
-  _timerNew: {fileID: 638804197}
+  _countUpTimer: {fileID: 638804197}
   _startGame: {fileID: 1088607158}
   _shootsText: {fileID: 2093687210}
   _hitsText: {fileID: 374671008}
@@ -8041,10 +8037,6 @@ MonoBehaviour:
   _weaponSwitching: {fileID: 340313234}
   _timer: {fileID: 0}
   _spawner: {fileID: 1346498080}
-  Shots: 0
-  Hits: 0
-  Dies: 0
-  Percent: 0
 --- !u!4 &783540867
 Transform:
   m_ObjectHideFlags: 0
@@ -14088,15 +14080,6 @@ MonoBehaviour:
   - {fileID: 3326319993792824376, guid: bbd84107968fd2846ba65279e5e463a9, type: 3}
   _bombPrefab: {fileID: 6808452079761921661, guid: c15512ac29be16e46a78f091dbe8f479, type: 3}
   _spawner: {fileID: 1331933535}
-  _minDelay: 0.5
-  _maxDelay: 1.5
-  _minAngle: -15
-  _maxAngle: 15
-  _minForce: 10
-  _maxForce: 15
-  _lifeTime: 3
-  _maxTorque: 3
-  _spawnBobmChance: 0.05
   _hitHandler: {fileID: 1878263836}
 --- !u!1 &1338441179
 GameObject:

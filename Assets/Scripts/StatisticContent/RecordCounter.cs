@@ -1,7 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using SpawnContent;
+using StartGameContent;
+using StatisticContent;
 using UnityEngine;
 
 public class RecordCounter : MonoBehaviour
@@ -13,10 +14,13 @@ public class RecordCounter : MonoBehaviour
     [SerializeField] private Spawner _spawner;
 
     private Gun _gun;
-    public int Shots;
-    public int Hits;
-    public int Dies;
-    public float Percent;
+    private int _shots;
+    private int _hits;
+    private int _dies;
+    private float _percent;
+    private int _maxDie = 3;
+    private float _factor=100f;
+    private float _delay = 1f;
 
     public event Action<int, int, float, int, bool> LevelCompleted;
 
@@ -45,11 +49,9 @@ public class RecordCounter : MonoBehaviour
 
     public void AddDie()
     {
-        Dies++;
+        _dies++;
         
-        // Debug.Log("ДАЙ");
-        
-        if (Dies >= 3)
+        if (_dies >= _maxDie)
             LevelOver();
     }
 
@@ -60,44 +62,42 @@ public class RecordCounter : MonoBehaviour
 
     private IEnumerator Over()
     {
-        yield return new WaitForSeconds(1f);
-        LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, false);
+        yield return new WaitForSeconds(_delay);
+        LevelCompleted?.Invoke(_shots, _hits, GetPercent(), _spawner.SpawnTargetAmount, false);
     }
     
     private void LevelOver()
     {
-        LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, false);
+        LevelCompleted?.Invoke(_shots, _hits, GetPercent(), _spawner.SpawnTargetAmount, false);
     }
 
     private void TimeOver()
     {
-        LevelCompleted?.Invoke(Shots, Hits, GetPercent(), _spawner.SpawnTargetAmount, true);
+        LevelCompleted?.Invoke(_shots, _hits, GetPercent(), _spawner.SpawnTargetAmount, true);
     }
 
     private float GetPercent()
     {
-        Percent = (float)Hits / Shots * 100;
+        _percent = (float)_hits / _shots * _factor;
 
-        if (Shots == 0)
+        if (_shots == 0)
             return 0;
 
-        return Percent;
+        return _percent;
     }
 
     private void ClearAllData()
     {
-        Shots = 0;
-        Hits = 0;
-        Percent = 0;
+        _shots = 0;
+        _hits = 0;
+        _percent = 0;
     }
-
-    // private void AddHit() => Hits++;
+    
     private void AddHit()
     {
-        Hits++;
-        // Debug.Log("Add Hit" + Hits);
+        _hits++;
     }
-    private void AddShoot() => Shots++;
+    private void AddShoot() => _shots++;
 
     private void ChangeGun(Gun gun)
     {

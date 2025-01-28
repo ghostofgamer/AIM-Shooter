@@ -1,27 +1,28 @@
 using LeaderboardContent;
+using StartGameContent;
+using StatisticContent;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private YandexLeaderboard _yandexLeaderBoard;
     [SerializeField] private RecordCounter _recordCounter;
     [SerializeField] private ScoreCalculator _scoreCalculator;
-    [SerializeField] private bool _isTimeBased;
-    [SerializeField] private TimerNew _timerNew;
+    [SerializeField] private bool _isTimeBased; 
+    [SerializeField] private CountUpTimer _countUpTimer;
     [SerializeField] private StartGame _startGame;
 
-    [Header("TMP_Text Elements ")] [SerializeField]
-    private TMP_Text _shootsText;
-
+    [Header("TMP_Text Elements ")] 
+    [SerializeField] private TMP_Text _shootsText;
     [SerializeField] private TMP_Text _hitsText;
     [SerializeField] private TMP_Text _percentText;
     [SerializeField] private TMP_Text _recordScoreText;
     [SerializeField] private TMP_Text _currentScoreText;
     [SerializeField] private TMP_Text _targetAmountText;
     [SerializeField] private TMP_Text _percentKillTarget;
-    // [SerializeField]private Timer _timer;
 
     private CanvasGroup _canvasGroup;
 
@@ -54,7 +55,7 @@ public class GameOverScreen : MonoBehaviour
 
         if (_isTimeBased)
         {
-            score = _scoreCalculator.CalculateScore(_timerNew.CurrentTime, _startGame.Difficulty, percentValue);
+            score = _scoreCalculator.CalculateScore(_countUpTimer.CurrentTime, _startGame.Difficulty, percentValue);
             _currentScoreText.text = score.ToString();
             int record = PlayerPrefs.GetInt("Record" + currentSceneIndex, 0);
 
