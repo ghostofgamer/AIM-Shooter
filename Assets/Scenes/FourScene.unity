@@ -2565,7 +2565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 922882579}
-  IsAdCompleted: 0
   _button: {fileID: 0}
   _block: {fileID: 151514316}
   _weaponCollider: {fileID: 921128571}
@@ -3703,7 +3702,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 922882579}
-  IsAdCompleted: 0
 --- !u!1 &286482246
 GameObject:
   m_ObjectHideFlags: 0

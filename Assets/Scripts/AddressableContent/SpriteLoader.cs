@@ -8,12 +8,12 @@ namespace AddressableContent
     {
         [SerializeField] private AssetReference spriteReference;
     
-        private SpriteRenderer spriteRenderer;
+        private SpriteRenderer _spriteRenderer;
         private AsyncOperationHandle<Sprite> _loadedSpriteHandle;
     
         private async void Start()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
             LoadSprite();
         }
 
@@ -23,7 +23,7 @@ namespace AddressableContent
             await _loadedSpriteHandle.Task;
         
             if (_loadedSpriteHandle.Status == AsyncOperationStatus.Succeeded)
-                spriteRenderer.sprite = _loadedSpriteHandle.Result;
+                _spriteRenderer.sprite = _loadedSpriteHandle.Result;
             else
                 Debug.LogError("Failed to load sprite.");
         }
