@@ -20,10 +20,10 @@ public class ObjectPool<T> where T : MonoBehaviour
     {
         var filter = _poolGeneric.Where(p => p.gameObject.activeSelf == false);
 
-        Debug.Log("FilterCount " + filter.Count());
+        // Debug.Log("FilterCount " + filter.Count());
         int index = Random.Range(0, filter.Count());
-        Debug.Log("Индекс " + index);
-        Debug.Log("AutoExpand " + AutoExpand);
+        /*Debug.Log("Индекс " + index);
+        Debug.Log("AutoExpand " + AutoExpand);*/
 
         if (filter.Count() == 0)
         {

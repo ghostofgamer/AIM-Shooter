@@ -24,33 +24,37 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIM-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/gradient_circle_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/gradient_circle_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/gradient_horizontal_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Basics/gradient_horizontal_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Explosions/nova_6x3_spritesheet_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Explosions/nova_6x3_spritesheet_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Magic/magic_orb2_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Materials/Misc/Magic/magic_orb2_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Explosions/FireballExplosion/ExplosionFireballFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Prefabs/Combat/Explosions/FireballExplosion/ExplosionFireballFire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Sound/etfx_explosion_fireball.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddedAssets/Epic Toon FX/Sound/etfx_explosion_fireball.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Prefabs.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Prefabs.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Prefabs_BundledAssetGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Prefabs_BundledAssetGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Prefabs_ContentUpdateGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Prefabs_ContentUpdateGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Sprites_BundledAssetGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Sprites_BundledAssetGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Sprites_ContentUpdateGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Sprites_ContentUpdateGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Sprites.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Sprites.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FourScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SecondLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/AbstractSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/AbstractSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/NinjaSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/Bomb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Screens/GameOverScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/6674cd32887a29a52dfbad8f6b77093a.data.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/7920c10c4d597f83b2b511251a4404f6.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/Bild.loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/Build/f7380ff869a60a24921f42d95ec6514b.wasm.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/StreamingAssets/aa/catalog.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/StreamingAssets/aa/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ADS/RestartLevelAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ADS/RestartLevelAd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/ObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpriteLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/RecordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/RecordCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StopGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StopGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SensivitySettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/WebGL/catalog_0.1.hash" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/WebGL/catalog_0.1.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerData/WebGL/catalog_0.1.json" beforeDir="false" afterPath="$PROJECT_DIR$/ServerData/WebGL/catalog_0.1.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +244,9 @@
       <workItem from="1737446942036" duration="13597000" />
       <workItem from="1737537553511" duration="13770000" />
       <workItem from="1737627431025" duration="8410000" />
-      <workItem from="1737882947589" duration="14551000" />
+      <workItem from="1737882947589" duration="15376000" />
+      <workItem from="1737968269586" duration="5478000" />
+      <workItem from="1738050044914" duration="2896000" />
     </task>
     <servers />
   </component>
@@ -274,13 +280,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/SpawnContent/Spawner.cs</url>
-          <line>40</line>
+          <line>41</line>
           <properties documentPath="D:\Repository\AIM-Shooter\Assets\Scripts\SpawnContent\Spawner.cs" containingFunctionPresentation="Method 'SpawnTarget'">
             <startOffsets>
-              <option value="1091" />
+              <option value="1125" />
             </startOffsets>
             <endOffsets>
-              <option value="1115" />
+              <option value="1149" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

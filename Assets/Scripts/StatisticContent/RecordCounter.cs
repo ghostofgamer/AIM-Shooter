@@ -90,8 +90,12 @@ public class RecordCounter : MonoBehaviour
         Percent = 0;
     }
 
-    private void AddHit() => Hits++;
-
+    // private void AddHit() => Hits++;
+    private void AddHit()
+    {
+        Hits++;
+        // Debug.Log("Add Hit" + Hits);
+    }
     private void AddShoot() => Shots++;
 
     private void ChangeGun(Gun gun)

@@ -8825,6 +8825,10 @@ PrefabInstance:
       propertyPath: _hitHandler
       value: 
       objectReference: {fileID: 1878263836}
+    - target: {fileID: 6462506645998149471, guid: b4e519480f0197d45bfa53b2b6cd21f3, type: 3}
+      propertyPath: _targetHitMetall
+      value: 
+      objectReference: {fileID: 8300000, guid: 828e9b18ff96e3446aa72c9d5913c1bd, type: 3}
     - target: {fileID: 6494442250457587370, guid: b4e519480f0197d45bfa53b2b6cd21f3, type: 3}
       propertyPath: m_Name
       value: SoundPlayer
@@ -14130,7 +14134,7 @@ MonoBehaviour:
   _stopGameButton: {fileID: 1565437979}
   _startGame: {fileID: 1088607158}
   _prefab: {fileID: 1073927265665138349, guid: f1b39fa687cad6249a0b11d690d557c8, type: 3}
-  _maxSize: 3
+  _maxSize: 50
 --- !u!4 &1346498081
 Transform:
   m_ObjectHideFlags: 0
@@ -15367,6 +15371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startGame: {fileID: 1088607158}
+  _step: 3
 --- !u!114 &1565437980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18448,6 +18453,7 @@ MonoBehaviour:
   _headShootEffects: []
   _bloodHitEffects: []
   _bloodContainer: {fileID: 1221817672}
+  _explosionEffect: {fileID: 0}
 --- !u!4 &1878263837
 Transform:
   m_ObjectHideFlags: 0

@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: bfcea28bc60d200408028e285e33ec87
   m_currentHash:
     serializedVersion: 2
-    Hash: 6b486da7eed84bd8f950114ac5be397f
+    Hash: 3a9d6866f0670c58b2019bbcf5bac596
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 1
+  m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,9 +35,9 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 30ebc0ddc15d9b44aa91385409899bfd
+    m_Id: 8d61cf1f35442304b83ee9cd178a7848
   m_RemoteCatalogLoadPath:
-    m_Id: d3eefcdc546d2ab46af2097a33c53ac7
+    m_Id: 84d07a9eff0aaf548b59ab85d2ba358e
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
@@ -46,8 +46,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 1b4c2d59d285ebb46826b872493f7e4c, type: 2}
   - {fileID: 11400000, guid: 7d899332bfd34cf4b949527c71877c5d, type: 2}
-  - {fileID: 11400000, guid: 3622e49a2f9cd1144ba733e757ba25aa, type: 2}
-  - {fileID: 11400000, guid: cf85bf239afe61e42ba19c49ae8995b1, type: 2}
+  - {fileID: 11400000, guid: e5caeb2a45e161d4a94dfe92b9d2b051, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -62,13 +61,27 @@ MonoBehaviour:
       - m_Id: 30690ef0f3bc5ba488048f16c1820f6f
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 8d61cf1f35442304b83ee9cd178a7848
-        m_Value: ServerData/[BuildTarget]
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 84d07a9eff0aaf548b59ab85d2ba358e
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 30ebc0ddc15d9b44aa91385409899bfd
-        m_Value: ServerData/[BuildTarget]
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: d3eefcdc546d2ab46af2097a33c53ac7
-        m_Value: https://ghostofgamer.github.io/AssetAddressableAim-Shooter/
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+    - m_InheritedParent: 
+      m_Id: 40961cee1ef50884c8526f832249023b
+      m_ProfileName: New Profile
+      m_Values:
+      - m_Id: 30690ef0f3bc5ba488048f16c1820f6f
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 8d61cf1f35442304b83ee9cd178a7848
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 84d07a9eff0aaf548b59ab85d2ba358e
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 30ebc0ddc15d9b44aa91385409899bfd
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: d3eefcdc546d2ab46af2097a33c53ac7
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: 30690ef0f3bc5ba488048f16c1820f6f
       m_Name: BuildTarget
@@ -102,7 +115,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8be78bd65db2b64bac29da1c25ffd6f, type: 2}
   - {fileID: 11400000, guid: c544574964c215a44a08c8b31a3eae94, type: 2}
   - {fileID: 11400000, guid: 9c7d00f06ccf6a0429646beabbc07957, type: 2}
-  m_ActiveProfileId: e803864921032da4bb91a3b1e0a48b80
+  m_ActiveProfileId: 40961cee1ef50884c8526f832249023b
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}

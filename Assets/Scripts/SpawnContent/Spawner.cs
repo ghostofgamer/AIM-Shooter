@@ -22,11 +22,12 @@ public class Spawner : AbstractSpawner
     protected override void StartSpawn(DifficultySettings difficultySettings)
     {
         base.StartSpawn(difficultySettings);
-        SpawnTargetAmount = 0;
+        // SpawnTargetAmount = 0;
     }
 
     protected override IEnumerator SpawnTarget()
     {
+        SpawnTargetAmount = 0;
         int spawnCount = 99999999;
         float minDistance = DifficultySettings.minDistanceBetweenTargets;
         Vector3 spawnRange = DifficultySettings.spawnRange;
@@ -62,6 +63,7 @@ public class Spawner : AbstractSpawner
                 target.gameObject.SetActive(true);
                 target.transform.position = newPos;
                 SpawnTargetAmount++;
+                // Debug.Log("Target Spawned " + SpawnTargetAmount);
                 target.Init(RecordCounter);
                 spawnCount--;
             }

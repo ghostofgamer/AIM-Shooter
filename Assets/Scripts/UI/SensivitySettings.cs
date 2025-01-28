@@ -11,7 +11,7 @@ public class SensivitySettings : MonoBehaviour
     public float minSensitivity = 0.5f;
     public float maxSensitivity = 500f;
 
-    private float _defaultSensitivity = 150f;
+    private float _defaultSensitivity = 100f;
 
     private void Start()
     {
