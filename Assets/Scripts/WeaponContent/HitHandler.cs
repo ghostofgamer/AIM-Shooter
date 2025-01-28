@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Decals;
 using EnemyContent;
 using UnityEngine;
+using Environment = EnvironmentContent.Environment;
 using Random = UnityEngine.Random;
 
 public class HitHandler : MonoBehaviour

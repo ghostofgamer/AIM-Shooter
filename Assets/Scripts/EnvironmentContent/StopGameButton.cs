@@ -1,40 +1,41 @@
 using System;
 using UnityEngine;
 
-public class StopGameButton : MonoBehaviour, IValueChanger
+namespace EnvironmentContent
 {
-    [SerializeField] private StartGame _startGame;
-    [SerializeField] private float _step = 3f;
-    
-    private Collider _collider;
-    private Vector3 _defaultPosition;
-    
-    public event Action Stoping;
-
-    private void OnEnable()
+    public class StopGameButton : MonoBehaviour, IValueChanger
     {
-        _startGame.Started += ButtonMove;
-    }
+        [SerializeField] private StartGame _startGame;
+        [SerializeField] private float _step = 3f;
 
-    private void OnDisable()
-    {
-        _startGame.Started -= ButtonMove;
-    }
+        private Vector3 _defaultPosition;
 
-    private void Start()
-    {
-        _defaultPosition = transform.position;
-        _collider = GetComponent<Collider>();
-    }
+        public event Action Stoping;
 
-    public void ChangeValue()
-    {
-        Stoping?.Invoke();
-        transform.position = _defaultPosition;
-    }
+        private void OnEnable()
+        {
+            _startGame.Started += ButtonMove;
+        }
 
-    private void ButtonMove()
-    {
-        transform.position = new Vector3  (transform.position.x+_step, transform.position.y, _defaultPosition.z);
+        private void OnDisable()
+        {
+            _startGame.Started -= ButtonMove;
+        }
+
+        private void Start()
+        {
+            _defaultPosition = transform.position;
+        }
+
+        public void ChangeValue()
+        {
+            Stoping?.Invoke();
+            transform.position = _defaultPosition;
+        }
+
+        private void ButtonMove()
+        {
+            transform.position = new Vector3(transform.position.x + _step, transform.position.y, _defaultPosition.z);
+        }
     }
 }

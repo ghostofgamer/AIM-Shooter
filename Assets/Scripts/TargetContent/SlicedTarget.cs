@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Environment = EnvironmentContent.Environment;
 
 public class SlicedTarget : MonoBehaviour
 {

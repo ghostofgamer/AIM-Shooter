@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class MenuButtons : MonoBehaviour,IValueChanger
+namespace EnvironmentContent
 {
-    [SerializeField] private PauseScreen _pauseScreen;
-    
-    public void ChangeValue()
+    public class MenuButtons : MonoBehaviour,IValueChanger
     {
-        _pauseScreen.Open();
+        [SerializeField] private PauseScreen _pauseScreen;
+    
+        public void ChangeValue()
+        {
+            _pauseScreen.Open();
+        }
     }
 }

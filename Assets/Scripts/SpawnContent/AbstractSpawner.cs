@@ -1,4 +1,5 @@
 using System.Collections;
+using EnvironmentContent;
 using UnityEngine;
 
 public abstract class AbstractSpawner : MonoBehaviour
