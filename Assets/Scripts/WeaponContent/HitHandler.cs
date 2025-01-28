@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Decals;
+using EnemyContent;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -31,7 +33,6 @@ public class HitHandler : MonoBehaviour
             InitializePool("HeadShoot", _headShootEffects, 10);
             InitializePool("BloodHit", _bloodHitEffects, 10);
         }
-        // Initialize pools for each type of effect
 
         InitializePool("StoneDecal", new Decal[] { _decalEffectStone }, 10);
         InitializePool("MetalDecal", new Decal[] { _decalEffectMetall }, 10);
@@ -66,7 +67,7 @@ public class HitHandler : MonoBehaviour
 
             if (hitPosition.IsHead)
             {
-                hitPosition.Damage(damage);
+                hitPosition.Hit();
                 HeadHited?.Invoke();
 
                 if (_effectsPools[poolKey].TryGetObject(out Decal decal, _headShootEffects[0]))
@@ -75,14 +76,7 @@ public class HitHandler : MonoBehaviour
                     decal.transform.rotation = Quaternion.LookRotation(hit.normal);
                     decal.transform.Translate(decal.transform.forward * 0.01f, Space.World);
                     decal.gameObject.SetActive(true);
-                    // decal.GetComponent<ParticleSystem>().Play();
                 }
-
-                /*int index = Random.Range(0, _headShootEffects.Length);
-                impactBlood = Instantiate(_headShootEffects[index].gameObject, hit.point,
-                    Quaternion.LookRotation(hit.normal),
-                    _bloodContainer);
-                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);*/
             }
             else
             {
@@ -92,25 +86,11 @@ public class HitHandler : MonoBehaviour
                     decal.transform.rotation = Quaternion.LookRotation(hit.normal);
                     decal.transform.Translate(decal.transform.forward * 0.01f, Space.World);
                     decal.gameObject.SetActive(true);
-                    // decal.GetComponent<ParticleSystem>().Play();
                 }
-
-
-                /*int index = Random.Range(0, _bloodHitEffects.Length);
-
-                impactBlood = Instantiate(_bloodHitEffects[index].gameObject, hit.point,
-                    Quaternion.LookRotation(hit.normal), _bloodContainer);
-                impactBlood.transform.Translate(impactBlood.transform.forward * 0.01f, Space.World);*/
             }
 
             return;
         }
-
-
-        /*
-        if (hit.transform.TryGetComponent(out Bomb bomb))
-            HitedBomb?.Invoke();
-            */
 
         if (hit.transform.TryGetComponent<Bomb>(out _))
         {
@@ -160,15 +140,6 @@ public class HitHandler : MonoBehaviour
                 impactDecal.transform.Translate(impactDecal.transform.forward * 0.01f, Space.World);
                 impactDecal.gameObject.SetActive(true);
             }
-
-            /*if (environment.IsStone)
-            {
-                impactGO = Instantiate(_decalEffectStone.gameObject, hit.point, Quaternion.LookRotation(hit.normal));
-                impactGO.transform.SetParent(hit.collider.transform);
-                impactGO.transform.Translate(impactGO.transform.forward * 0.01f, Space.World);
-            }
-            else if (!environment.IsStone)
-                impactGO = Instantiate(_decalEffectMetall.gameObject, hit.point, Quaternion.LookRotation(hit.normal));*/
         }
     }
 }

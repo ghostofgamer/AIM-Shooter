@@ -1,3 +1,4 @@
+using EnemyContent;
 using UnityEngine;
 
 public class ZombieMode : MonoBehaviour

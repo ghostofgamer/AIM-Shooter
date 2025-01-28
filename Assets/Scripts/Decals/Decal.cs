@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class Decal : MonoBehaviour
+namespace Decals
 {
+    public class Decal : MonoBehaviour
+    {
+    }
 }
