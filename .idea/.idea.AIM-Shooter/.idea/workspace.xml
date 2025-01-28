@@ -23,17 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdeab752-330f-4246-a583-fcdad00c3ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Environment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Environment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/MenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/MenuButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/StopGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/StopGameButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentContent/Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/AbstractSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnContent/AbstractSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartGameContent/StartGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StartGameContent/StartGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/TimerNew.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatisticContent/TimerNew.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TargetContent/SlicedTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponContent/HitHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocalizationContent/Localization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocalizationContent/Localization.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +215,7 @@
       <workItem from="1737627431025" duration="8410000" />
       <workItem from="1737882947589" duration="15376000" />
       <workItem from="1737968269586" duration="5478000" />
-      <workItem from="1738050044914" duration="13896000" />
+      <workItem from="1738050044914" duration="14233000" />
     </task>
     <servers />
   </component>

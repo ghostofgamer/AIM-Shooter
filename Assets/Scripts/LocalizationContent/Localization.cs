@@ -16,7 +16,6 @@ public class Localization : MonoBehaviour
     private const string Turkish = "tr";
 
     [SerializeField] private LeanLocalization _leanLocalization;
-    // [SerializeField] private Load _load;
 
     private string _currentLanguage;
     private string _autoFoundLanguage;
@@ -44,40 +43,21 @@ public class Localization : MonoBehaviour
         Debug.Log("ЯЗЫК " + _autoFoundLanguage);
         SetLanguage(_autoFoundLanguage);
 #endif
-        // LanguageChanged?.Invoke(_currentLanguage);
-    }
-
-
-    private void Start()
-    {
-        /*_autoFoundLanguage = YandexGamesSdk.Environment.i18n.lang;
-        Debug.Log("!!! " + _autoFoundLanguage);
-        Debug.Log("!!! " + _autoFoundLanguage);
-        Debug.Log("!!! " + _autoFoundLanguage);
-
-        SetLanguage(_autoFoundLanguage);*/
-        
-        // LanguageChanged?.Invoke(_currentLanguage);
     }
 
     public void SetLanguage(string languageCode)
     {
-        Debug.Log("Передали " + languageCode);
-        
         switch (languageCode)
         {
             case English:
-                Debug.Log("ТУТ " + EnglishCode);
                 _leanLocalization.SetCurrentLanguage(EnglishCode);  
                 break;
 
             case Turkish:
-                Debug.Log("ТУТ " + TurkishCode);
                 _leanLocalization.SetCurrentLanguage(TurkishCode);
                 break;
 
             case Russian:
-                Debug.Log("ТУТ " + RussianCode);
                 _leanLocalization.SetCurrentLanguage(RussianCode);
                 break;
         }
