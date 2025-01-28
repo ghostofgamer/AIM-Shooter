@@ -20412,6 +20412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74facb56c9e9d744b87438e990c13639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lookMouse: {fileID: 963194229}
 --- !u!1 &2075659027
 GameObject:
   m_ObjectHideFlags: 0

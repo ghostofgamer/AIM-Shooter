@@ -3128,7 +3128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1659772138}
-  IsAdCompleted: 0
 --- !u!1 &294099646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6804,6 +6803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startGame: {fileID: 1088607158}
+  _step: 3
 --- !u!114 &670541178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17698,7 +17698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1659772138}
-  IsAdCompleted: 0
   _button: {fileID: 0}
   _block: {fileID: 1681279010}
   _weaponCollider: {fileID: 849028754}
@@ -20314,6 +20313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74facb56c9e9d744b87438e990c13639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lookMouse: {fileID: 963194229}
 --- !u!1 &2072090900
 GameObject:
   m_ObjectHideFlags: 0

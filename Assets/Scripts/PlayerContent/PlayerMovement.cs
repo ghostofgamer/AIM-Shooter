@@ -20,6 +20,9 @@ namespace PlayerContent
         private bool _isGrounded;
         private float _speed;
         private PlayerInput _playerInput;
+        private float _minHeight = 1.5f;
+        private float _maxHeight = 3f;
+        private float _factor = 2f;
 
         private void Start()
         {
@@ -35,10 +38,10 @@ namespace PlayerContent
         {
             _speed = _playerInput.IsRunning && _isGrounded ? _speedRun : _speedWalk;
             _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-            _characterController.height = _playerInput.IsCrouching ? 1.5f : 3;
+            _characterController.height = _playerInput.IsCrouching ? _minHeight : _maxHeight;
 
             if (_isGrounded && _velocity.y < 0)
-                _velocity.y = -2f;
+                _velocity.y = -_factor;
 
             _x = _playerInput.X;
             _z = _playerInput.Z;
@@ -51,7 +54,7 @@ namespace PlayerContent
         public void Jump()
         {
             if (_isGrounded)
-                _velocity.y = Mathf.Sqrt(_jumpHight * -2 * _gravity);
+                _velocity.y = Mathf.Sqrt(_jumpHight * -_factor * _gravity);
         }
     }
 }

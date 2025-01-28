@@ -2883,6 +2883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startGame: {fileID: 1088607158}
+  _step: 3
 --- !u!1 &200032123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,7 +3765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1589474502}
-  IsAdCompleted: 0
 --- !u!1 &314139302
 GameObject:
   m_ObjectHideFlags: 0
@@ -14722,7 +14722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusScreen: {fileID: 1589474502}
-  IsAdCompleted: 0
   _button: {fileID: 0}
   _block: {fileID: 1510685445}
   _weaponCollider: {fileID: 986833328}
@@ -17098,6 +17097,7 @@ MonoBehaviour:
   _headShootEffects: []
   _bloodHitEffects: []
   _bloodContainer: {fileID: 1686959315}
+  _explosionEffect: {fileID: 0}
 --- !u!4 &1878263837
 Transform:
   m_ObjectHideFlags: 0
@@ -18749,6 +18749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74facb56c9e9d744b87438e990c13639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lookMouse: {fileID: 963194229}
 --- !u!1 &2078026264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4501e8be7a4b44245a4f87c5ce583c33, type: 3}
