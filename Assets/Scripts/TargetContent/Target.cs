@@ -1,6 +1,7 @@
+using Interfaces;
 using UnityEngine;
 
-public class Target : MonoBehaviour, IDamageable, ITargetHandler
+public class Target : MonoBehaviour, ITargetHandler
 {
     [SerializeField] private int _health = 50;
     [SerializeField]  private bool _isDeadCount = true;
@@ -14,19 +15,10 @@ public class Target : MonoBehaviour, IDamageable, ITargetHandler
 
     public void Die()
     {
-        // Debug.Log("Сам ВЫКЛ");
         if (_isDeadCount)
             _recordCounter.AddDie();
 
         gameObject.SetActive(false);
-    }
-
-    public void TakeDamage(int damage)
-    {
-        _health -= damage;
-
-        if (_health <= 0)
-            Die();
     }
 
     public void HandleHit() => gameObject.SetActive(false);

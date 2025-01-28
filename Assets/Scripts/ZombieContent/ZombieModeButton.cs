@@ -1,3 +1,4 @@
+using Interfaces;
 using UnityEngine;
 
 public class ZombieModeButton : MonoBehaviour, IValueChanger

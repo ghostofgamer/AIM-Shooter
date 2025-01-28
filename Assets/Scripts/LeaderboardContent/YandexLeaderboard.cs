@@ -1,53 +1,55 @@
-using System.Collections;
 using System.Collections.Generic;
 using Agava.YandexGames;
 using UnityEngine;
 
-public class YandexLeaderboard : MonoBehaviour
+namespace LeaderboardContent
 {
-    private const string LeaderBoardName = "Leaderboard";
-    private const string AnonymousName = "Anonymous";
-
-    private readonly List<LeaderboardPlayer> _leaderboardPlayers = new List<LeaderboardPlayer>();
-
-    [SerializeField] private LeaderboardView _leaderboardView;
-
-    public void SetPlayerScore(int score)
+    public class YandexLeaderboard : MonoBehaviour
     {
-        if (PlayerAccount.IsAuthorized == false)
-            return;
+        private const string LeaderBoardName = "Leaderboard";
+        private const string AnonymousName = "Anonymous";
 
-        Leaderboard.GetPlayerEntry(LeaderBoardName, (result) =>
+        private readonly List<LeaderboardPlayer> _leaderboardPlayers = new List<LeaderboardPlayer>();
+
+        [SerializeField] private LeaderboardView _leaderboardView;
+
+        public void SetPlayerScore(int score)
         {
-            if (result == null || result.score < score)
+            if (PlayerAccount.IsAuthorized == false)
+                return;
+
+            Leaderboard.GetPlayerEntry(LeaderBoardName, (result) =>
             {
-                Leaderboard.SetScore(LeaderBoardName, score);
-            }
-        });
-    }
+                if (result == null || result.score < score)
+                {
+                    Leaderboard.SetScore(LeaderBoardName, score);
+                }
+            });
+        }
 
-    public void Fill()
-    {
-        if (PlayerAccount.IsAuthorized == false)
-            return;
-
-        _leaderboardPlayers.Clear();
-
-        Leaderboard.GetEntries(LeaderBoardName, (result =>
+        public void Fill()
         {
-            foreach (var entry in result.entries)
+            if (PlayerAccount.IsAuthorized == false)
+                return;
+
+            _leaderboardPlayers.Clear();
+
+            Leaderboard.GetEntries(LeaderBoardName, (result =>
             {
-                int rank = entry.rank;
-                int score = entry.score;
-                string name = entry.player.publicName;
+                foreach (var entry in result.entries)
+                {
+                    int rank = entry.rank;
+                    int score = entry.score;
+                    string name = entry.player.publicName;
 
-                if (string.IsNullOrEmpty(name))
-                    name = AnonymousName;
+                    if (string.IsNullOrEmpty(name))
+                        name = AnonymousName;
 
-                _leaderboardPlayers.Add(new LeaderboardPlayer(rank, name, score));
-            }
+                    _leaderboardPlayers.Add(new LeaderboardPlayer(rank, name, score));
+                }
 
-            _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
-        }));
+                _leaderboardView.ConstructLeaderboard(_leaderboardPlayers);
+            }));
+        }
     }
 }

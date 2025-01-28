@@ -1,4 +1,7 @@
-public interface IValueChanger
+namespace Interfaces
 {
-    public void ChangeValue();
+    public interface IValueChanger
+    {
+        public void ChangeValue();
+    }
 }

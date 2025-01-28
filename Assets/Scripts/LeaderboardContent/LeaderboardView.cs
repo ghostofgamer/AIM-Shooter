@@ -1,35 +1,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaderboardView : MonoBehaviour
+namespace LeaderboardContent
 {
-    [SerializeField] private Transform _container;
-    [SerializeField] private LeaderboardElement _leaderboardElementPrefab;
-
-    private List<LeaderboardElement> _leaderboardElements = new List<LeaderboardElement>();
-
-    public void ConstructLeaderboard(List<LeaderboardPlayer> leaderboardElements)
+    public class LeaderboardView : MonoBehaviour
     {
-        ClearLeaderboard();
+        [SerializeField] private Transform _container;
+        [SerializeField] private LeaderboardElement _leaderboardElementPrefab;
 
-        foreach (LeaderboardPlayer player in leaderboardElements)
-        {
-            LeaderboardElement leaderboardElement = Instantiate(_leaderboardElementPrefab, _container);
-            leaderboardElement.Initialize(player.Name, player.Rank, player.Score);
-            leaderboardElement.ShowLeaderPosition(player.Rank);
-            _leaderboardElements.Add(leaderboardElement);
-        }
-    }
+        private List<LeaderboardElement> _leaderboardElements = new List<LeaderboardElement>();
 
-    private void ClearLeaderboard()
-    {
-        foreach (var element in _leaderboardElements)
+        public void ConstructLeaderboard(List<LeaderboardPlayer> leaderboardElements)
         {
-            Debug.Log("колько удалений прошло ");
-            Destroy(element);
-            element.gameObject.SetActive(false);
+            ClearLeaderboard();
+
+            foreach (LeaderboardPlayer player in leaderboardElements)
+            {
+                LeaderboardElement leaderboardElement = Instantiate(_leaderboardElementPrefab, _container);
+                leaderboardElement.Initialize(player.Name, player.Rank, player.Score);
+                leaderboardElement.ShowLeaderPosition(player.Rank);
+                _leaderboardElements.Add(leaderboardElement);
+            }
         }
 
-        _leaderboardElements = new List<LeaderboardElement>();
+        private void ClearLeaderboard()
+        {
+            foreach (var element in _leaderboardElements)
+            {
+                Destroy(element);
+                element.gameObject.SetActive(false);
+            }
+
+            _leaderboardElements = new List<LeaderboardElement>();
+        }
     }
 }

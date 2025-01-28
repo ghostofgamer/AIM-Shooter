@@ -1,4 +1,5 @@
 using Agava.YandexGames;
+using LeaderboardContent;
 using UnityEngine;
 
 public class LeaderboardButton : AbstractButton

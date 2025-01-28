@@ -1,5 +1,7 @@
-
-public interface IShootable
+namespace Interfaces
 {
-    public void Shoot();
+    public interface IShootable
+    {
+        public void Shoot();
+    }
 }

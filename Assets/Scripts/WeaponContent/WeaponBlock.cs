@@ -1,4 +1,5 @@
 using ADS;
+using Interfaces;
 using UnityEngine;
 
 public class WeaponBlock : MonoBehaviour, IValueChanger

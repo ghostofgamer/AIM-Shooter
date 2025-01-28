@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Decals;
 using EnemyContent;
+using Interfaces;
 using UnityEngine;
 using Environment = EnvironmentContent.Environment;
 using Random = UnityEngine.Random;

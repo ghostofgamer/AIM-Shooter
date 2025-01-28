@@ -1,4 +1,7 @@
-public interface ITargetHandler
+namespace Interfaces
 {
-    public void HandleHit();
+    public interface ITargetHandler
+    {
+        public void HandleHit();
+    }
 }
