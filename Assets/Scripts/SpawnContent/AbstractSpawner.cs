@@ -1,6 +1,7 @@
 using System.Collections;
 using EnvironmentContent;
 using StartGameContent;
+using StatisticContent;
 using UnityEngine;
 
 namespace SpawnContent

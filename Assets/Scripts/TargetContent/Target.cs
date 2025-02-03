@@ -1,4 +1,5 @@
 using Interfaces;
+using StatisticContent;
 using UnityEngine;
 
 namespace TargetContent
