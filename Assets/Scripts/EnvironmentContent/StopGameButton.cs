@@ -31,7 +31,7 @@ namespace EnvironmentContent
             _defaultPosition = transform.position;
         }
 
-        public void Stop()
+        public void ChangeValue()
         {
             Stoping?.Invoke();
             ReturnDefaultPosition();

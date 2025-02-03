@@ -4,6 +4,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace AddressableContent
 {
+    [RequireComponent(typeof(SpriteRenderer))]
     public class SpriteLoader : MonoBehaviour
     {
         [SerializeField] private AssetReference spriteReference;

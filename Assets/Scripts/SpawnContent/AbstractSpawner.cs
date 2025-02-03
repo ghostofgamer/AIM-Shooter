@@ -44,7 +44,7 @@ namespace SpawnContent
 
         protected virtual IEnumerator SpawnTarget()
         {
-            yield return new WaitForSeconds(0f);
+            yield return null;
         }
 
         protected void StopSpawn()

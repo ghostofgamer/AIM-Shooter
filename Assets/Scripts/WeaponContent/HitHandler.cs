@@ -122,7 +122,7 @@ public class HitHandler : MonoBehaviour
 
         if (hit.transform.TryGetComponent(out IValueChanger valueChanger))
         {
-            valueChanger.Stop();
+            valueChanger.ChangeValue();
         }
 
         GameObject impactGO;

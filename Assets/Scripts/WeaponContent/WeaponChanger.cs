@@ -8,7 +8,7 @@ public class WeaponChanger : MonoBehaviour, IValueChanger
 
     [field: SerializeField] public int Index { get; private set; }
 
-    public void Stop()
+    public void ChangeValue()
     {
         _weaponSwitching.Select(Index);
         PlayerPrefs.SetInt("CurrentWeaponIndex", Index);

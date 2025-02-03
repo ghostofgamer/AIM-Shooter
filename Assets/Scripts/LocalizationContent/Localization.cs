@@ -36,11 +36,6 @@ public class Localization : MonoBehaviour
         
         
         _autoFoundLanguage = YandexGamesSdk.Environment.i18n.lang;
-        Debug.Log("ЯЗЫК " + _autoFoundLanguage);
-        Debug.Log("ЯЗЫК " + _autoFoundLanguage);
-        Debug.Log("ЯЗЫК " + _autoFoundLanguage);
-        Debug.Log("ЯЗЫК " + _autoFoundLanguage);
-        Debug.Log("ЯЗЫК " + _autoFoundLanguage);
         SetLanguage(_autoFoundLanguage);
 #endif
     }
