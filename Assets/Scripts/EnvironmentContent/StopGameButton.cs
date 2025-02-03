@@ -16,11 +16,13 @@ namespace EnvironmentContent
 
         private void OnEnable()
         {
+            _startGame.GameStarting += ReturnDefaultPosition;
             _startGame.Started += ButtonMove;
         }
 
         private void OnDisable()
         {
+            _startGame.GameStarting -= ReturnDefaultPosition;
             _startGame.Started -= ButtonMove;
         }
 
@@ -29,10 +31,15 @@ namespace EnvironmentContent
             _defaultPosition = transform.position;
         }
 
-        public void ChangeValue()
+        public void Stop()
         {
             Stoping?.Invoke();
-            transform.position = _defaultPosition;
+            ReturnDefaultPosition();
+        }
+
+        private void ReturnDefaultPosition()
+        {
+             transform.position = _defaultPosition;
         }
 
         private void ButtonMove()

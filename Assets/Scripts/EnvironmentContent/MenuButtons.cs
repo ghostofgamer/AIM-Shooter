@@ -7,7 +7,7 @@ namespace EnvironmentContent
     {
         [SerializeField] private PauseScreen _pauseScreen;
     
-        public void ChangeValue()
+        public void Stop()
         {
             _pauseScreen.Open();
         }

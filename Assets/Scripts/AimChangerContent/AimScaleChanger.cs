@@ -12,7 +12,7 @@ namespace AimChangerContent
         [SerializeField] private Vector3 _scale;
         [SerializeField] private int _factor;
     
-        public void ChangeValue()
+        public void Stop()
         {
             _image.transform.localScale = _scale;
             PlayerPrefs.SetInt(AimScaleKey, _factor);

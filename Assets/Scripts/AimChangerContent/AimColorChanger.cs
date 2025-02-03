@@ -12,7 +12,7 @@ namespace AimChangerContent
         [SerializeField] private Color _color;
         [SerializeField] private int _index;
 
-        public void ChangeValue()
+        public void Stop()
         {
             _image.color = _color;
             PlayerPrefs.SetInt(AimColorKey, _index);

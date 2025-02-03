@@ -5,6 +5,7 @@ using EnemyContent;
 using Interfaces;
 using SpawnContent;
 using UnityEngine;
+using WeaponContent;
 using Environment = EnvironmentContent.Environment;
 using Random = UnityEngine.Random;
 
@@ -65,7 +66,6 @@ public class HitHandler : MonoBehaviour
 
         if (hit.transform.TryGetComponent(out HitPositionEnemy hitPosition))
         {
-            // hitPosition.Damage(damage);
             string poolKey = hitPosition.IsHead ? "HeadShoot" : "BloodHit";
 
             if (hitPosition.IsHead)
@@ -101,9 +101,7 @@ public class HitHandler : MonoBehaviour
             _explosionEffect.gameObject.SetActive(true);
             
             hit.collider.TryGetComponent<Bomb>(out Bomb bomb);
-            {
                 bomb.Explosion();
-            }
             
             HitedBomb?.Invoke();
         }
@@ -124,8 +122,7 @@ public class HitHandler : MonoBehaviour
 
         if (hit.transform.TryGetComponent(out IValueChanger valueChanger))
         {
-            valueChanger.ChangeValue();
-            // return;
+            valueChanger.Stop();
         }
 
         GameObject impactGO;
@@ -139,7 +136,6 @@ public class HitHandler : MonoBehaviour
             {
                 impactDecal.transform.position = hit.point;
                 impactDecal.transform.rotation = Quaternion.LookRotation(hit.normal);
-                // impactDecal.transform.SetParent(hit.collider.transform);
                 impactDecal.transform.Translate(impactDecal.transform.forward * 0.01f, Space.World);
                 impactDecal.gameObject.SetActive(true);
             }

@@ -19,7 +19,7 @@ namespace AimChangerContent
     
         private static Dictionary<AssetReference, Sprite> _spriteCache = new Dictionary<AssetReference, Sprite>();
 
-        public async void ChangeValue()
+        public async void Stop()
         {
             Sprite sprite;
 

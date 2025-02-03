@@ -1,13 +1,15 @@
 using Interfaces;
 using UnityEngine;
 
-public class FruitTrigger : MonoBehaviour, ITargetHandler
+namespace TargetContent
 {
-    [SerializeField] private SlicedTarget _slicedTarget;
-
-    public void HandleHit()
+    public class FruitTrigger : MonoBehaviour, ITargetHandler
     {
-        Debug.Log("Попал в фрукт");
-        _slicedTarget.Slice();
+        [SerializeField] private SlicedTarget _slicedTarget;
+
+        public void HandleHit()
+        {
+            _slicedTarget.Slice();
+        }
     }
 }

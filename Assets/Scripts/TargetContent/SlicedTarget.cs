@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Environment = EnvironmentContent.Environment;
 
@@ -19,19 +18,14 @@ public class SlicedTarget : MonoBehaviour
     private void Awake()
     {
         _targetRigidbody = GetComponent<Rigidbody>();
-
         _slicedPartsPositions = new Vector3[_slicedParts.Length];
         _slicedPartsRotations = new Quaternion[_slicedParts.Length];
 
         for (int i = 0; i < _slicedPartsPositions.Length; i++)
-        {
             _slicedPartsPositions[i] = _slicedParts[i].transform.localPosition;
-        }
 
         for (int i = 0; i < _slicedPartsRotations.Length; i++)
-        {
             _slicedPartsRotations[i] = _slicedParts[i].transform.rotation;
-        }
     }
 
     private void OnEnable()
@@ -51,31 +45,17 @@ public class SlicedTarget : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-
-        /*for (int i = 0; i < _slicedParts.Length; i++)
-        {
-            _slicedParts[i].transform.position = _slicedPartsPositions[i];
-        }
-
-        for (int i = 0; i < _slicedPartsRotations.Length; i++)
-        {
-            _slicedParts[i].transform.rotation = _slicedPartsRotations[i];
-        }*/
     }
 
-    /*public void TakeDamage(int damage)
+    private void OnTriggerEnter(Collider other)
     {
-    }*/
-
-    /*public void HandleHit()
-    {
-        Slice();
-    }*/
+        if (other.TryGetComponent(out Environment environment))
+            Die();
+    }
 
     public void Slice()
     {
         _isSliced = true;
-        Debug.Log("Slice");
 
         if (_slicedParticles != null)
             _slicedParticles.Play();
@@ -87,7 +67,6 @@ public class SlicedTarget : MonoBehaviour
             collider.enabled = false;
 
         _slicedPrefab.transform.rotation = Quaternion.Euler(0, 0, 15f);
-
         Rigidbody[] slices = _slicedPrefab.GetComponentsInChildren<Rigidbody>();
 
         foreach (var slice in slices)
@@ -100,29 +79,21 @@ public class SlicedTarget : MonoBehaviour
                 UnityEngine.Random.Range(-1f, 1f),
                 UnityEngine.Random.Range(-1f, 1f)
             );
+            
             slice.AddForce(randomForce * 3f, ForceMode.Impulse);
-
-            // slice.AddForceAtPosition(Vector3.up * 5f, slice.transform.position,ForceMode.Impulse);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out Environment environment))
-            Die();
-    }
-
-    public void Die()
-    {
-        Debug.Log("Сам ВЫКЛ");
-        if (!_isSliced)
-            _recordCounter.AddDie();
-
-        gameObject.SetActive(false);
     }
 
     public void Init(RecordCounter recordCounter)
     {
         _recordCounter = recordCounter;
+    }
+
+    private void Die()
+    {
+        if (!_isSliced)
+            _recordCounter.AddDie();
+
+        gameObject.SetActive(false);
     }
 }

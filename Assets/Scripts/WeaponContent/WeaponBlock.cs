@@ -22,7 +22,7 @@ public class WeaponBlock : MonoBehaviour, IValueChanger
         }
     }
 
-    public void ChangeValue()
+    public void Stop()
     {
         _openWeaponAD.Show();
     }

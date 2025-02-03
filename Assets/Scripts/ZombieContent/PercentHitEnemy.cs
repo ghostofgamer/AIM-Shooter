@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using WeaponContent;
 
 public class PercentHitEnemy : MonoBehaviour
 {

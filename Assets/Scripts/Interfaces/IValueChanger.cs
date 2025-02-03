@@ -2,6 +2,6 @@ namespace Interfaces
 {
     public interface IValueChanger
     {
-        public void ChangeValue();
+        public void Stop();
     }
 }

@@ -11,7 +11,5 @@ public class Bomb : MonoBehaviour
     {
         _item.gameObject.SetActive(false);
         _collider.enabled = false;
-        // _audio.PlayOneShot(_audio.clip);
-        // _effect.Play();
     }
 }

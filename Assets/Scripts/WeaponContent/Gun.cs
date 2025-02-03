@@ -140,15 +140,11 @@ public class Gun : MonoBehaviour, IShootable
             _currentAmmo--;
             AmmoChanged?.Invoke(_currentAmmo);
         }
-       
-
+        
         int layerMask = ~(1 << layerToIgnore);
 
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range, layerMask))
-        {
             _hitHandler.ProcessHit(hit, _damage, _force);
-            // _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));
-        }
 
         _lookMouse.ChangeOffset(Random.Range(-_recoilY, _recoilY), Random.Range(0, _recoilX));
     }

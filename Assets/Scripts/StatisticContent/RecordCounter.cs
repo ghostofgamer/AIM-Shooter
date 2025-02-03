@@ -4,6 +4,7 @@ using SpawnContent;
 using StartGameContent;
 using StatisticContent;
 using UnityEngine;
+using WeaponContent;
 
 public class RecordCounter : MonoBehaviour
 {

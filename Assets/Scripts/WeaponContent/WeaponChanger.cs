@@ -1,5 +1,6 @@
 using Interfaces;
 using UnityEngine;
+using WeaponContent;
 
 public class WeaponChanger : MonoBehaviour, IValueChanger
 {
@@ -7,7 +8,7 @@ public class WeaponChanger : MonoBehaviour, IValueChanger
 
     [field: SerializeField] public int Index { get; private set; }
 
-    public void ChangeValue()
+    public void Stop()
     {
         _weaponSwitching.Select(Index);
         PlayerPrefs.SetInt("CurrentWeaponIndex", Index);

@@ -1,51 +1,45 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetScaler : MonoBehaviour
+namespace TargetContent
 {
-    [SerializeField] private float _duration;
-    [SerializeField] private Vector3 _defaultScale;
-
-    private float _elapsedTime;
-    private Target _target;
-private Coroutine _coroutine;
-
-    private void OnEnable()
+    public class TargetScaler : MonoBehaviour
     {
-        _target = GetComponent<Target>();
-        transform.localScale = _defaultScale;
-        
-        if (_coroutine != null)
-            StopCoroutine(_coroutine);
-        
-        _coroutine=  StartCoroutine(ScaleTarget());
-    }
+        [SerializeField] private float _duration;
+        [SerializeField] private Vector3 _defaultScale;
 
-    /*private void Start()
-    {
-        _target = GetComponent<Target>();
-        
-        if (_coroutine == null)
-            StopCoroutine(_coroutine);
-        _coroutine=  StartCoroutine(ScaleTarget());
-    }*/
+        private float _elapsedTime;
+        private Target _target;
+        private Coroutine _coroutine;
+        private Vector3 _originalScale;
+        private float  _scale;
 
-    private IEnumerator ScaleTarget()
-    {
-        Vector3 originalScale = transform.localScale;
-        _elapsedTime = 0;
-
-        while (_elapsedTime < _duration)
+        private void OnEnable()
         {
-            float scale = Mathf.Lerp(1f, 0f, _elapsedTime / _duration);
-            _elapsedTime += Time.deltaTime;
-            transform.localScale = originalScale * scale;
-            yield return null;
+            _target = GetComponent<Target>();
+            transform.localScale = _defaultScale;
+
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(ScaleTarget());
         }
 
-        transform.localScale = Vector3.zero;
-        _target.Die();
+        private IEnumerator ScaleTarget()
+        {
+            _originalScale = transform.localScale;
+            _elapsedTime = 0;
+
+            while (_elapsedTime < _duration)
+            {
+                _scale = Mathf.Lerp(1f, 0f, _elapsedTime / _duration);
+                _elapsedTime += Time.deltaTime;
+                transform.localScale = _originalScale * _scale;
+                yield return null;
+            }
+
+            transform.localScale = Vector3.zero;
+            _target.Die();
+        }
     }
 }

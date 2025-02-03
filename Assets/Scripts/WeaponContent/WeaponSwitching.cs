@@ -2,62 +2,63 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class WeaponSwitching : MonoBehaviour
+namespace WeaponContent
 {
-    [SerializeField] private int _selectedWeapon = -1;
-    [SerializeField] private Gun[] _guns;
-
-    private Coroutine _coroutine;
-    
-    public event Action<Gun> WeaponSwitched;
-    
-    public Gun _currentGun { get; private set; }
-
-    private void Awake()
+    public class WeaponSwitching : MonoBehaviour
     {
-       int indexWeapon= PlayerPrefs.GetInt("CurrentWeaponIndex",0);
-        Select(indexWeapon);
-        // Select(0);
-    }
-    
-    private void SelectWeapon()
-    {
-        int i = 0;
+        [SerializeField] private int _selectedWeapon = -1;
+        [SerializeField] private Gun[] _guns;
 
-        foreach (Transform weapon in transform)
+        private Coroutine _coroutine;
+    
+        public event Action<Gun> WeaponSwitched;
+    
+        public Gun _currentGun { get; private set; }
+
+        private void Awake()
         {
-            weapon.gameObject.SetActive(i == _selectedWeapon);
-            // weapon.gameObject.GetComponent<Gun>().ReadyGun();
-            i++;
+            int indexWeapon= PlayerPrefs.GetInt("CurrentWeaponIndex",0);
+            Select(indexWeapon);
         }
-    }
-
-    public void Select(int index)
-    {
-        if (_selectedWeapon == index)
-            return;
-
-        if(_coroutine!=null)
-            StopCoroutine(_coroutine);
-        
-        _coroutine = StartCoroutine(StartSelectWeapon(index));
-    }
-
-    private IEnumerator StartSelectWeapon(int index)
-    {
-        yield return new WaitForSeconds(0.15f);
-        _selectedWeapon = index;
-
-        int i = 0;
-
-        foreach (Gun gun in _guns)
+    
+        private void SelectWeapon()
         {
-            _currentGun = _guns[_selectedWeapon];
-            _currentGun.DefaultAmmo();
-            gun.gameObject.SetActive(i == _selectedWeapon);
-            i++;
+            int i = 0;
+
+            foreach (Transform weapon in transform)
+            {
+                weapon.gameObject.SetActive(i == _selectedWeapon);
+                i++;
+            }
         }
+
+        public void Select(int index)
+        {
+            if (_selectedWeapon == index)
+                return;
+
+            if(_coroutine!=null)
+                StopCoroutine(_coroutine);
         
-        WeaponSwitched?.Invoke(_currentGun);
+            _coroutine = StartCoroutine(StartSelectWeapon(index));
+        }
+
+        private IEnumerator StartSelectWeapon(int index)
+        {
+            yield return new WaitForSeconds(0.15f);
+            _selectedWeapon = index;
+
+            int i = 0;
+
+            foreach (Gun gun in _guns)
+            {
+                _currentGun = _guns[_selectedWeapon];
+                _currentGun.DefaultAmmo();
+                gun.gameObject.SetActive(i == _selectedWeapon);
+                i++;
+            }
+        
+            WeaponSwitched?.Invoke(_currentGun);
+        }
     }
 }
