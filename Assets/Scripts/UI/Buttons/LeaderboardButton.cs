@@ -1,25 +1,29 @@
 using Agava.YandexGames;
 using LeaderboardContent;
+using UI.Screens;
 using UnityEngine;
 
-public class LeaderboardButton : AbstractButton
+namespace UI.Buttons
 {
-    [SerializeField]private YandexLeaderboard _leaderboard;
-    [SerializeField]private AutorizationScreen _authScreen;
-    [SerializeField]private GameObject _menu;
-    
-    protected override void OnClick()
+    public class LeaderboardButton : AbstractButton
     {
-        if (PlayerAccount.IsAuthorized)
+        [SerializeField]private YandexLeaderboard _leaderboard;
+        [SerializeField]private AutorizationScreen _authScreen;
+        [SerializeField]private GameObject _menu;
+    
+        protected override void OnClick()
         {
-            _menu.SetActive(false);
-            _leaderboard.gameObject.SetActive(true);
-            PlayerAccount.RequestPersonalProfileDataPermission(_leaderboard.Fill);
-        }
-        else
-        {
-            _menu.SetActive(false);
-            _authScreen.gameObject.SetActive(true);
+            if (PlayerAccount.IsAuthorized)
+            {
+                _menu.SetActive(false);
+                _leaderboard.gameObject.SetActive(true);
+                PlayerAccount.RequestPersonalProfileDataPermission(_leaderboard.Fill);
+            }
+            else
+            {
+                _menu.SetActive(false);
+                _authScreen.gameObject.SetActive(true);
+            }
         }
     }
 }

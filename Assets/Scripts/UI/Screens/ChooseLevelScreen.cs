@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ChooseLevelScreen : AbstractScreen
+namespace UI.Screens
 {
+    public class ChooseLevelScreen : AbstractScreen
+    {
+    }
 }

@@ -57,4 +57,12 @@ public class Localization : MonoBehaviour
                 break;
         }
     }
+    
+    public string GetCurrentLanguage()
+    {
+        Debug.Log(" language " + _autoFoundLanguage);
+        Debug.Log(" language " + _autoFoundLanguage);
+        Debug.Log(" language " + _autoFoundLanguage);
+        return _autoFoundLanguage;
+    }
 }

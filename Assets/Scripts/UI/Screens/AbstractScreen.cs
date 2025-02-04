@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public abstract class AbstractScreen : MonoBehaviour
+namespace UI.Screens
 {
-    public virtual void Open()
+    public abstract class AbstractScreen : MonoBehaviour
     {
-        this.gameObject.SetActive(true);
-    }
+        public virtual void Open()
+        {
+            this.gameObject.SetActive(true);
+        }
 
-    public virtual void Close()
-    {
-        this.gameObject.SetActive(false);
+        public virtual void Close()
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

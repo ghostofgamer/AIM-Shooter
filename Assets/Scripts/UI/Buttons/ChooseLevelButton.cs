@@ -1,13 +1,17 @@
+using UI.Screens;
 using UnityEngine;
 
-public class ChooseLevelButton : AbstractButton
+namespace UI.Buttons
 {
-    [SerializeField] private int _index;
-    [SerializeField] private TutorialScreen _tutorialScreen;
-    
-    protected override void OnClick()
+    public class ChooseLevelButton : AbstractButton
     {
-        _tutorialScreen.gameObject.SetActive(true);
-        _tutorialScreen.OpenPage(_index);
+        [SerializeField] private int _index;
+        [SerializeField] private TutorialScreen _tutorialScreen;
+    
+        protected override void OnClick()
+        {
+            _tutorialScreen.gameObject.SetActive(true);
+            _tutorialScreen.OpenPage(_index);
+        }
     }
 }

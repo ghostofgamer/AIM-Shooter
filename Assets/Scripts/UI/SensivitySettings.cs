@@ -2,44 +2,49 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SensivitySettings : MonoBehaviour
+namespace UI
 {
-    [field: SerializeField] public float SensitivityMouse { get; private set; } = 100f;
-    [SerializeField] private TMP_Text _valueText;
-
-    public Slider sensitivitySlider;
-    public float minSensitivity = 0.5f;
-    public float maxSensitivity = 500f;
-
-    private float _defaultSensitivity = 100f;
-
-    private void Start()
+    public class SensivitySettings : MonoBehaviour
     {
-        float currentSensitivity = PlayerPrefs.GetFloat("Sensitivity", _defaultSensitivity);
+        private const string Sensitivity = "Sensitivity";
+        
+        [field: SerializeField] public float SensitivityMouse { get; private set; } = 100f;
+        [SerializeField] private TMP_Text _valueText;
+        [SerializeField] private Slider _sensitivitySlider;
+        
+        private float _minSensitivity = 0.5f;
+        private float _maxSensitivity = 500f;
+        private float _defaultSensitivity = 100f;
+        private float _min = 0.5f;
+        private float _max = 5f;
 
-        sensitivitySlider.minValue = 0.6f;
-        sensitivitySlider.maxValue = 5f;
-        sensitivitySlider.value = MapValue(currentSensitivity, minSensitivity, maxSensitivity, 0.5f, 5f);
-        _valueText.text = sensitivitySlider.value.ToString("F1");
-        sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
-        SensitivityMouse = currentSensitivity;
-    }
+        private void Start()
+        {
+            float currentSensitivity = PlayerPrefs.GetFloat(Sensitivity, _defaultSensitivity);
 
-    private void OnSensitivityChanged(float value)
-    {
-        SensitivityMouse = MapValue(value, 0.5f, 5f, minSensitivity, maxSensitivity);
-        _valueText.text = value.ToString("F1");
+            _sensitivitySlider.minValue = 0.6f;
+            _sensitivitySlider.maxValue = _max;
+            _sensitivitySlider.value = MapValue(currentSensitivity, _minSensitivity, _maxSensitivity, _min, _max);
+            _valueText.text = _sensitivitySlider.value.ToString("F1");
+            _sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
+            SensitivityMouse = currentSensitivity;
+        }
 
-        PlayerPrefs.SetFloat("Sensitivity", SensitivityMouse);
-        PlayerPrefs.Save();
-    }
+        private void OnSensitivityChanged(float value)
+        {
+            SensitivityMouse = MapValue(value, _min, _max, _minSensitivity, _maxSensitivity);
+            _valueText.text = value.ToString("F1");
+            PlayerPrefs.SetFloat(Sensitivity, SensitivityMouse);
+            PlayerPrefs.Save();
+        }
 
-    private float MapValue(float value, float fromMin, float fromMax, float toMin, float toMax)
-    {
-        if (value < fromMin) value = fromMin;
-        if (value > fromMax) value = fromMax;
+        private float MapValue(float value, float fromMin, float fromMax, float toMin, float toMax)
+        {
+            if (value < fromMin) value = fromMin;
+            if (value > fromMax) value = fromMax;
 
-        float mappedValue = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
-        return mappedValue;
+            float mappedValue = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
+            return mappedValue;
+        }
     }
 }

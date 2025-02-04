@@ -4,47 +4,50 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadingScreen : MonoBehaviour
+namespace UI
 {
-    public Slider _loadingSlider;
-    public TMP_Text _loadingText;
-
-    private Coroutine _loadingCoroutine;
-
-    public void LoadScene(int index)
+    public class LoadingScreen : MonoBehaviour
     {
-        if (_loadingCoroutine != null)
-            StopCoroutine(_loadingCoroutine);
+        public Slider _loadingSlider;
+        public TMP_Text _loadingText;
 
-        _loadingCoroutine = StartCoroutine(LoadSceneAsync(index));
-    }
+        private Coroutine _loadingCoroutine;
 
-    private IEnumerator LoadSceneAsync(int index)
-    {
-        Time.timeScale = 1;
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
-        asyncOperation.allowSceneActivation = false;
-        float progress = 0f;
-        
-        while (!asyncOperation.isDone)
+        public void LoadScene(int index)
         {
-            progress = Mathf.MoveTowards(progress, asyncOperation.progress / 0.9f, Time.deltaTime);
-            _loadingSlider.value = progress;
- 
-            if (_loadingText != null)
-                _loadingText.text = (progress * 100).ToString("F0") + "%";
+            if (_loadingCoroutine != null)
+                StopCoroutine(_loadingCoroutine);
 
-            if (asyncOperation.progress >= 0.9f)
+            _loadingCoroutine = StartCoroutine(LoadSceneAsync(index));
+        }
+
+        private IEnumerator LoadSceneAsync(int index)
+        {
+            Time.timeScale = 1;
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
+            asyncOperation.allowSceneActivation = false;
+            float progress = 0f;
+        
+            while (!asyncOperation.isDone)
             {
-                progress = Mathf.MoveTowards(progress, 1f, Time.deltaTime);
+                progress = Mathf.MoveTowards(progress, asyncOperation.progress / 0.9f, Time.deltaTime);
                 _loadingSlider.value = progress;
-                _loadingText.text = (progress * 100).ToString("F0") + "%";
-                
-                if (progress >= 1f)
-                    asyncOperation.allowSceneActivation = true;
-            }
+ 
+                if (_loadingText != null)
+                    _loadingText.text = (progress * 100).ToString("F0") + "%";
 
-            yield return null;
+                if (asyncOperation.progress >= 0.9f)
+                {
+                    progress = Mathf.MoveTowards(progress, 1f, Time.deltaTime);
+                    _loadingSlider.value = progress;
+                    _loadingText.text = (progress * 100).ToString("F0") + "%";
+                
+                    if (progress >= 1f)
+                        asyncOperation.allowSceneActivation = true;
+                }
+
+                yield return null;
+            }
         }
     }
 }

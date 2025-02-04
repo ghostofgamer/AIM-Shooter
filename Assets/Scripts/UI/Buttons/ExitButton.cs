@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitButton : AbstractButton
+namespace UI.Buttons
 {
-    private const string MainScene = "MainScene";
-
-    protected override void OnClick() => LoadScene();
-    
-    private void LoadScene()
+    public class ExitButton : AbstractButton
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(MainScene);
+        private const string MainScene = "MainScene";
+
+        protected override void OnClick() => LoadScene();
+    
+        private void LoadScene()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(MainScene);
+        }
     }
 }

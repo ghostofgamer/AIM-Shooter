@@ -2796,6 +2796,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 7372155753490335778, guid: 0c3475ddca3477f4787ece37178e9651, type: 3}
+      propertyPath: _sensitivitySlider
+      value: 
+      objectReference: {fileID: 801620782}
     - target: {fileID: 7406828367172474671, guid: 0c3475ddca3477f4787ece37178e9651, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13506,6 +13510,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2147471739}
   m_SourcePrefab: {fileID: 100100000, guid: 0f5eb57885752ae4db95d30863786bdc, type: 3}
+--- !u!114 &801620782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7413001468284495031, guid: 0c3475ddca3477f4787ece37178e9651, type: 3}
+  m_PrefabInstance: {fileID: 84455097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &801727077 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2032427816107280084, guid: 0f5eb57885752ae4db95d30863786bdc, type: 3}

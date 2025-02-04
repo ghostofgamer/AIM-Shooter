@@ -1,23 +1,31 @@
 using ADS;
+using UI.Buttons;
 using UnityEngine;
 
-public class BlockLevel : AbstractButton
+namespace UI
 {
-    [SerializeField] private RewardLevel _rewardLevel;
-    [SerializeField] private int _index;
-
-    private void Start()
+    public class BlockLevel : AbstractButton
     {
-        int purchasedIndex = PlayerPrefs.GetInt("RewardLevel" + _index, 0);
+        private const string RewardLevel = "RewardLevel";
 
-        if (purchasedIndex > 0)
-            gameObject.SetActive(false);
-    }
+        [SerializeField] private RewardLevel _rewardLevel;
+        [SerializeField] private int _index;
+
+        private int _purchasedIndex;
+
+        private void Start()
+        {
+            _purchasedIndex = PlayerPrefs.GetInt(RewardLevel + _index, 0);
+
+            if (_purchasedIndex > 0)
+                gameObject.SetActive(false);
+        }
 
 
-    protected override void OnClick()
-    {
-        Button.enabled = false;
-        _rewardLevel.Show();
+        protected override void OnClick()
+        {
+            Button.enabled = false;
+            _rewardLevel.Show();
+        }
     }
 }

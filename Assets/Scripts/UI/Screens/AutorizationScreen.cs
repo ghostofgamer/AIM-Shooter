@@ -1,10 +1,12 @@
 using Agava.YandexGames;
-using UnityEngine;
 
-public class AutorizationScreen : AbstractScreen
+namespace UI.Screens
 {
-    public void Autorize()
+    public class AutorizationScreen : AbstractScreen
     {
-        PlayerAccount.Authorize();
+        public void Autorize()
+        {
+            PlayerAccount.Authorize();
+        }
     }
 }

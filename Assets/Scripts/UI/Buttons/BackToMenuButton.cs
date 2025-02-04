@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class BackToMenuButton : AbstractButton
+namespace UI.Buttons
 {
-    [SerializeField] private LoadingScreen _loadingScreen;
+    public class BackToMenuButton : AbstractButton
+    {
+        [SerializeField] private LoadingScreen _loadingScreen;
 
-    private int _mainMenuIndexScene = 1;
+        private int _mainMenuIndexScene = 1;
 
-    protected override void OnClick() => _loadingScreen.LoadScene(_mainMenuIndexScene);
+        protected override void OnClick() => _loadingScreen.LoadScene(_mainMenuIndexScene);
+    }
 }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Menu : AbstractScreen
+namespace UI.Screens
 {
-
+    public class Menu : AbstractScreen
+    {
+    }
 }

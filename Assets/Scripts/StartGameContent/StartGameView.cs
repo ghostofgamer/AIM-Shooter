@@ -8,9 +8,14 @@ namespace StartGameContent
 {
     public class StartGameView : MonoBehaviour
     {
+        private const string English = "en";
+        private const string Russian = "ru";
+        private const string Turkish = "tr";
+
         [SerializeField] private TMP_Text _countdownText;
         [SerializeField] private StartGame _startGame;
         [SerializeField] private StopGameButton _stopGameButton;
+        [SerializeField] private Localization _localization;
 
         private float _countDownDuration = 1f;
         private Coroutine _coroutine;
@@ -47,7 +52,8 @@ namespace StartGameContent
             for (int i = 3; i >= 1; i--)
                 yield return StartCoroutine(AnimateText(i.ToString(), _countDownDuration));
 
-            yield return StartCoroutine(AnimateText("GO", _countDownDuration));
+            string text = SetLanguage(_localization.GetCurrentLanguage());
+            yield return StartCoroutine(AnimateText(text, _countDownDuration));
             _countdownText.gameObject.SetActive(false);
         }
 
@@ -76,6 +82,26 @@ namespace StartGameContent
             }
 
             _countdownText.gameObject.SetActive(false);
+        }
+
+        private string SetLanguage(string language)
+        {
+            switch (language)
+            {
+                case English:
+                    return "GO";
+                    break;
+
+                case Turkish:
+                    return "Başlangıç";
+                    break;
+
+                case Russian:
+                    return "Погнали";
+                    break;
+            }
+
+            return "";
         }
     }
 }
