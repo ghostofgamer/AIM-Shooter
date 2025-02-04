@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace UI.Screens
@@ -5,7 +7,12 @@ namespace UI.Screens
     public class SettingsScreen : AbstractScreen
     {
         [SerializeField] private CanvasGroup _canvasGroup;
-    
+
+        private void Start()
+        {
+            
+        }
+
         public override void Open()
         {
             SetValue(1, true);

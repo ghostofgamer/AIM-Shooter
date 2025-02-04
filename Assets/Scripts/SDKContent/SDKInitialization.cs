@@ -19,6 +19,9 @@ namespace SDKContent
 
         private void OnInitialized()
         {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!");
             SceneManager.LoadScene(1);
         }
     }

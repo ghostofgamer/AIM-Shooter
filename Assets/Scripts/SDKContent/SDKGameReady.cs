@@ -9,6 +9,9 @@ namespace SDKContent
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
 YandexGamesSdk.GameReady();
+             Debug.Log("READY!");
+             Debug.Log("READY!");
+             Debug.Log("READY!");
 #endif
         }
     }
